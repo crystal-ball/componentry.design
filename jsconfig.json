@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    // Configuration to resolve project `@` relative imports
+    "paths": {
+      "@/*": ["src/*"],
+      "componentry": ["node_modules/componentry/src"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

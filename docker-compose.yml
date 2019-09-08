@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  test:
+    build:
+      context: .
+    ports:
+      - '5000:5000'
+
+  cypress:
+    image: cypress/included:3.4.1
+    # See https://github.com/cypress-io/cypress/issues/350
+    ipc: host
+    environment:
+      - CYPRESS_baseUrl=http://test:5000
+    depends_on:
+      - test
+    # Share the current folder as volume to avoid copying
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e

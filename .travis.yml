@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - '10'
+
+# Cache dependencies
+cache: npm
+
+# Default install is npm install w/ package.json
+# install
+
+# Default script is npm test
+# script

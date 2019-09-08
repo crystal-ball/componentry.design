@@ -1,13 +1,64 @@
 {
   "name": "componentry-dot-design",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"Build project\""
+  "version": "0.0.0",
+  "description": "Componentry documentation application",
+  "keywords": [
+    "componentry",
+    "documentation"
+  ],
+  "contributors": [
+    "Dan Hedgecock <hedgecock.d@gmail.com> (https://danhedgecock.com)"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crystal-ball/componentry-dot-design.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --mode=development",
+    "start:docker": "NODE_ENV=development webpack-dev-server --host=0.0.0.0 --mode=development",
+    "build": "NODE_ENV=production webpack --mode=production",
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "NODE_ENV=test eslint --format=pretty cypress src test",
+    "test:unit": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:acceptance": "docker-compose up --exit-code-from cypress --abort-on-container-exit",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "postinstall": "bash ./scripts/post-install.sh",
+    "format": "prettier --write '*.{js,json,md,json}' '**/*.{md,js,json,scss}'"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.6.0",
+    "@babel/runtime-corejs3": "7.6.0",
+    "classnames": "2.2.6",
+    "componentry": "crystal-ball/componentry#v3",
+    "prop-types": "15.7.2",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-router-dom": "5.0.1",
+    "svg-symbol-sprite-loader": "^3.2.0"
+  },
+  "devDependencies": {
+    "@crystal-ball/commitizen-adapter": "1.4.0",
+    "@crystal-ball/prettier-base": "1.4.0",
+    "@crystal-ball/webpack-base": "6.0.0",
+    "@testing-library/jest-dom": "4.1.0",
+    "@testing-library/react": "9.1.4",
+    "@types/jest": "24.0.18",
+    "eslint-config-eloquence": "12.4.0",
+    "husky": "3.0.5",
+    "jest": "24.9.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@crystal-ball/commitizen-adapter"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
+    }
+  },
+  "prettier": "@crystal-ball/prettier-base"
 }
