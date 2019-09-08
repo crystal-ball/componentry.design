@@ -19,7 +19,7 @@
     "start:docker": "NODE_ENV=development webpack-dev-server --host=0.0.0.0 --mode=development",
     "build": "NODE_ENV=production webpack --mode=production",
     "test": "npm run test:lint && npm run test:unit",
-    "test:lint": "NODE_ENV=test eslint --format=pretty .storybook cypress src test",
+    "test:lint": "NODE_ENV=test eslint --format=pretty cypress src test",
     "test:unit": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test jest --watch",
     "test:acceptance": "docker-compose up --exit-code-from cypress --abort-on-container-exit",

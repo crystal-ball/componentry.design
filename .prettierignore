@@ -1,9 +1,15 @@
-styles/theme/_variables.scss
-styles/theme/_alert.scss
-styles/theme/_button.scss
-styles/theme/_button-group.scss
-styles/theme/_input.scss
+# Skip formatting files generated or managed by other tools
 
-src/Button/button.scss
+# NPM dependencies
+node_modules
+package.json
+package-lock.json
 
-demo/styles/theme.scss
+# Sass theme definition
+src/styles/theme.scss
+
+# Jest LCOV output
+coverage
+
+# webpack build output
+dist

@@ -18,18 +18,18 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.js', '!**/*.stories.js'],
 
   // Environment setup entrypoints in order of execution
-  globalSetup: '<rootDir>/test/global-setup',
-  setupFiles: ['<rootDir>/test/jest-env-setup.js'],
   setupFilesAfterEnv: ['<rootDir>/test/jest-after-env-setup.js'],
-  globalTeardown: '<rootDir>/test/global-teardown',
 
   // Configure Jest resolver for non-standard project import and UI resources
   // handled by webpack
   moduleNameMapper: {
     // Configuration for resolving project `@` relative imports
     '@/(.*)$': '<rootDir>/src/$1',
+    componentry: '<rootDir>/node_modules/componentry/src',
     // webpack non-js resources loader mocks
     '\\.(png|jpg)': '<rootDir>/__mocks__/file-loader-mock.js',
     '\\.scss': '<rootDir>/__mocks__/scss-loader-mock.js',
   },
+
+  transformIgnorePatterns: ['node_modules/(?!(componentry(.js)?))'],
 }
