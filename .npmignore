@@ -1,0 +1,44 @@
+
+# Don't Publish Me!
+#################################
+
+# Source
+#################################
+.github
+__mocks__
+config
+# NOTE: Don't ignore /src, the SCSS files need to be in bundle
+
+# Output
+#################################
+build
+monitor
+
+# Packages, Logging, Congis
+#################################
+.esm-cache
+false
+.editorconfig
+.flowconfig
+.travis.yml
+jest.config.js
+webpack.config.js
+webpack.config.umd.js
+.babelrc
+
+# Config
+#################################
+.vscode
+jsconfig.json
+.cz-config.js
+.eslintrc.js
+.prettierrc
+.prettierignore
+documentation.yml
+
+# Documentation
+#################################
+docs
+demo
+guides
+public

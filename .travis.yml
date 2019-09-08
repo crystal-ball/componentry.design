@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "10"
+
+# Cache dependencies
+cache: npm
+
+# Default install is npm install w/ package.json
+# install
+
+# Default script is npm test
+# script
+
+deploy:
+  provider: script
+  # Prevent Travis from resetting working directory after build
+  skip_cleanup: true
+  script: npx semantic-release
+  on:
+    branch: master
