@@ -3,6 +3,8 @@
 const path = require('path') // eslint-disable-line
 const webpackBase = require('@crystal-ball/webpack-base')
 
+const { resolve } = path
+
 /*
  * 📦 Single webpack configuration file handles different environment build targets
  * by using webpack-base to merge configurations common to all environments with
@@ -25,11 +27,16 @@ module.exports = () => {
    * the generated base configs.
    */
 
-  // Add a loader rule for Componentry source
-  configs.resolve.alias.componentry = path.resolve('node_modules/componentry/src')
+  // Configure project so that componentry can be used from Github or as a
+  // linked package -> either way the src files won't be transpiled and need to
+  // be aliased to the src/index.js and run through a Babel loader. React also
+  // has to be aliased or two copies will be bundled (one from this directory and
+  // one from symlinked package directory)
+  configs.resolve.alias.react = resolve('node_modules/react')
+  configs.resolve.alias.componentry = resolve('node_modules/componentry/src')
   configs.module.rules.push({
     test: /\.js$/,
-    include: path.resolve('node_modules/componentry/src'),
+    include: [resolve('node_modules/componentry/src'), resolve('../componentry/src')],
     use: [{ loader: 'babel-loader' }],
   })
 
