@@ -4,6 +4,7 @@
       "src": "/static/(.*)",
       "headers": { "cache-control": "maxage=31536000" },
       "dest": "/static/$1"
-    }
+    },
+    { "src": "/(.*)", "dest": "/" }
   ]
 }
