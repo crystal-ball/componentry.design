@@ -25,7 +25,7 @@ svgSymbolSpriteLoader({ useCache: process.env.NODE_ENV === 'production' })
 // Start the party 🎉
 // Render all of the root application providers then application root component
 render(
-  <Theme value={theme}>
+  <Theme theme={theme}>
     <Media>
       <BrowserRouter>
         <App />
