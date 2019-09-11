@@ -1,0 +1,14 @@
+/**
+ * Application styles
+ */
+
+.screen {
+  padding-left: $spacer;
+  padding-right: $spacer;
+}
+
+@media (min-width: 768px) {
+  .screen {
+    padding: 0;
+  }
+}
