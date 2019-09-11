@@ -1,27 +1,47 @@
 import React from 'react'
 import { shape, string } from 'prop-types'
-import { withRouter } from 'react-router-dom'
-import { Flex } from 'componentry'
+import { withRouter, Link } from 'react-router-dom'
+import { Flex, Header } from 'componentry'
+import { css } from '@emotion/core'
 
 // List of screens that should not have the shared application header rendered
 const suppressHeaderLocations = ['/']
 
-const Header = ({ location }) => {
+const smallStyles = ({ grays }) => css`
+  color: ${grays['600']};
+  font-size: 60%;
+`
+
+const linkStyles = css`
+  text-decoration: none;
+  color: inherit;
+`
+
+function AppHeader({ location }) {
   // When the app is on a route that should not show the header bail out on
   // a render value
   if (suppressHeaderLocations.includes(location.pathname)) return null
 
   return (
-    <Flex as='header' className='py-2' align='center' justify='center'>
-      <h1>Componentry</h1>
+    <Flex
+      as='header'
+      className='py-3 border-mito mb-4 px-3'
+      align='center'
+      justify='between'
+    >
+      <Link to='/' css={linkStyles}>
+        <Header as='h2' className='mb-0'>
+          C<small css={smallStyles}>omponentry</small>
+        </Header>
+      </Link>
     </Flex>
   )
 }
 
-Header.propTypes = {
+AppHeader.propTypes = {
   location: shape({
     pathname: string.isRequired,
   }).isRequired,
 }
 
-export default withRouter(Header)
+export default withRouter(AppHeader)

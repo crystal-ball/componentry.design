@@ -1,22 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import { Theme, Media } from 'componentry'
+import { Theme as ComponentryTheme, Media } from 'componentry'
+import { ThemeProvider as EmotionTheme } from 'emotion-theming'
 import svgSymbolSpriteLoader from 'svg-symbol-sprite-loader'
 
-// ========================================================
-// Application Core Elements
-// ========================================================
+import { componentryTheme } from './theme/componentry'
+import { emotionTheme } from './theme/emotion'
 
-// ⚠️ Import application styles before application components so that base CSS
-// styles are included before component styles.
+// ⚠️ Import styles first to ensure lower specificity than component styles
 import './index.scss'
 import './utils/require-icons'
-import App from './components/App/App'
 
-// Componentry configuration defaults can be updated using the ThemeProvider
-// component and passing a theme configuration object
-const theme = {}
+import App from './components/App/App'
 
 // Injects SVG symbol sprite into document from local storage if it exists,
 // otherwise fetch, cache in local storage and inject.
@@ -25,12 +21,14 @@ svgSymbolSpriteLoader({ useCache: process.env.NODE_ENV === 'production' })
 // Start the party 🎉
 // Render all of the root application providers then application root component
 render(
-  <Theme theme={theme}>
-    <Media>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Media>
-  </Theme>,
+  <ComponentryTheme theme={componentryTheme}>
+    <EmotionTheme theme={emotionTheme}>
+      <Media>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Media>
+    </EmotionTheme>
+  </ComponentryTheme>,
   document.getElementById('root'),
 )
