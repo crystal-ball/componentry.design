@@ -1,3 +1,5 @@
+/* global module */
+
 /**
  * CoreJS includes the polyfills for new language features compiled by Babel.
  * Explicitly set the `core-js` version used by `preset-env` per Babel best
@@ -6,10 +8,13 @@
 const corejs = { version: 3, proposals: true }
 
 /**
- * Babel configurations
+ * 📝 Babel configurations
  *
- * Babel configs are specified by environment (explicit configs by env makes it
- * easy to understand how each env is transformed).
+ * - Project wide configuration file type `babel.config.js` used to set the
+ *   "root" configurations. This is required for any project that needs to
+ *   transform a linked npm package.
+ * - Configs are specified by environment to make it easier to understand how
+ *   each env is transformed.
  */
 module.exports = {
   env: {
@@ -34,8 +39,14 @@ module.exports = {
           },
         ],
         '@babel/preset-react',
+        // Replace React.createElement with Emotion's `jsx` call to enable
+        // Emotion's CSS in JS
+        '@emotion/babel-preset-css-prop',
       ],
       plugins: [
+        // Emotion must be first! Hoists and compresses styles and provides
+        // source maps in dev
+        ['emotion', { sourceMap: true }],
         '@babel/plugin-transform-react-jsx-source', // Better stacks for error boundaries
         '@babel/plugin-proposal-class-properties',
         // Runtime will transform Babel helpers to imports from @babel/runtime
@@ -63,8 +74,10 @@ module.exports = {
           },
         ],
         '@babel/preset-react',
+        '@emotion/babel-preset-css-prop',
       ],
       plugins: [
+        'emotion',
         '@babel/plugin-proposal-class-properties',
         ['@babel/plugin-transform-runtime', { useESModules: true, corejs }],
       ],
@@ -86,6 +99,7 @@ module.exports = {
           },
         ],
         '@babel/preset-react',
+        '@emotion/babel-preset-css-prop',
       ],
       plugins: [
         '@babel/plugin-proposal-class-properties',

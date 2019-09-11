@@ -20,6 +20,10 @@ module.exports = {
   // Environment setup entrypoints in order of execution
   setupFilesAfterEnv: ['<rootDir>/test/jest-after-env-setup.js'],
 
+  // Snapshot custom component css (it should be used sparingly and be important
+  // enough to verify in tests)
+  snapshotSerializers: ['jest-emotion'],
+
   // Configure Jest resolver for non-standard project import and UI resources
   // handled by webpack
   moduleNameMapper: {
@@ -31,5 +35,7 @@ module.exports = {
     '\\.scss': '<rootDir>/__mocks__/scss-loader-mock.js',
   },
 
+  // Transform linked Componentry source files with Babel by *not* including it
+  // in the *ignore* patterns ¯\_(ツ)_/¯
   transformIgnorePatterns: ['node_modules/(?!(componentry(.js)?))'],
 }

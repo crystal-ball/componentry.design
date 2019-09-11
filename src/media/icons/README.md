@@ -1,2 +1,4 @@
-Put SVGs for font icons in this directoy. See:
-[Application Media](/guides/application/Media.md)
+# 🥳 THANK YOU!
+
+Icons used are a subset of the totally amazing
+[Zondicons](https://www.zondicons.com/), Thank you Steve Schrover 🙌

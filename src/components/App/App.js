@@ -9,6 +9,7 @@ import Header from './Header/Header'
 // Screens
 import HomeScreen from '../HomeScreen/HomeScreen'
 import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
+import DevScreen from '../DevScreen/DevScreen'
 
 /**
  * Application class component is responsible for setting the base application
@@ -24,6 +25,7 @@ const App = () => (
       {/* Application screen level routes */}
       <Switch>
         <Route path='/' exact component={HomeScreen} />
+        <Route path='/dev-testing' exact component={DevScreen} />
         <Route component={FourOhFourScreen} />
       </Switch>
     </Flex>
