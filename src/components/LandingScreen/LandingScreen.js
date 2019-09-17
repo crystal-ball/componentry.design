@@ -1,7 +1,7 @@
 import React from 'react'
 import { Anchor, Button, Block, Flex, Header, Text, useMedia } from 'componentry'
 
-const HomeScreen = () => {
+export default function LandingScreen() {
   const { sm } = useMedia()
   const headerText = sm ? 'Componentry' : 'Radical React Components'
 
@@ -49,5 +49,3 @@ const HomeScreen = () => {
     </div>
   )
 }
-
-export default HomeScreen

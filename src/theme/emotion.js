@@ -3,16 +3,16 @@ import { ThemeProvider as EmotionTheme } from 'emotion-theming'
 
 // Emotion styles theme is accessible using emotion-theming
 export const emotionTheme = {
-  colors: {
-    teal: '#5effbd',
-    bubblegum: '#ffc4e2',
-  },
-  grays: {
+  themeColors: {},
+  grayColors: {
     '100': '#e4e0f0',
     '600': '#48676a',
   },
-  borders: {
+  borderColors: {
     mito: '#2c3258',
+  },
+  typographyColors: {
+    header: '#ffc4e2',
   },
 }
 

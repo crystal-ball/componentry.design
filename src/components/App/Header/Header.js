@@ -1,40 +1,87 @@
 import React from 'react'
 import { shape, string } from 'prop-types'
 import { withRouter, Link } from 'react-router-dom'
-import { Flex, Header } from 'componentry'
+import { Anchor, Block, Button, Dropdown, Flex, Header, Icon, Text } from 'componentry'
 import { css } from '@emotion/core'
 
-// List of screens that should not have the shared application header rendered
-const suppressHeaderLocations = ['/']
-
-const smallStyles = ({ grays }) => css`
-  color: ${grays['600']};
-  font-size: 60%;
-`
-
-const linkStyles = css`
-  text-decoration: none;
-  color: inherit;
+const logoHeaderStyles = ({ typographyColors }) => css`
+  color: ${typographyColors.header};
+  line-height: 1;
+  font-size: 30px;
+  text-decoration: underline;
+  letter-spacing: 0;
+  background: #492d54;
+  border-radius: 4px;
+  padding: 3px 13px 8px;
 `
 
 function AppHeader({ location }) {
-  // When the app is on a route that should not show the header bail out on
-  // a render value
-  if (suppressHeaderLocations.includes(location.pathname)) return null
+  // Header shows a different hero/logo depending on if the landing screen is active
+  const showHero = location.pathname === '/'
+
+  // TODO: WANT A USEROUTER HOOK SO BAD!
 
   return (
-    <Flex
-      as='header'
-      className='py-3 border-mito mb-4 px-3'
-      align='center'
-      justify='between'
-    >
-      <Link to='/' css={linkStyles}>
-        <Header as='h2' className='mb-0'>
-          C<small css={smallStyles}>omponentry</small>
-        </Header>
-      </Link>
-    </Flex>
+    <>
+      {/* App hero shown on the landing screen */}
+      {showHero && (
+        <Flex
+          direction='column'
+          align='center'
+          justify='between'
+          className='py-5 px-3 border-mito bg-ultra'
+        >
+          <Header textAlign='center'>Componentry</Header>
+          <Text className='lead mb-0' color='muted'>
+            Radical React Components
+          </Text>
+        </Flex>
+      )}
+      {/* Sticky nav header shows on all pages */}
+      <Block className='mb-4 bg-ultra'>
+        {!showHero && (
+          <Flex justify='center' className='mt-3'>
+            <Anchor as={Link} to='/' css={logoHeaderStyles}>
+              C
+            </Anchor>
+          </Flex>
+        )}
+        <Flex as='nav' justify='between' align='center' className='px-4 py-3 border-mito'>
+          {/* Setup links */}
+          <Dropdown Trigger='Setup'>
+            <Dropdown.Content>
+              <Dropdown.Item as={Link} to='/setup/design-system'>
+                Design System
+              </Dropdown.Item>
+            </Dropdown.Content>
+          </Dropdown>
+
+          {/* Styles links */}
+          <Dropdown Trigger='Styles'>
+            <Dropdown.Content>
+              <Dropdown.Item as={Link} to='/styles/typography'>
+                Typography
+              </Dropdown.Item>
+            </Dropdown.Content>
+          </Dropdown>
+
+          {/* Components links */}
+          <Dropdown Trigger='Components'>
+            <Dropdown.Content>
+              <Dropdown.Item as={Link} to='/components/anchor'>
+                Anchor
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to='/components/flex'>
+                Flex
+              </Dropdown.Item>
+            </Dropdown.Content>
+          </Dropdown>
+          <Button anchor>
+            <Icon id='navigation-more' />
+          </Button>
+        </Flex>
+      </Block>
+    </>
   )
 }
 

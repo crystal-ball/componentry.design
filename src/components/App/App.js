@@ -7,29 +7,30 @@ import { ScrollToTop } from '@/components/universal'
 import Header from './Header/Header'
 
 // Screens
-import HomeScreen from '../HomeScreen/HomeScreen'
-import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
+import LandingScreen from '../LandingScreen/LandingScreen'
+import SetupScreen from '../SetupScreen/SetupScreen'
+import StylesScreen from '../StylesScreen/StylesScreen'
+import ComponentsScreen from '../ComponentsScreen/ComponentsScreen'
 import DevScreen from '../DevScreen/DevScreen'
+import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
 
-/**
- * Application class component is responsible for setting the base application
- * behaviors and screen layouts+routing.
- */
-const App = () => (
-  <>
-    {/* Restores scroll position to page top on route change */}
-    <ScrollToTop />
-    {/* Base container element with flexbox layout for sticky footers */}
-    <Flex className='min-100vh' direction='column'>
-      <Header />
-      {/* Application screen level routes */}
-      <Switch>
-        <Route path='/' exact component={HomeScreen} />
-        <Route path='/dev-testing' exact component={DevScreen} />
-        <Route component={FourOhFourScreen} />
-      </Switch>
-    </Flex>
-  </>
-)
-
-export default App
+export default function App() {
+  return (
+    <>
+      {/* App container div sets flexbox layout for screens + sticky footers */}
+      <Flex className='min-100vh radical-theme' direction='column'>
+        <Header />
+        <Switch>
+          <Route path='/' exact component={LandingScreen} />
+          <Route path='/setup' component={SetupScreen} />
+          <Route path='/styles' component={StylesScreen} />
+          <Route path='/components' component={ComponentsScreen} />
+          <Route path='/dev-testing' exact component={DevScreen} />
+          <Route component={FourOhFourScreen} />
+        </Switch>
+      </Flex>
+      {/* Restores scroll position to page top on route change */}
+      <ScrollToTop />
+    </>
+  )
+}
