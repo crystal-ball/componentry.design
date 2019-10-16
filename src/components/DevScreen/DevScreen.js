@@ -1,5 +1,5 @@
 import React from 'react'
-import { Block, Flex, Header, Icon } from 'componentry'
+import { Block, Flex, Heading, Icon } from 'componentry'
 import { css } from '@emotion/core'
 
 const icons = [
@@ -48,9 +48,9 @@ const iconContainerStyles = css`
 
 export default function DevScreen() {
   return (
-    <Flex justify='center' className='screen flex-grow-1'>
+    <Flex justify='center' className='screen-container'>
       <Flex direction='column' maxWidth={1100}>
-        <Header as='h2'>Zondicon Icons</Header>
+        <Heading as='h2'>Zondicon Icons</Heading>
         <Flex wrap='wrap'>
           {icons.map(icon => (
             <Block key={icon} className='border-mito' css={iconContainerStyles}>

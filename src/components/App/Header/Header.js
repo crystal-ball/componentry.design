@@ -1,11 +1,11 @@
-import React from 'react'
-import { shape, string } from 'prop-types'
-import { withRouter, Link } from 'react-router-dom'
-import { Anchor, Block, Button, Dropdown, Flex, Header, Icon, Text } from 'componentry'
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Anchor, Block, Flex, Heading, Text, useVisible } from 'componentry'
 import { css } from '@emotion/core'
+import MobileNavDrawer from './MobileNavDrawer/MobileNavDrawer'
 
-const logoHeaderStyles = ({ typographyColors }) => css`
-  color: ${typographyColors.header};
+const logoHeaderStyles = ({ fontColors }) => css`
+  color: ${fontColors.header};
   line-height: 1;
   font-size: 30px;
   text-decoration: underline;
@@ -15,11 +15,17 @@ const logoHeaderStyles = ({ typographyColors }) => css`
   padding: 3px 13px 8px;
 `
 
-function AppHeader({ location }) {
+export default function AppHeader() {
+  const location = useLocation()
+
   // Header shows a different hero/logo depending on if the landing screen is active
   const showHero = location.pathname === '/'
+  const [navActive, updateNavActive] = useState(false)
 
   // TODO: WANT A USEROUTER HOOK SO BAD!
+
+  // Generate timed active/visible values for css property animations
+  const { active, visible } = useVisible(navActive)
 
   return (
     <>
@@ -31,7 +37,7 @@ function AppHeader({ location }) {
           justify='between'
           className='py-5 px-3 border-mito bg-ultra'
         >
-          <Header textAlign='center'>Componentry</Header>
+          <Heading textAlign='center'>Componentry</Heading>
           <Text className='lead mb-0' color='muted'>
             Radical React Components
           </Text>
@@ -46,49 +52,25 @@ function AppHeader({ location }) {
             </Anchor>
           </Flex>
         )}
-        <Flex as='nav' justify='between' align='center' className='px-4 py-3 border-mito'>
+        <Flex as='nav' justify='around' align='center' className='px-4 py-3 border-mito'>
           {/* Setup links */}
-          <Dropdown Trigger='Setup'>
-            <Dropdown.Content>
-              <Dropdown.Item as={Link} to='/setup/design-system'>
-                Design System
-              </Dropdown.Item>
-            </Dropdown.Content>
-          </Dropdown>
-
-          {/* Styles links */}
-          <Dropdown Trigger='Styles'>
-            <Dropdown.Content>
-              <Dropdown.Item as={Link} to='/styles/typography'>
-                Typography
-              </Dropdown.Item>
-            </Dropdown.Content>
-          </Dropdown>
-
-          {/* Components links */}
-          <Dropdown Trigger='Components'>
-            <Dropdown.Content>
-              <Dropdown.Item as={Link} to='/components/anchor'>
-                Anchor
-              </Dropdown.Item>
-              <Dropdown.Item as={Link} to='/components/flex'>
-                Flex
-              </Dropdown.Item>
-            </Dropdown.Content>
-          </Dropdown>
-          <Button anchor>
-            <Icon id='navigation-more' />
-          </Button>
+          <Anchor
+            as='button'
+            onClick={() => {
+              updateNavActive(!navActive)
+            }}
+          >
+            Setup
+          </Anchor>
+          <Anchor as='button'>Styles</Anchor>
+          <Anchor as='button'>Components</Anchor>
         </Flex>
       </Block>
+      <MobileNavDrawer
+        active={active}
+        visible={visible}
+        closeNav={() => updateNavActive(false)}
+      />
     </>
   )
 }
-
-AppHeader.propTypes = {
-  location: shape({
-    pathname: string.isRequired,
-  }).isRequired,
-}
-
-export default withRouter(AppHeader)

@@ -1,10 +1,10 @@
 import React from 'react'
-import { Block, Header } from 'componentry'
+import { Block, Heading } from 'componentry'
 
 export default function DesignSystemScreen() {
   return (
-    <div className='bg-background'>
-      <Header as='h2'>Design system notes</Header>
+    <div className='screen-container'>
+      <Heading as='h2'>Design system notes</Heading>
 
       <ul>
         <li>SASS variable customization</li>
