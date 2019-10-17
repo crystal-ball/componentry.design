@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import { Theme as ComponentryTheme, Media } from 'componentry'
+import { Theme as ComponentryTheme, Media, setupOutlineHandlers } from 'componentry'
 import { ThemeProvider as EmotionTheme } from 'emotion-theming'
 import svgSymbolSpriteLoader from 'svg-symbol-sprite-loader'
 
@@ -17,6 +17,9 @@ import App from './components/App/App'
 // Injects SVG symbol sprite into document from local storage if it exists,
 // otherwise fetch, cache in local storage and inject.
 svgSymbolSpriteLoader({ useCache: process.env.NODE_ENV === 'production' })
+
+// Smartly show outlines for keyboard users and suppress for mouse users
+setupOutlineHandlers()
 
 // Start the party 🎉
 // Render all of the root application providers then application root component

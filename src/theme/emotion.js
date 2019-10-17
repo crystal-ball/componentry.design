@@ -10,7 +10,7 @@ export const emotionTheme = {
   themeColors: {},
   backgroundColors: {
     ultra: '#110f16',
-    background: '#181424',
+    background: '#1a1722',
     overlay: 'rgba(17, 15, 22, 0.75)',
   },
   borderColors: {

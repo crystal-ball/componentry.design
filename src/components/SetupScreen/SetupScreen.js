@@ -9,3 +9,8 @@ export default function SetupScreen() {
     </>
   )
 }
+
+// Install
+// SASS variables
+// Theme provider
+// Outline handlers

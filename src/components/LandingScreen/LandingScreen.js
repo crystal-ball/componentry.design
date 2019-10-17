@@ -1,51 +1,48 @@
 import React from 'react'
-import { Anchor, Button, Block, Flex, Heading, Text, useMedia } from 'componentry'
+import { Flex, Heading, Icon, Text } from 'componentry'
+import { css } from '@emotion/core'
+
+import Radpack from '@/media/radpack.jpg'
+
+const heroContainerStyles = ({ backgroundColors, borderColors }) => css`
+  background-color: ${backgroundColors.ultra};
+  background-image: url(${Radpack});
+  position: relative;
+  height: 100vh;
+  border-bottom: 1px solid ${borderColors.mito};
+  width: 100%;
+`
+
+const heroTitleStyles = css`
+  font-size: 114px;
+  line-height: 1;
+`
+
+const iconContainerStyles = css`
+  color: #a8ffdb;
+`
+
+const heroTextStyles = css`
+  margin-top: 14px;
+  max-width: 375px;
+  font-size: 28px;
+  line-height: 36px;
+`
 
 export default function LandingScreen() {
-  const { sm } = useMedia()
-  const headerText = sm ? 'Componentry' : 'Radical React Components'
-
   return (
-    <div className='screen d-flex w-100 justify-content-center'>
-      <Block style={{ maxWidth: 1200 }} mt={150} mb={50}>
-        <Heading textAlign='center'>
-          Componentry{' '}
-          <span role='img' aria-label='docs'>
-            📝
-          </span>
-        </Heading>
-        <Text>Radical React Components</Text>
-        <Text>
-          <Anchor href='https://github.com/crystal-ball/componentry'>Github repo</Anchor>
-        </Text>
-
-        <Heading as='h1'>{headerText}</Heading>
-        <Heading as='h2'>{headerText}</Heading>
-        <Heading as='h3'>{headerText}</Heading>
-        <Heading as='h4'>{headerText}</Heading>
-        <Heading as='h5'>{headerText}</Heading>
-
-        <Button color='primary'>Radical</Button>
-
-        <Heading as='h5'>Spacing</Heading>
-        <Flex>
-          <div>
-            <Block bg='success' className='pl-5 pt-5 mr-1' />
-          </div>
-          <div>
-            <Block bg='success' className='pl-4 pt-4 mr-1' />
-          </div>
-          <div>
-            <Block bg='success' className='pl-3 pt-3 mr-1' />
-          </div>
-          <div>
-            <Block bg='success' className='pl-2 pt-2 mr-1' />
-          </div>
-          <div>
-            <Block bg='success' className='pl-1 pt-1 mr-1' />
-          </div>
+    <div className='screen d-flex w-100'>
+      <Flex direction='column' justify='center' pt='xl' css={heroContainerStyles}>
+        <Flex justify='center'>
+          <Heading textAlign='center' css={heroTitleStyles}>
+            <Icon id='tuning' css={iconContainerStyles} />
+            Componentry
+          </Heading>
+          <Text css={heroTextStyles}>
+            React components designed for efficiently composing complex application UIs
+          </Text>
         </Flex>
-      </Block>
+      </Flex>
     </div>
   )
 }
