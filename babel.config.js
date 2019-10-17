@@ -1,13 +1,6 @@
 /* global module */
 
 /**
- * CoreJS includes the polyfills for new language features compiled by Babel.
- * Explicitly set the `core-js` version used by `preset-env` per Babel best
- * practices and allow polyifilling proposal stage features
- */
-const corejs = { version: 3, proposals: true }
-
-/**
  * 📝 Babel configurations
  *
  * - Project wide configuration file type `babel.config.js` used to set the
@@ -15,96 +8,81 @@ const corejs = { version: 3, proposals: true }
  *   transform a linked npm package.
  * - Configs are specified by environment to make it easier to understand how
  *   each env is transformed.
+ * - Only polyfills required for application code are added with the `usage`
+ *   option of the preset-env `useBuiltIns`, but this does assume that libraries
+ *   have properly handled compiling their polyfills.
+ * - Under the hood calling `api.env` will enable caching based on NODE_ENV
+ *
+ * 📝 Core JS
+ *
+ * CoreJS includes the polyfills for new language features compiled by Babel.
+ * Explicitly set the `core-js` version used by `preset-env` per Babel best
+ * practices
+ * - Optionally experimental features can be polyfilled by setting corejs to:
+ *   { version: 3, proposals: true }
+ * - Optionally the transform-runtime plugin accepts a `corejs` configuration
+ *   option that will use imports from core-js to polyfill language features
+ *   instead of adding polyfills to global scope (this is preferred for package
+ *   compilation) Note that enabling this requires adding `@babel/runtime-corejs3`
+ *   as a dependency.
  */
-module.exports = {
-  env: {
-    /**
-     * Development env targets latest Chrome/FF browsers and includes plugins
-     * that provide more detailed info for debugging workflows
-     */
-    development: {
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            // Disable module transformation to allow webpack to manage it
-            modules: false,
-            targets: { chrome: '73', firefox: '67' },
-            // Will automatically add core-js polyfill imports for unsupported
-            // language features based on environment
-            useBuiltIns: 'usage',
-            // Set the core-js version as best practice and allow polyifilling
-            // proposal stage features
-            corejs,
-          },
-        ],
-        '@babel/preset-react',
-        // Replace React.createElement with Emotion's `jsx` call to enable
-        // Emotion's CSS in JS
-        '@emotion/babel-preset-css-prop',
+module.exports = function babelConfigs(api) {
+  return {
+    // --------------------------------------------------------
+    // Presets
+    presets: [
+      // Automatically use the minimum set of syntax and polyfill transforms to
+      // meet target environment using browserslist config.
+      [
+        '@babel/preset-env',
+        {
+          // Transform modules to common js in test for Jest
+          // Disable module transformation in dev and prod builds to allow
+          // webpack to smart-manage modules.
+          modules: api.env('test') ? 'commonjs' : false,
+          // Automatically add core-js polyfill imports for unsupported language
+          // features using target environment
+          useBuiltIns: 'usage',
+          // Configure the version of core-js polyfill helpers injected by
+          // plugins
+          corejs: 3,
+        },
       ],
-      plugins: [
-        // Emotion must be first! Hoists and compresses styles and provides
-        // source maps in dev
-        ['emotion', { sourceMap: true }],
-        '@babel/plugin-transform-react-jsx-source', // Better stacks for error boundaries
-        '@babel/plugin-proposal-class-properties',
-        // Runtime will transform Babel helpers to imports from @babel/runtime
-        // Passing useESModules allows webpack to handle module transforms
-        // Passing corejs configs will use imports from @babel/runtime-corejs3
-        // instead of global polyfills
-        ['@babel/plugin-transform-runtime', { useESModules: true, corejs }],
+      // Includes plugins required to transform JSX. Development plugins add
+      // references to source and self on each component
+      ['@babel/preset-react', { development: api.env('development'), useBuiltIns: true }],
+      // Includes the `babel-plugin-emotion` and configures the transform-react-jsx
+      // plugin to replace `React.createElement` with calls to Emotion's `jsx` to
+      // enable Emotion's CSS in JS
+      '@emotion/babel-preset-css-prop',
+    ],
+
+    // --------------------------------------------------------
+    // Plugins
+    plugins: [
+      // Auto-loads different transforms by env 😱... In development the `hot`
+      // fn is magically transformed to extend HMR to handle components.
+      // In production, plugin will replace `hot(module)(App)` with `App` which is
+      // important for webpack optimizations
+      // Ref: https://github.com/gaearon/react-hot-loader/issues/1080
+      'react-hot-loader/babel',
+      // Transform Runtime will transform inline Babel helper fns to imports from
+      //   @babel/runtime
+      // Passing useESModules disables running helper imports through the common
+      //   js module transform and allows webpack to manage the esm
+      // Passing corejs configs will use imports from @babel/runtime-corejs3
+      //   instead of global polyfills (this should be set for libraries but is
+      //   optional for applications)
+      [
+        '@babel/plugin-transform-runtime',
+        { useESModules: api.env(['development', 'production']) },
       ],
-    },
-    /**
-     * Production env targets current modern browsers and `useBuiltIns` will
-     * automatically add polyfill imports for newer browser features when
-     * they're used in code.
-     */
-    production: {
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            // ℹ️ See development env for preset-env notes
-            modules: false,
-            targets: '> 0.25%, not ie 11, not dead',
-            useBuiltIns: 'usage',
-            corejs,
-          },
-        ],
-        '@babel/preset-react',
-        '@emotion/babel-preset-css-prop',
-      ],
-      plugins: [
-        'emotion',
-        '@babel/plugin-proposal-class-properties',
-        ['@babel/plugin-transform-runtime', { useESModules: true, corejs }],
-      ],
-    },
-    /**
-     * Test env mimics production, but uses commonjs modules because Jest
-     * doesn't support ESModules and operates directly on source code.
-     */
-    test: {
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            // ℹ️ See development env for preset-env notes
-            modules: 'commonjs',
-            targets: '> 0.25%, not ie 11, not dead',
-            useBuiltIns: 'usage',
-            corejs,
-          },
-        ],
-        '@babel/preset-react',
-        '@emotion/babel-preset-css-prop',
-      ],
-      plugins: [
-        '@babel/plugin-proposal-class-properties',
-        ['@babel/plugin-transform-runtime', { useESModules: false, corejs }],
-      ],
-    },
-  },
+
+      // --- Additional stage-3 proposals not present in preset-env set
+      '@babel/plugin-proposal-class-properties',
+      '@babel/plugin-proposal-private-methods',
+      '@babel/plugin-proposal-optional-chaining',
+      '@babel/plugin-proposal-nullish-coalescing-operator',
+    ],
+  }
 }

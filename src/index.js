@@ -1,9 +1,11 @@
 import React from 'react'
-import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { Theme as ComponentryTheme, Media, setupOutlineHandlers } from 'componentry'
 import { ThemeProvider as EmotionTheme } from 'emotion-theming'
 import svgSymbolSpriteLoader from 'svg-symbol-sprite-loader'
+// ℹ️ During development react-dom is aliased to @hot-loader/react-dom in the
+// webpack configs for RHL
+import { render } from 'react-dom'
 
 import { componentryTheme } from './theme/componentry'
 import { emotionTheme } from './theme/emotion'

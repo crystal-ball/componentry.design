@@ -40,5 +40,10 @@ module.exports = () => {
     use: [{ loader: 'babel-loader' }],
   })
 
+  // During development use the RHL patched version of react-dom
+  if (process.env.NODE_ENV === 'development') {
+    configs.resolve.alias['react-dom'] = '@hot-loader/react-dom'
+  }
+
   return configs
 }
