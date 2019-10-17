@@ -2,13 +2,26 @@
  * Application styles
  */
 
-.screen {
-  padding-left: $spacer;
-  padding-right: $spacer;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.screen-container {
+  max-width: 100%;
+  flex-grow: 1;
+  padding-left: $space-base;
+  padding-right: $space-base;
+  overflow: auto;
 }
 
 @media (min-width: 768px) {
-  .screen {
+  .screen-container {
+    max-width: 1200px;
+    margin-left: $space-xl;
+    margin-right: auto;
     padding: 0;
   }
 }

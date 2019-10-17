@@ -1,35 +1,54 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { Flex } from 'componentry'
 
 // Application
 import { ScrollToTop } from '@/components/universal'
 import Header from './Header/Header'
 
 // Screens
-import HomeScreen from '../HomeScreen/HomeScreen'
-import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
+import LandingScreen from '../LandingScreen/LandingScreen'
+import SetupScreen from '../SetupScreen/SetupScreen'
+import StylesScreen from '../StylesScreen/StylesScreen'
+import ComponentsScreen from '../ComponentsScreen/ComponentsScreen'
 import DevScreen from '../DevScreen/DevScreen'
+import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
 
-/**
- * Application class component is responsible for setting the base application
- * behaviors and screen layouts+routing.
- */
-const App = () => (
-  <>
-    {/* Restores scroll position to page top on route change */}
-    <ScrollToTop />
-    {/* Base container element with flexbox layout for sticky footers */}
-    <Flex className='min-100vh' direction='column'>
-      <Header />
-      {/* Application screen level routes */}
-      <Switch>
-        <Route path='/' exact component={HomeScreen} />
-        <Route path='/dev-testing' exact component={DevScreen} />
-        <Route component={FourOhFourScreen} />
-      </Switch>
-    </Flex>
-  </>
-)
+// ℹ️ Routing heiararchy
+// Getting Started
+//  - Setup, Customize, API principles, component styles compatability, Guidelines, Style Props
+//  (Principles and Guidelines are nice terms)
+// Components
+//  - All the components!
 
-export default App
+export default function App() {
+  return (
+    <>
+      {/* App container div sets flexbox layout for screens + sticky footers */}
+      <div className='app-container radical-theme'>
+        <Header />
+        <Switch>
+          <Route path='/' exact>
+            <LandingScreen />
+          </Route>
+          <Route path='/setup'>
+            <SetupScreen />
+          </Route>
+          <Route path='/styles'>
+            <StylesScreen />
+          </Route>
+          <Route path='/components'>
+            <ComponentsScreen />
+          </Route>
+          <Route path='/dev-testing'>
+            <DevScreen />
+          </Route>
+          <Route>
+            <FourOhFourScreen />
+          </Route>
+        </Switch>
+      </div>
+      {/* Restores scroll position to page top on route change */}
+      <ScrollToTop />
+    </>
+  )
+}

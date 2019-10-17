@@ -1,47 +1,52 @@
 import React from 'react'
-import { shape, string } from 'prop-types'
-import { withRouter, Link } from 'react-router-dom'
-import { Flex, Header } from 'componentry'
+import { Anchor, Block, Flex, Icon } from 'componentry'
 import { css } from '@emotion/core'
 
-// List of screens that should not have the shared application header rendered
-const suppressHeaderLocations = ['/']
-
-const smallStyles = ({ grays }) => css`
-  color: ${grays['600']};
-  font-size: 60%;
+const navContainerStyles = css`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(17, 15, 22, 0.55);
+  z-index: 1;
 `
 
-const linkStyles = css`
-  text-decoration: none;
-  color: inherit;
+const iconAnchorStyles = css`
+  font-size: 32px;
 `
 
-function AppHeader({ location }) {
-  // When the app is on a route that should not show the header bail out on
-  // a render value
-  if (suppressHeaderLocations.includes(location.pathname)) return null
-
+export default function AppHeader() {
   return (
-    <Flex
-      as='header'
-      className='py-3 border-mito mb-4 px-3'
-      align='center'
-      justify='between'
-    >
-      <Link to='/' css={linkStyles}>
-        <Header as='h2' className='mb-0'>
-          C<small css={smallStyles}>omponentry</small>
-        </Header>
-      </Link>
-    </Flex>
+    <Block className='bg-ultra'>
+      <Flex
+        as='nav'
+        justify='between'
+        align='center'
+        borderTop
+        borderBottom
+        borderColor='mito'
+        className='px-4 py-3'
+        css={navContainerStyles}
+      >
+        <Anchor href='https://github.com/crystal-ball/componentry' css={iconAnchorStyles}>
+          <Icon id='github' className='d-block' font={false} />
+        </Anchor>
+
+        <div>
+          <Anchor as='button' mx='sm'>
+            Setup
+          </Anchor>
+          <Anchor as='button' mx='sm'>
+            Principles
+          </Anchor>
+          <Anchor as='button' mx='sm'>
+            Styles
+          </Anchor>
+          <Anchor as='button' mx='sm'>
+            Components
+          </Anchor>
+        </div>
+      </Flex>
+    </Block>
   )
 }
-
-AppHeader.propTypes = {
-  location: shape({
-    pathname: string.isRequired,
-  }).isRequired,
-}
-
-export default withRouter(AppHeader)

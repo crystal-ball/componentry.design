@@ -15,15 +15,15 @@
  * convenience, the webpack configurations enable importing the theme variables
  * into any component style file with `@import 'theme';`
  */
-@import '~componentry/../styles/themes/radical';
-@import '~componentry/../styles/themes/radical-css-variables';
+@import '~componentry/styles/themes/radical';
+@import '~componentry/styles/themes/radical-css-variables';
 
 /*
  * --- Componentry styles ---
  *
  * Componentry includes a browser reboot, component styles and utility styles.
  */
-@import '~componentry/../styles/componentry';
+@import '~componentry/componentry';
 
 /*
  * --- Application styles ---

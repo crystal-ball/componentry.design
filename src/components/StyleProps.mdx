@@ -1,0 +1,39 @@
+# Style Props API
+
+Every component accepts a set of library props that cause utility classes or component
+styles to be rendered.
+
+p* m*
+
+| Prop           | Value                | Description                       |
+| -------------- | -------------------- | --------------------------------- |
+| `p*`           | string, number, size | Set a padding value               |
+| `m*`           | string, number, size | Set a margin value                |
+| `border`       | boolean              | Set a default border style        |
+| `borderTop`    | boolean              | Set a default border-top style    |
+| `borderRight`  | boolean              | Set a default border-right style  |
+| `borderBottom` | boolean              | Set a default border-bottom style |
+| `borderLeft`   | boolean              | Set a default border-left style   |
+| `borderColor`  | boolean              | Set a border color utlity class   |
+| `borderWidth`  | `lg`, `xl`           | Set a border width utility class  |
+
+'bg', 'border', 'fontColor', 'fontSize', 'fontWeight', 'italic', 'monospace', 'position',
+'textAlign', 'uppercase',
+
+'border', 'fontSize', 'letterSpacing', 'lineHeight', 'width', 'maxWidth', 'minWidth',
+'height', 'maxHeight', 'minHeight',
+
+## Sizes
+
+Style props that accept sizes are configured to handle a set of library values as
+classNames and pass through all other values. Setting the size to one of: `xs`, `sm`,
+`base` `lg`, or `xl` will return a class, passing any other string or numeric value will
+return a style.
+
+```jsx
+// Will render utility class: `.p-base`
+<Block p='base' />
+
+// Will render style: `{ padding: 5 }`
+<Block p={5} />
+```
