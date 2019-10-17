@@ -7,6 +7,6 @@ describe('Application', () => {
 
   // Test that the production build finished without errors by loading the app
   it('should have built without errors', () => {
-    cy.get('h1').contains('Componentry')
+    cy.get('[data-testid=title]').contains('Componentry')
   })
 })

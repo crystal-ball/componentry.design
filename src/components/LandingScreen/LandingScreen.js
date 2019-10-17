@@ -34,7 +34,7 @@ export default function LandingScreen() {
     <div className='screen d-flex w-100'>
       <Flex direction='column' justify='center' pt='xl' css={heroContainerStyles}>
         <Flex justify='center'>
-          <Heading textAlign='center' css={heroTitleStyles}>
+          <Heading textAlign='center' css={heroTitleStyles} data-testid='title'>
             <Icon id='tuning' css={iconContainerStyles} />
             Componentry
           </Heading>
