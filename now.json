@@ -2,7 +2,7 @@
   "build": {
     "env": {
       "CI": "true",
-      "CYPRESS_INSTALL_BINARY": 0
+      "CYPRESS_INSTALL_BINARY": "0"
     }
   },
   "routes": [

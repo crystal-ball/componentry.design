@@ -14,8 +14,8 @@
     "type": "git",
     "url": "https://github.com/crystal-ball/componentry-dot-design.git"
   },
-  "engines" : {
-    "node" : ">=10"
+  "engines": {
+    "node": ">=10"
   },
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --mode=development",
@@ -28,7 +28,6 @@
     "test:acceptance": "docker-compose up --exit-code-from cypress --abort-on-container-exit",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "postinstall": "bash ./scripts/post-install.sh",
     "format": "prettier --write '*.{js,json,md,json}' '**/*.{md,js,json,scss}'"
   },
   "dependencies": {
