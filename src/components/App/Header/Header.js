@@ -15,7 +15,7 @@ const iconAnchorStyles = css`
   font-size: 32px;
 `
 
-export default function AppHeader() {
+export default function Header() {
   return (
     <Block className='bg-ultra'>
       <Flex
