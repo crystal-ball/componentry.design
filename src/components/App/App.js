@@ -1,4 +1,5 @@
 import React from 'react'
+import { hot } from 'react-hot-loader/root'
 import { Route, Switch } from 'react-router-dom'
 
 // Application
@@ -20,7 +21,7 @@ import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
 // Components
 //  - All the components!
 
-export default function App() {
+function App() {
   return (
     <>
       {/* App container div sets flexbox layout for screens + sticky footers */}
@@ -52,3 +53,5 @@ export default function App() {
     </>
   )
 }
+
+export default hot(App)
