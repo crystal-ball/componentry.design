@@ -1,39 +1,42 @@
 <div align="right">
-  <img height=75 src="./docs/assets/componentry.png" alt="Componentry">
+  <h1>
+    <img height=75 src="./docs/assets/componentry.png" alt="Componentry">
+  </h1>
+
+  <!-- prettier-ignore-start -->
+  <a href="https://zeit.co/crystal-ball/componentry-dot-design">
+    <img src="https://img.shields.io/badge/hosting-▲%20Zeit-7de0c4" alt="Zeit Now" valign="text-top" />
+  </a>
+  <a href="https://renovatebot.com/">
+    <img src="https://img.shields.io/badge/Renovate-enabled-32c3c2.svg" alt="Renovate" valign="text-top" />
+  </a>
+  <a href="https://commitizen.github.io/cz-cli/">
+    <img src="https://img.shields.io/badge/Commitizen-%E2%9C%93%20friendly-10e67b" alt="Commitizen friendly" valign="text-top" />
+  </a>
+  <a href="https://github.com/crystal-ball/componentry-dot-design#workspaces/-projects-5b88b5c9af3c0a2186966767/board?repos=205958183">
+    <img src="https://img.shields.io/badge/ZenHub-managed-5e60ba.svg" alt="ZenHub" valign="text-top" />
+  </a>
+  <a href="./CODE_OF_CONDUCT.md">
+    <img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0-de8cf2.svg" alt="Contributor Covenant" valign="text-top" />
+  </a>
+  <code>:integrations</code>
+
+  <br />
+  <a href="https://github.com/crystal-ball">
+    <img src="https://img.shields.io/badge/%F0%9F%94%AE%E2%9C%A8-contains_magic-D831D7.svg" alt="Contains magic" valign="text-top" />
+  </a>
+  <a href="https://github.com/crystal-ball/crystal-ball.github.io">
+    <img src="https://img.shields.io/badge/%F0%9F%92%96%F0%9F%8C%88-full_of_love-F5499E.svg" alt="Full of love" valign="text-top" />
+  </a>
+  <code>:flair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+  <!-- prettier-ignore-end -->
+
+  <h1></h1>
+  <br />
+  <p align="center">
+    <em>Componentry documentation site</em>
+  </p>
+  <br />
 </div>
 
 ---
-
-<div align="center">
-<!-- prettier-ignore-start -->
-  <a href="https://travis-ci.com/crystal-ball/componentry-dot-design" target="_blank" rel="noopener noreferrer">
-    <img src="https://travis-ci.com/crystal-ball/componentry-dot-design.svg?branch=master" alt="build status" />
-  </a>
-  <!-- <a href="https://dashboard.cypress.io/#/projects/v3cpt4/runs">
-    <img src="https://img.shields.io/badge/cypress-dashboard-brightgreen.svg" alt="Cypress Dashboard">
-  </a> -->
-  <!-- <a href="https://codeclimate.com/github/crystal-ball/componentry-dot-design/maintainability">
-    <img src="https://api.codeclimate.com/v1/badges/3b4b227366911cc055e0/maintainability" />
-  </a>
-  <a href="https://codeclimate.com/github/crystal-ball/componentry-dot-design/test_coverage">
-    <img src="https://api.codeclimate.com/v1/badges/3b4b227366911cc055e0/test_coverage" />
-  </a> -->
-  <a href="https://renovatebot.com/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Renovate-enabled-32c3c2.svg" alt="dependencies managed by Renovate" />
-  </a>
-  <a href="https://github.com/crystal-ball/componentry-dot-design#zenhub" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/Shipping_faster_with-ZenHub-5e60ba.svg?style=flat-square" alt="ZenHub" />
-  </a>
-  <br />
-  <a href="https://github.com/crystal-ball" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/%F0%9F%94%AE%E2%9C%A8-contains_magic-D831D7.svg" alt="Contains magic" />
-  </a>
-  <a href="https://github.com/crystal-ball/componentry-dot-design" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/%F0%9F%92%96%F0%9F%8C%88-full_of_love-F5499E.svg" alt="Full of love" />
-  </a>
-<!-- prettier-ignore-end -->
-</div>
-
-<p align="center">
-  <em>Componentry documentation application</em>
-</p>
