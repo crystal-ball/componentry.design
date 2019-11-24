@@ -1,48 +1,57 @@
 import React from 'react'
-import { Flex, Heading, Icon, Text } from 'componentry'
+import { Flex, Heading, Icon, Text, useMedia } from 'componentry'
 import { css } from '@emotion/core'
+import classnames from 'classnames'
 
 import Radpack from '@/media/radpack.jpg'
+import { ScreenContainer } from '@/components/universal'
 
-const heroContainerStyles = ({ backgroundColors, borderColors }) => css`
+const heroBackgroundStyles = ({ backgroundColors }) => css`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-color: ${backgroundColors.ultra};
   background-image: url(${Radpack});
-  position: relative;
-  height: 100vh;
-  border-bottom: 1px solid ${borderColors.mito};
-  width: 100%;
-`
-
-const heroTitleStyles = css`
-  font-size: 114px;
-  line-height: 1;
-`
-
-const iconContainerStyles = css`
-  color: #a8ffdb;
+  z-index: -1;
 `
 
 const heroTextStyles = css`
-  margin-top: 14px;
-  max-width: 375px;
-  font-size: 28px;
-  line-height: 36px;
+  max-width: 450px;
 `
 
 export default function LandingScreen() {
+  const { sm } = useMedia()
   return (
-    <div className='screen d-flex w-100'>
-      <Flex direction='column' justify='center' pt='xl' css={heroContainerStyles}>
-        <Flex justify='center'>
-          <Heading textAlign='center' css={heroTitleStyles} data-testid='title'>
-            <Icon id='tuning' css={iconContainerStyles} />
-            Componentry
-          </Heading>
-          <Text css={heroTextStyles}>
-            React components designed for efficiently composing complex application UIs
+    <ScreenContainer>
+      <div css={heroBackgroundStyles} />
+      <Flex direction='column' justify='center' pt='xl'>
+        <Heading
+          fontColor='primary'
+          className={classnames({
+            'display-1': !sm,
+          })}
+          data-testid='title'
+        >
+          Componentry
+        </Heading>
+        <Flex align='center'>
+          <Icon id='tuning' className='display-1' fontColor='anchor' font={false} />
+          <Text
+            className={classnames({ lead: !sm, 'font-size-xl': sm })}
+            ml='base'
+            css={heroTextStyles}
+          >
+            A design system for building radical React applications
           </Text>
         </Flex>
       </Flex>
-    </div>
+    </ScreenContainer>
   )
 }
+
+// Sections:
+// Radically simpler
+// Radically smaller
+// Radically accessible
