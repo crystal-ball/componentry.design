@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import { Active, Flex, Heading, Icon } from 'componentry'
 import { css } from '@emotion/core'
 
@@ -6,7 +7,6 @@ import { Link } from '@/components/universal'
 
 const navContainerStyles = ({ borderColors }) => css`
   box-shadow: 0 0 10px ${borderColors.ultra};
-  margin-bottom: 10px;
 `
 
 const contentContainerStyles = ({ borderColors }) => css`
@@ -20,7 +20,16 @@ const contentContainerStyles = ({ borderColors }) => css`
   z-index: 1;
 `
 
+const menuOffsetStyles = css`
+  display: block;
+  width: 20px;
+  height: 25px;
+`
+
 export default function Header() {
+  const location = useLocation()
+  const renderLandingLink = location.pathname !== '/'
+
   return (
     <Flex
       as='nav'
@@ -33,16 +42,18 @@ export default function Header() {
       px='base'
       css={navContainerStyles}
     >
-      <div />
-      <Heading as='h4' fontColor='primary'>
-        Componentry
-      </Heading>
+      <div css={menuOffsetStyles}>&nbsp;</div>
+      {renderLandingLink && (
+        <Heading as='h4' fontColor='primary' className='line-height-1'>
+          Componentry
+        </Heading>
+      )}
       <Active clickEvents>
         {({ deactivate }) => (
           /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
           <>
             <Active.Trigger>
-              <Icon id='menu' />
+              <Icon id='menu' className='h4' />
             </Active.Trigger>
             <Active.Content p='base' css={contentContainerStyles}>
               <div onClick={deactivate}>
