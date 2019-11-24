@@ -9,12 +9,16 @@ import Header from './Header/Header'
 // Screens
 import LandingScreen from '../LandingScreen/LandingScreen'
 import SetupScreen from '../SetupScreen/SetupScreen'
-import StylesScreen from '../StylesScreen/StylesScreen'
+import DesignSystemScreen from '../DesignSystemScreen/DesignSystemScreen'
 import ComponentsScreen from '../ComponentsScreen/ComponentsScreen'
 import DevScreen from '../DevScreen/DevScreen'
 import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
 
 // ℹ️ Routing heiararchy
+// 1. Setup - Install, ThemeProvider, outline handler
+// 2. Design System - Customizing, Colors, Typography, Spacing
+// 3. Components - API principles, library props, etc.
+
 // Getting Started
 //  - Setup, Customize, API principles, component styles compatability, Guidelines, Style Props
 //  (Principles and Guidelines are nice terms)
@@ -34,8 +38,8 @@ function App() {
           <Route path='/setup'>
             <SetupScreen />
           </Route>
-          <Route path='/styles'>
-            <StylesScreen />
+          <Route path='/design-system'>
+            <DesignSystemScreen />
           </Route>
           <Route path='/components'>
             <ComponentsScreen />

@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "build": {
     "env": {
       "CI": "true",
@@ -11,6 +12,6 @@
       "headers": { "cache-control": "maxage=31536000" },
       "dest": "/static/$1"
     },
-    { "src": "/(.*)", "dest": "/" }
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }

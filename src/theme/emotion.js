@@ -15,6 +15,7 @@ export const emotionTheme = {
   },
   borderColors: {
     mito: '#2c3258',
+    ultra: '#681854',
   },
   fontColors: {
     anchor: '#5effbd',
