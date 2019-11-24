@@ -15,7 +15,7 @@
     "url": "https://github.com/crystal-ball/componentry-dot-design.git"
   },
   "engines": {
-    "node": ">=10"
+    "node": "10"
   },
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --mode=development",

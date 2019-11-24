@@ -1,5 +1,5 @@
 import React from 'react'
-import { Anchor, Block, Button, Flex, Icon } from 'componentry'
+import { Anchor, Block, Flex, Icon } from 'componentry'
 import { css } from '@emotion/core'
 
 import { Link } from '@/components/universal'
