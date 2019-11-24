@@ -27,6 +27,7 @@ $theme-colors: (
 
 $background-colors: (
   ultra:       #151421,
+  mito:        #2c3258,
   overlay:     rgba(21,20,33, 0.9),
 );
 
@@ -72,7 +73,7 @@ $spacing: (
 // ---------------------------------------------------------------------------
 $font-family-sans-serif: 'Play', serif;
 
-$font-size-base:   20px;
+$font-size-base:   1rem;
 $font-size-lg:     1.25rem;
 $font-size-sm:     0.8rem;
 

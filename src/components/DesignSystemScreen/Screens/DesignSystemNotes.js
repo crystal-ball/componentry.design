@@ -3,7 +3,7 @@ import { Block, Heading } from 'componentry'
 
 export default function DesignSystemScreen() {
   return (
-    <div className='screen-container'>
+    <div>
       <Heading as='h2'>Design system notes</Heading>
 
       <ul>

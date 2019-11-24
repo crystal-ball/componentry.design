@@ -19,7 +19,7 @@ const colors = [
 export default function TypographyScreen() {
   const [textColor, updateTextColor] = useState('foreground')
   return (
-    <Block className='screen-container'>
+    <Block>
       <Heading>Theme customization</Heading>
       <p className='lead'>
         Yes, Yes, without the oops! You know what? It is beets. I've crashed into a beet

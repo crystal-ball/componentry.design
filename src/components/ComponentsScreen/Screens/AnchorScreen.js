@@ -19,7 +19,7 @@ export default function AnchorsScreen() {
   const [textColor, updateTextColor] = useState('null')
 
   return (
-    <Block className='screen-container'>
+    <Block>
       <Text className='lead'>Anchor</Text>
       <Text>This is the anchor component</Text>
 
