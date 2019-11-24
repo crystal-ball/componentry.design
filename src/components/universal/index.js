@@ -1,2 +1,2 @@
-/* eslint-disable import/prefer-default-export */
-export { default as ScrollToTop } from './ScrollToTop'
+export { default as Link } from './Link/Link'
+export { default as ScrollToTop } from './ScrollToTop/ScrollToTop'

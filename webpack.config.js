@@ -32,13 +32,13 @@ module.exports = () => {
   // be aliased to the src/index.js and run through a Babel loader. React also
   // has to be aliased or two copies will be bundled (one from this directory and
   // one from symlinked package directory)
-  configs.resolve.alias.react = resolve('node_modules/react')
-  configs.resolve.alias.componentry = resolve('node_modules/componentry/src')
-  configs.module.rules.push({
-    test: /\.js$/,
-    include: [resolve('node_modules/componentry/src'), resolve('../componentry/src')],
-    use: [{ loader: 'babel-loader' }],
-  })
+  // configs.resolve.alias.react = resolve('node_modules/react')
+  // configs.resolve.alias.componentry = resolve('node_modules/componentry/src')
+  // configs.module.rules.push({
+  //   test: /\.js$/,
+  //   include: [resolve('../componentry/src')],
+  //   use: [{ loader: 'babel-loader' }],
+  // })
 
   // During development use the RHL patched version of react-dom
   if (process.env.NODE_ENV === 'development') {
