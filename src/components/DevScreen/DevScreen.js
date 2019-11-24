@@ -48,7 +48,7 @@ const iconContainerStyles = css`
 
 export default function DevScreen() {
   return (
-    <Flex justify='center' className='screen-container'>
+    <Flex justify='center'>
       <Flex direction='column' maxWidth={1100}>
         <Heading as='h2'>Zondicon Icons</Heading>
         <Flex wrap='wrap'>

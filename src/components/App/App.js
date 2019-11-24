@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom'
 // Application
 import { ScrollToTop } from '@/components/universal'
 import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 // Screens
 import LandingScreen from '../LandingScreen/LandingScreen'
@@ -51,6 +52,7 @@ function App() {
             <FourOhFourScreen />
           </Route>
         </Switch>
+        <Footer />
       </div>
       {/* Restores scroll position to page top on route change */}
       <ScrollToTop />
