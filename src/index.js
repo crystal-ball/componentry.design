@@ -1,20 +1,26 @@
+/**
+ * ℹ️ RHL must be imported before React/DOM for some setup magic, note during
+ * development react-dom is aliased to @hot-loader/react-dom in webpack configs
+ */
+import 'react-hot-loader'
 import React from 'react'
+import { render } from 'react-dom' // eslint-disable-line
+
 import { BrowserRouter } from 'react-router-dom'
+import { MDXProvider } from '@mdx-js/react'
 import { Theme as ComponentryTheme, Media, setupOutlineHandlers } from 'componentry'
 import { ThemeProvider as EmotionTheme } from 'emotion-theming'
 import svgSymbolSpriteLoader from 'svg-symbol-sprite-loader'
-// ℹ️ During development react-dom is aliased to @hot-loader/react-dom in the
-// webpack configs for RHL
-import { render } from 'react-dom'
 
-import { componentryTheme } from './theme/componentry'
-import { emotionTheme } from './theme/emotion'
-
-// ⚠️ Import styles first to ensure lower specificity than component styles
+// ⚠️ Side effects imports, note styles must be imported before components to
+// ensure component styles can override them
 import './index.scss'
 import './utils/require-icons'
 
 import App from './components/App/App'
+import { components } from './components/App/mdx-components'
+import { componentryTheme } from './theme/componentry'
+import { emotionTheme } from './theme/emotion'
 
 // Injects SVG symbol sprite into document from local storage if it exists,
 // otherwise fetch, cache in local storage and inject.
@@ -26,14 +32,18 @@ setupOutlineHandlers()
 // Start the party 🎉
 // Render all of the root application providers then application root component
 render(
-  <ComponentryTheme theme={componentryTheme}>
-    <EmotionTheme theme={emotionTheme}>
-      <Media>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Media>
-    </EmotionTheme>
-  </ComponentryTheme>,
+  <React.StrictMode>
+    <MDXProvider components={components}>
+      <ComponentryTheme theme={componentryTheme}>
+        <EmotionTheme theme={emotionTheme}>
+          <Media>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </Media>
+        </EmotionTheme>
+      </ComponentryTheme>
+    </MDXProvider>
+  </React.StrictMode>,
   document.getElementById('root'),
 )
