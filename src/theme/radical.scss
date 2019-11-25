@@ -11,6 +11,7 @@ $enable-caret: false;
 
 $grayscale: (
   '100':  #e4e0f0,
+  '500':  #457770,
   '600':  #48676a,
 );
 
@@ -96,6 +97,11 @@ $h4-font-size: var(--h4);
 $paragraph-max-width: 800px;
 
 $lead-font-size: var(--lead);
+
+// --------------------------------------------------------
+// Cards
+
+$card-border-color: map-get($map: $grayscale, $key: '500');
 
 // --------------------------------------------------------
 // Icons
