@@ -10,9 +10,11 @@
 :root {
   /* ~1.25 scale on 16px */
   --h1: 2.5rem; // 40px
-  --h2: 1.875rem; // 30px
+  --h2: 1.75rem; // 28px
   --h3: 1.5rem; // 24px
   --h4: 1.25rem; // 20px
+
+  --display2: 3.25rem; // 40px
 
   --lead: 28px;
 
@@ -32,6 +34,8 @@
     --h2: 2.5rem; // 40px
     --h3: 1.75rem; // 28px
     --h4: 1.2rem; // 24px
+
+    --display2: 5rem; // 100px
 
     --lead: 1.75rem; // 28px
 

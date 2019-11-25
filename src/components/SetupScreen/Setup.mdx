@@ -1,7 +1,53 @@
-Getting Setup!!!
+<Heading className='display-2 my-xl'>Setup</Heading>
 
-1. Installing
-2. Including the Theme provider
-3. Including focus outline handler
+## 1. Install
 
--> Next the design system
+```sh
+npm install componentry
+```
+
+## 2. Styles
+
+Import the library styles into your base stylesheet after importing theme overrides.
+
+```scss
+// Import application custom theme overrides first
+@import './theme/custom-overrides';
+
+// Import the Componentry library entry point to include a browser reboot,
+// component styles and utility styles.
+@import '~componentry/src/componentry';
+```
+
+## 3. ThemeProvider
+
+Including the `ThemeProvider` allows you to globally set defaults for component props.
+
+```javascript
+import { Theme } from 'componentry'
+
+render(
+  <Theme theme={{
+    Button: { color: 'primary' }
+  }}>
+    <App />
+  </Theme>
+  document.getElementById('root')
+)
+```
+
+## 4. Outlines handler
+
+The `setupOutlineHandler` fn will create event listeners for keyboard actions and enable
+focus outlines when a keyboard event occurs. Use this optional utility if you'd like to
+suppress focus outlines on click for mouse users.
+
+```javascript
+import { setupOutlineHandlers } from 'componentry'
+
+setupOutlineHandlers()
+```
+
+---
+
+🎉 Setup complete, next learn about customizing the styles: <Link to='/design-system'>Design System</Link>
