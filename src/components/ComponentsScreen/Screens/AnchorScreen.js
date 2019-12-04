@@ -26,7 +26,7 @@ export default function AnchorsScreen() {
       <Heading as='h3'>Colors</Heading>
       <Flex>
         {colors.map(color => (
-          <Button className='mx-2' onClick={() => updateTextColor(color)} key={color}>
+          <Button key={color} className='mx-2' onClick={() => updateTextColor(color)}>
             {color}
           </Button>
         ))}

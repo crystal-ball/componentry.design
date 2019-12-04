@@ -20,10 +20,10 @@ export default function Header() {
   return (
     <Block className='bg-ultra'>
       <Flex
+        borderBottom
         as='nav'
         justify='between'
         align='center'
-        borderBottom
         borderColor='ultra'
         borderWidth='3'
         className='px-4 py-3'

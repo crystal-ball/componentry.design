@@ -78,10 +78,10 @@ export default function TypographyScreen() {
       <Flex>
         {colors.map(color => (
           <Button
+            key={color}
             anchor
             className='mx-2'
             onClick={() => updateTextColor(color)}
-            key={color}
           >
             {color}
           </Button>

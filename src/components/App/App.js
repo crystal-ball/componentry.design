@@ -33,7 +33,7 @@ function App() {
       <div className='app-container radical-theme'>
         <Header />
         <Switch>
-          <Route path='/' exact>
+          <Route exact path='/'>
             <LandingScreen />
           </Route>
           <Route path='/setup'>

@@ -32,11 +32,11 @@ export default function Header() {
 
   return (
     <Flex
+      borderBottom
       as='nav'
       background='ultra'
       justify='between'
       align='center'
-      borderBottom
       borderColor='ultra'
       py='sm'
       px='base'

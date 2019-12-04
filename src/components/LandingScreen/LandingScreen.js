@@ -62,7 +62,7 @@ export default function LandingScreen() {
       >
         <Card className={classnames('mb-lg', { 'w-50': !sm })}>
           <Card.Body>
-            <Heading as='h4' fontSize='base' uppercase>
+            <Heading uppercase as='h4' fontSize='base'>
               <Icon id='color-palette' font={false} /> Radically simpler
             </Heading>
 
@@ -74,7 +74,7 @@ export default function LandingScreen() {
         </Card>
         <Card className={classnames('mb-lg', { 'w-50': !sm })}>
           <Card.Body>
-            <Heading as='h4' fontSize='base' uppercase>
+            <Heading uppercase as='h4' fontSize='base'>
               <Icon id='hot' font={false} /> Radically smaller
             </Heading>
 
@@ -85,7 +85,7 @@ export default function LandingScreen() {
         </Card>
         <Card className={classnames({ 'w-50': !sm })}>
           <Card.Body>
-            <Heading as='h4' fontSize='base' uppercase>
+            <Heading uppercase as='h4' fontSize='base'>
               <Icon id='mood-happy-outline' font={false} /> Radically funner
             </Heading>
 
@@ -100,8 +100,3 @@ export default function LandingScreen() {
     </ScreenContainer>
   )
 }
-
-// Sections:
-// Radically simpler
-// Radically smaller
-// Radically accessible
