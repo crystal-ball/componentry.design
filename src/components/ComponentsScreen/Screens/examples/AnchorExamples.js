@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Anchor, Block, Button, Flex, Heading, Text } from 'componentry'
+import { Anchor, Button, Flex } from 'componentry'
 
 const colors = [
   'primary',
@@ -15,15 +15,11 @@ const colors = [
   'anchor',
 ]
 
-export default function AnchorsScreen() {
+export default function AnchorExamples() {
   const [textColor, updateTextColor] = useState('null')
 
   return (
-    <Block>
-      <Text className='lead'>Anchor</Text>
-      <Text>This is the anchor component</Text>
-
-      <Heading as='h3'>Colors</Heading>
+    <>
       <Flex>
         {colors.map(color => (
           <Button key={color} className='mx-2' onClick={() => updateTextColor(color)}>
@@ -32,6 +28,6 @@ export default function AnchorsScreen() {
         ))}
       </Flex>
       <Anchor color={textColor}>Radical React Components</Anchor>
-    </Block>
+    </>
   )
 }
