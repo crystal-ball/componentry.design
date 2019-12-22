@@ -31,13 +31,13 @@
     "format": "prettier --write '*.{js,json,md,json}' '**/*.{md,js,json,scss}'"
   },
   "dependencies": {
-    "@babel/runtime": "7.7.4",
-    "@emotion/core": "10.0.22",
+    "@babel/runtime": "7.7.7",
+    "@emotion/core": "10.0.27",
     "@hot-loader/react-dom": "16.11.0",
-    "@mdx-js/react": "1.5.1",
+    "@mdx-js/react": "1.5.3",
     "classnames": "2.2.6",
     "componentry": "v3.0.0-alpha.15",
-    "emotion-theming": "10.0.19",
+    "emotion-theming": "10.0.27",
     "prism-react-renderer": "1.0.2",
     "prop-types": "15.7.2",
     "react": "16.12.0",
