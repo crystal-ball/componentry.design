@@ -3,6 +3,11 @@ import { ThemeProvider as EmotionTheme } from 'emotion-theming'
 
 // Emotion styles theme is accessible using emotion-theming
 export const emotionTheme = {
+  typography: {
+    fontFamilySansSerif: '"Play", serif',
+    fontFamilyMonospace: '"Fira Code", monospace',
+    fontFamilyDisplay: '"Major Mono Display", monospace',
+  },
   grayScale: {
     '100': '#e4e0f0',
     '600': '#48676a',
@@ -22,6 +27,7 @@ export const emotionTheme = {
     header: '#ffc4e2',
     muted: '#48676a',
     lead: '#48676a',
+    component: '#bf9afc',
   },
 }
 

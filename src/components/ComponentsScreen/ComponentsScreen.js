@@ -5,6 +5,7 @@ import { ScreenContainer } from '@/components/universal'
 import Components from './Components.mdx'
 import ActiveScreen from './Screens/ActiveScreen.mdx'
 import AnchorScreen from './Screens/AnchorScreen.mdx'
+import BlockScreen from './Screens/BlockScreen.mdx'
 import ButtonScreen from './Screens/ButtonScreen.mdx'
 import FlexScreen from './Screens/FlexScreen.mdx'
 import HeaderScreen from './Screens/HeadingScreen.mdx'
@@ -18,6 +19,7 @@ export default function ComponentsScreen() {
       <Switch>
         <Route path='/components/active' component={ActiveScreen} />
         <Route path='/components/anchor' component={AnchorScreen} />
+        <Route path='/components/block' component={BlockScreen} />
         <Route path='/components/button' component={ButtonScreen} />
         <Route path='/components/flex' component={FlexScreen} />
         <Route path='/components/heading' component={HeaderScreen} />

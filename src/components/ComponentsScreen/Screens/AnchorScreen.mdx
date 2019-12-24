@@ -1,5 +1,22 @@
-import AnchorExamples from './examples/AnchorExamples'
+import { useState } from 'react'
+import { fontColors } from '@/theme/componentry'
 
-# &lt;Anchor /&gt;
+export function AnchorExamples() {
+  const [textColor, updateTextColor] = useState('anchor')
+  return (
+    <>
+      <Flex>
+        {fontColors.map(color => (
+          <Button key={color} size="sm" className='mx-2' onClick={() => updateTextColor(color)}>
+            {color}
+          </Button>
+        ))}
+      </Flex>
+      <Anchor color={textColor}>Radical React Components</Anchor>
+    </>
+  )
+}
+
+<ComponentHeading name="anchor" />
 
 <AnchorExamples />

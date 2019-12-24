@@ -16,20 +16,26 @@ $grayscale: (
 );
 
 $theme-colors: (
-  background:  #191825,
-  foreground:  #c6d2d1,
+  background:  #12121f,
+  foreground:  #e9e4f5,
   primary:     #f70777,
-  secondary:   #a8ffef,
+  secondary:   #a6ffdd,
   success:     #c3f920,
   info:        #2bf5e9,
   warning:     #ffc300,
   danger:      #fc4552,
+
+  lavender: #f5f0ff,
+  ultra-lavender: #bf9afc,
+  blue: #baf0ff
 );
 
 $background-colors: (
-  ultra:       #151421,
-  mito:        #2c3258,
+  ultra:       #100f1a,
+  background:  #12121f,
+  elevated:    #141322,
   overlay:     rgba(21,20,33, 0.9),
+  mito:        #2c3258
 );
 
 $border-colors: (
@@ -37,12 +43,12 @@ $border-colors: (
   ultra: #681854,
 );
 
-$anchor-color: #a8ffef;
 $font-colors: (
-  anchor:   #a8ffef,
-  heading:  #457770,
+  anchor:   #a6ffdd,
+  heading:  #baf0ff,
   muted:    #48676a,
   lead:     #48676a,
+  component: #bf9afc,
 );
 
 $themes: (
@@ -73,6 +79,8 @@ $spacing: (
 // Fonts
 // ---------------------------------------------------------------------------
 $font-family-sans-serif: 'Play', serif;
+$font-family-monospace: 'Fira Code', monospace;
+$font-family-display: 'Major Mono Display', monospace;
 
 $font-size-base:   1rem;
 $font-size-lg:     1.25rem;
@@ -80,9 +88,12 @@ $font-size-sm:     0.8rem;
 
 $line-height-base: 1.6;
 
+// Anchors
+$anchor-color: map-get($font-colors, 'anchor');
+
 // Headings
-$headings-color: #457770;
-$headings-font-family:     'Orbitron', sans-serif;
+$headings-color: map-get($font-colors, 'heading');
+$headings-font-family: $font-family-display;
 $headings-font-weight:     400;
 $headings-letter-spacing:  0.1em;
 $headings-line-height:     1.5;
@@ -108,7 +119,8 @@ $code-color: #ff57ac;
 // --------------------------------------------------------
 // Cards
 
-$card-border-color: map-get($map: $grayscale, $key: '500');
+$card-border-color: map-get($grayscale, '500');
+$card-bg: map-get($background-colors, 'elevated');
 
 // --------------------------------------------------------
 // Icons
