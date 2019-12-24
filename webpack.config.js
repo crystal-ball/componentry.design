@@ -3,8 +3,6 @@
 const path = require('path') // eslint-disable-line
 const webpackBase = require('@crystal-ball/webpack-base')
 
-const { resolve } = path
-
 /*
  * 📦 Single webpack configuration file handles different environment build targets
  * by using webpack-base to merge configurations common to all environments with
