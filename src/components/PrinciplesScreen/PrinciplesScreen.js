@@ -12,6 +12,7 @@ export default function PrinciplesScreen() {
       <Switch>
         <Route path='/principles/props' component={PropsAPIScreen} />
         <Route path='/principles/variants' component={VariantScreen} />
+
         <Route path='/principles' component={Principles} />
       </Switch>
     </ScreenContainer>

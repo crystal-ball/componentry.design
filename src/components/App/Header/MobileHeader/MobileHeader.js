@@ -1,16 +1,20 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import { Active, Flex, Heading, Icon } from 'componentry'
+import { Active, Anchor, Block, Drawer, Flex, Heading, Icon } from 'componentry'
 import { css } from '@emotion/core'
 
 import { Link } from '@/components/universal'
+import { routes } from '../../routes'
 
 const navContainerStyles = ({ borderColors }) => css`
   box-shadow: 0 0 10px ${borderColors.ultra};
 `
 
 const contentContainerStyles = ({ borderColors }) => css`
-  position: absolute;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   top: 0;
   right: 0;
   bottom: 0;
@@ -55,22 +59,71 @@ export default function Header() {
             <Active.Trigger>
               <Icon id='menu' className='h4' />
             </Active.Trigger>
-            <Active.Content p='base' css={contentContainerStyles}>
-              <div onClick={deactivate}>
-                <Link to='/'>Home</Link>
-              </div>
-              <div onClick={deactivate}>
-                <Link to='/setup'>Setup</Link>
-              </div>
-              <div onClick={deactivate}>
-                <Link to='/design-system'>Design System</Link>
-              </div>
-              <div onClick={deactivate}>
-                <Link to='/components'>Components</Link>
-              </div>
-              <div onClick={deactivate}>
-                <Link to='/principles'>Principles</Link>
-              </div>
+
+            <Active.Content css={contentContainerStyles}>
+              <Block p='base'>
+                <div onClick={deactivate}>
+                  <Link to='/'>Home</Link>
+                </div>
+
+                {/* Setup */}
+                <Drawer onDeactivate={deactivate}>
+                  <Drawer.Trigger>Setup</Drawer.Trigger>
+                  <Drawer.Content pl='base'>
+                    {routes.setup.map(({ name, path }) => (
+                      <Drawer.Trigger key={path} as={Link} to={path}>
+                        {name}
+                      </Drawer.Trigger>
+                    ))}
+                  </Drawer.Content>
+                </Drawer>
+
+                {/* Design system */}
+                <Drawer onDeactivate={deactivate}>
+                  <Drawer.Trigger>Design System</Drawer.Trigger>
+                  <Drawer.Content pl='base'>
+                    {routes.design.map(({ name, path }) => (
+                      <Drawer.Trigger key={path} as={Link} to={path}>
+                        {name}
+                      </Drawer.Trigger>
+                    ))}
+                  </Drawer.Content>
+                </Drawer>
+
+                {/* Components */}
+                <Drawer onDeactivate={deactivate}>
+                  <Drawer.Trigger>Components</Drawer.Trigger>
+                  <Drawer.Content pl='base'>
+                    {routes.components.map(({ name, path }) => (
+                      <Drawer.Trigger key={path} as={Link} to={path}>
+                        {name}
+                      </Drawer.Trigger>
+                    ))}
+                  </Drawer.Content>
+                </Drawer>
+
+                {/* Principles */}
+                <Drawer onDeactivate={deactivate}>
+                  <Drawer.Trigger>Principles</Drawer.Trigger>
+                  <Drawer.Content pl='base'>
+                    {routes.setup.map(({ name, path }) => (
+                      <Drawer.Trigger key={path} as={Link} to={path}>
+                        {name}
+                      </Drawer.Trigger>
+                    ))}
+                  </Drawer.Content>
+                </Drawer>
+              </Block>
+
+              <Flex justify='center' align='center' py='sm' px='base' background='mito'>
+                <Anchor
+                  href='https://github.com/crystal-ball/componentry'
+                  mx='sm'
+                  fontSize='xl'
+                >
+                  <Icon id='github' className='d-block' font={false} />
+                </Anchor>
+              </Flex>
             </Active.Content>
           </>
         )}
