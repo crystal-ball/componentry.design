@@ -1,5 +1,8 @@
 export const routes = {
-  setup: [{ name: 'Install', path: '/setup/install' }],
+  setup: [
+    { name: 'Getting Started', path: '/setup/getting-started' },
+    { name: 'Theme Customization', path: '/setup/theme-customization' },
+  ],
   design: [
     { name: 'Colors', path: '/design-system/colors' },
     { name: 'Typography', path: '/design-system/typography' },
@@ -14,7 +17,8 @@ export const routes = {
     { name: 'Heading', path: '/components/heading' },
   ],
   principles: [
-    { name: 'Props API', path: '/principles/props' },
-    { name: 'Variants API', path: '/principles/variants' },
+    { name: 'Library Principles', path: '/principles/library-principles' },
+    { name: 'Component API Design', path: '/principles/api-design' },
+    { name: 'Accessibility', path: '/principles/accessibility' },
   ],
 }
