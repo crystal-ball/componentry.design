@@ -1,16 +1,32 @@
 # Color system
 
-Componentry manages colors in a more flexible way than other libraries. Colors start
-with a base set of theme colors (primary, success, etc.) and then individual theme
-domains layer specific colors on top of those.
+Componentry manages colors in a more flexible way than other libraries. Colors start with
+a base set of theme colors (primary, success, etc.) and then individual theme domains
+layer specific colors on top of those.
 
 eg Borders: Include the theme-colors and add border-colors.
 
 This allows creating more semantic variables for colors and more options.
 
+## Shades
+
+A dark and light base shade are used to create theme shades and shadows:
+
+```scss
+$dark-shade: #151617 !default;
+$light-shade: #f0f0f0 !default;
+```
+
 ### Color sets
 
-- `$theme-colors`
-- `$background-colors`
-- `$border-colors`
-- `$font-colors`
+- `$grayscale` - The `$grayscale` map includes the shades of gray used in the theme. By
+  default values from `'100'` to `'900'` are included.
+- `$theme-colors` - The `$theme-colors` map includes the foreground, background and all
+  contextual theme colors.
+- `$background-colors` - The `$background-colors` map includes all background colors.
+- `$border-colors` - The `$border-colors` map includes all border colors.
+- `$typography-colors` - The `$typography-colors` map includes all typography colors.
+
+The `$background-colors`, `$border-colors`, and `$typography-colors` maps are convenient
+locations to include additional contextual colors. For example if you wanted modals to
+have custom border colors you could add a `$modal` value to the `$border-colors` map.

@@ -1,0 +1,48 @@
+# Component props API
+
+Every component accepts a set of library props that cause utility classes or component
+styles to be rendered.
+
+| Prop            | Value                                     |
+| --------------- | ----------------------------------------- |
+| `background`    | `$background-colors()`                    |
+| `border`        | boolean                                   |
+| `borderTop`     | boolean                                   |
+| `borderRight`   | boolean                                   |
+| `borderBottom`  | boolean                                   |
+| `borderLeft`    | boolean                                   |
+| `borderColor`   | `$border-colors()`                        |
+| `borderWidth`   | sm, lg, xl                                |
+| `fontColor`     | `$typography-colors()`                    |
+| `fontSize`      | string, number, xs, sm, base, lg, xl      |
+| `fontWeight`    | lighter, light, normal, bold, bolder      |
+| `letterSpacing` | string                                    |
+| `lineHeight`    | string                                    |
+| `italic`        | boolean                                   |
+| `monospace`     | boolean                                   |
+| `uppercase`     | boolean                                   |
+| `textAlign`     | left, center, right, justify              |
+| `p*`            | string, number, `$spacing`                |
+| `m*`            | string, number,`$spacing`                 |
+| `position`      | static, relative, absolute, fixed, sticky |
+| `width`         | string, number                            |
+| `height`        | string, number                            |
+| `minWidth`      | string, number                            |
+| `minHeight`     | string, number                            |
+| `maxWidth`      | string, number                            |
+| `maxHeight`     | string, number                            |
+
+## Sizes
+
+Style props that accept sizes are configured to handle a set of library values as
+classNames and pass through all other values. Setting the size to one of: `xs`, `sm`,
+`base` `lg`, or `xl` will return a class, passing any other string or numeric value will
+return a style.
+
+```jsx
+// Will render utility class: `.p-base`
+<Block p='base' />
+
+// Will render style: `{ padding: 5 }`
+<Block p={5} />
+```

@@ -68,6 +68,9 @@ export default function Header() {
               <div onClick={deactivate}>
                 <Link to='/components'>Components</Link>
               </div>
+              <div onClick={deactivate}>
+                <Link to='/principles'>Principles</Link>
+              </div>
             </Active.Content>
           </>
         )}
