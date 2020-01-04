@@ -1,4 +1,4 @@
-# Component props API
+# Component API Design
 
 Every component accepts a set of library props that cause utility classes or component
 styles to be rendered.
@@ -46,3 +46,15 @@ return a style.
 // Will render style: `{ padding: 5 }`
 <Block p={5} />
 ```
+
+## Component `variant` API
+
+Components each have at least one `variant`, components with base styles use this to
+determine the base styles for the element. You can create additional variations if you
+need multiple styles of a single component. For example you may want a menu with dense
+spacing with a button trigger style, as well as an additional menu for navigation with
+loose spacing and a text trigger style.
+
+- The `variant` prop will override the base css class used throughout the component.
+- The component behaviors are separated into a separate class so that styles can be
+  customized without having to reproduce behaviors.

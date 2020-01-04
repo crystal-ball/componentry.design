@@ -106,7 +106,7 @@ export default function Header() {
                 <Drawer onDeactivate={deactivate}>
                   <Drawer.Trigger>Principles</Drawer.Trigger>
                   <Drawer.Content pl='base'>
-                    {routes.setup.map(({ name, path }) => (
+                    {routes.principles.map(({ name, path }) => (
                       <Drawer.Trigger key={path} as={Link} to={path}>
                         {name}
                       </Drawer.Trigger>

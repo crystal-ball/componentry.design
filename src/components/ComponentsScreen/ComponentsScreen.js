@@ -2,13 +2,12 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import { ScreenContainer } from '@/components/universal'
-import Components from './Components.mdx'
-import ActiveScreen from './Screens/ActiveScreen.mdx'
-import AnchorScreen from './Screens/AnchorScreen.mdx'
-import BlockScreen from './Screens/BlockScreen.mdx'
-import ButtonScreen from './Screens/ButtonScreen.mdx'
-import FlexScreen from './Screens/FlexScreen.mdx'
-import HeaderScreen from './Screens/HeadingScreen.mdx'
+import ActiveScreen from './screens/active.mdx'
+import AnchorScreen from './screens/anchor.mdx'
+import BlockScreen from './screens/block.mdx'
+import ButtonScreen from './screens/button.mdx'
+import FlexScreen from './screens/flex.mdx'
+import HeaderScreen from './screens/heading.mdx'
 
 export default function ComponentsScreen() {
   return (
@@ -20,8 +19,6 @@ export default function ComponentsScreen() {
         <Route path='/components/button' component={ButtonScreen} />
         <Route path='/components/flex' component={FlexScreen} />
         <Route path='/components/heading' component={HeaderScreen} />
-
-        <Route path='/components' component={Components} />
       </Switch>
     </ScreenContainer>
   )
