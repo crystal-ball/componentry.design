@@ -19,6 +19,17 @@ Import the library styles into your base stylesheet after importing theme overri
 @import '~componentry/src/componentry';
 ```
 
+The generated styles are configured using SASS variables. The top level variables set
+shared rules:
+
+```scss
+$enable-rounded:       true; // Styles will include border-radius styles
+$enable-shadows:       true; // Styles will include box-shadow styles
+$enable-transitions:   true; // Styles will include transition styles
+```
+
+There are also variables for element z-indices and breakpoints.
+
 ## 3. ThemeProvider
 
 Including the `ThemeProvider` allows you to globally set defaults for component props.

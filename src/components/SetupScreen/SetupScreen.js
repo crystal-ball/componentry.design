@@ -10,7 +10,3 @@ export default function SetupScreen() {
     </ScreenContainer>
   )
 }
-
-// Install
-// Theme provider
-// Outline handlers

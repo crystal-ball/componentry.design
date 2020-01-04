@@ -12,7 +12,7 @@ import LandingScreen from '../LandingScreen/LandingScreen'
 import SetupScreen from '../SetupScreen/SetupScreen'
 import DesignSystemScreen from '../DesignSystemScreen/DesignSystemScreen'
 import ComponentsScreen from '../ComponentsScreen/ComponentsScreen'
-import DevScreen from '../DevScreen/DevScreen'
+import PrinciplesScreen from '../PrinciplesScreen/PrinciplesScreen'
 import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
 
 // ℹ️ Routing heiararchy
@@ -45,8 +45,8 @@ function App() {
           <Route path='/components'>
             <ComponentsScreen />
           </Route>
-          <Route path='/dev-testing'>
-            <DevScreen />
+          <Route path='/principles'>
+            <PrinciplesScreen />
           </Route>
           <Route>
             <FourOhFourScreen />

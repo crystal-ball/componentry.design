@@ -47,6 +47,9 @@ export default function Header() {
           <Link to='/components' mx='sm'>
             Components
           </Link>
+          <Link to='/principles' mx='sm'>
+            Principles
+          </Link>
           <Anchor
             href='https://github.com/crystal-ball/componentry'
             mx='sm'
