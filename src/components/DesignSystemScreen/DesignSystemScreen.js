@@ -14,6 +14,7 @@ export default function DesignSystemScreen() {
         <Route path='/design-system/colors' component={ColorsScreen} />
         <Route path='/design-system/spacing' component={SpacingScreen} />
         <Route path='/design-system/typography' component={TypographyScreen} />
+
         <Route path='/design-system' component={DesignSystem} />
       </Switch>
     </ScreenContainer>

@@ -1,9 +1,10 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import { Anchor, Block, Flex, Icon } from 'componentry'
+import { Anchor, Block, Dropdown, Flex, Icon } from 'componentry'
 import { css } from '@emotion/core'
 
 import { Link } from '@/components/universal'
+import { routes } from '../../routes'
 
 const navContainerStyles = ({ borderColors }) => css`
   box-shadow: 0 0 10px ${borderColors.ultra};
@@ -38,18 +39,54 @@ export default function Header() {
         )}
 
         <Flex align='center'>
-          <Link to='/setup' mx='sm'>
-            Setup
-          </Link>
-          <Link to='/design-system' mx='sm'>
-            Design System
-          </Link>
-          <Link to='/components' mx='sm'>
-            Components
-          </Link>
-          <Link to='/principles' mx='sm'>
-            Principles
-          </Link>
+          {/* Setup */}
+          <Dropdown>
+            <Dropdown.Trigger mx='sm'>Setup</Dropdown.Trigger>
+            <Dropdown.Content>
+              {routes.setup.map(({ name, path }) => (
+                <Dropdown.Item key={path} as={Link} to={path}>
+                  {name}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Content>
+          </Dropdown>
+
+          {/* Design System */}
+          <Dropdown>
+            <Dropdown.Trigger mx='sm'>Design System</Dropdown.Trigger>
+            <Dropdown.Content>
+              {routes.design.map(({ name, path }) => (
+                <Dropdown.Item key={path} as={Link} to={path}>
+                  {name}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Content>
+          </Dropdown>
+
+          {/* Components */}
+          <Dropdown>
+            <Dropdown.Trigger mx='sm'>Components</Dropdown.Trigger>
+            <Dropdown.Content>
+              {routes.components.map(({ name, path }) => (
+                <Dropdown.Item key={path} as={Link} to={path}>
+                  {name}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Content>
+          </Dropdown>
+
+          {/* Principles */}
+          <Dropdown>
+            <Dropdown.Trigger mx='sm'>Principles</Dropdown.Trigger>
+            <Dropdown.Content>
+              {routes.principles.map(({ name, path }) => (
+                <Dropdown.Item key={path} as={Link} to={path}>
+                  {name}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Content>
+          </Dropdown>
+
           <Anchor
             href='https://github.com/crystal-ball/componentry'
             mx='sm'

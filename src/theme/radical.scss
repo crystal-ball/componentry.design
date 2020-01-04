@@ -43,8 +43,9 @@ $border-colors: (
   ultra: #681854,
 );
 
-$font-colors: (
+$typography-colors: (
   anchor:   #a6ffdd,
+  code:     #ff57ac,
   heading:  #baf0ff,
   muted:    #48676a,
   lead:     #48676a,
@@ -89,10 +90,10 @@ $font-size-sm:     0.8rem;
 $line-height-base: 1.6;
 
 // Anchors
-$anchor-color: map-get($font-colors, 'anchor');
+$anchor-color: map-get($typography-colors, 'anchor');
 
 // Headings
-$headings-color: map-get($font-colors, 'heading');
+$headings-color: map-get($typography-colors, 'heading');
 $headings-font-family: $font-family-display;
 $headings-font-weight:     400;
 $headings-letter-spacing:  0.1em;
@@ -114,13 +115,20 @@ $lead-font-size: var(--lead);
 // --------------------------------------------------------
 // Code
 
-$code-color: #ff57ac;
+$code-color: map-get($typography-colors, code);
 
 // --------------------------------------------------------
 // Cards
 
-$card-border-color: map-get($grayscale, '500');
-$card-bg: map-get($background-colors, 'elevated');
+$card-border-color:  map-get($grayscale, '500');
+$card-bg:            map-get($background-colors, 'elevated');
+
+// --------------------------------------------------------
+// Dropdowns
+
+$dropdown-anchor-color:        map-get($typography-colors, anchor);
+$dropdown-anchor-hover-color:  map-get($typography-colors, anchor);
+$dropdown-anchor-hover-bg:     map-get($background-colors, mito);
 
 // --------------------------------------------------------
 // Icons
