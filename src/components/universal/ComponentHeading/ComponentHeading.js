@@ -4,15 +4,16 @@ import { Heading } from 'componentry'
 
 import { css } from '@emotion/core'
 
-const headingStyles = ({ fontColors, typography }) => css`
+const headingStyles = ({ typographyColors, typography }) => css`
   font-family: ${typography.fontFamilyDisplay};
-  color: ${fontColors.component};
+  color: ${typographyColors.radvender};
   letter-spacing: 8px;
-  text-align: right;
+  text-align: left;
+  margin-top: 80px;
 `
 
 export default function ComponentHeading({ name }) {
-  return <Heading css={headingStyles}>{`<${name}/>`}</Heading>
+  return <Heading className='raddow-1' css={headingStyles}>{`<${name}/>`}</Heading>
 }
 
 ComponentHeading.propTypes = {

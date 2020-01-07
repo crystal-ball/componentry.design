@@ -7,6 +7,8 @@ import { Link } from '@/components/universal'
 import { routes } from '../../routes'
 
 const navContainerStyles = ({ borderColors }) => css`
+  position: sticky;
+  top: 0;
   box-shadow: 0 0 10px ${borderColors.ultra};
 `
 
@@ -19,8 +21,8 @@ const contentContainerStyles = ({ borderColors }) => css`
   right: 0;
   bottom: 0;
   width: 70%;
-  background: rgba(17, 15, 22, 0.9);
-  border-left: 5px solid ${borderColors.mito};
+  background: rgba(36, 37, 96, 0.9);
+  border-left: 5px solid ${borderColors.ultra};
   z-index: 1;
 `
 
@@ -48,8 +50,8 @@ export default function Header() {
     >
       <div css={menuOffsetStyles}>&nbsp;</div>
       {renderLandingLink && (
-        <Heading as='h4' fontColor='primary' className='line-height-1'>
-          Componentry
+        <Heading as='h4' fontColor='primary' className='line-height-1 raddow-1'>
+          componentry
         </Heading>
       )}
       <Active clickEvents>
@@ -63,12 +65,14 @@ export default function Header() {
             <Active.Content css={contentContainerStyles}>
               <Block p='base'>
                 <div onClick={deactivate}>
-                  <Link to='/'>Home</Link>
+                  <Link to='/' fontSize='lg'>
+                    Home
+                  </Link>
                 </div>
 
                 {/* Setup */}
                 <Drawer onDeactivate={deactivate}>
-                  <Drawer.Trigger>Setup</Drawer.Trigger>
+                  <Drawer.Trigger fontSize='lg'>Setup</Drawer.Trigger>
                   <Drawer.Content pl='base'>
                     {routes.setup.map(({ name, path }) => (
                       <Drawer.Trigger key={path} as={Link} to={path}>
@@ -80,7 +84,7 @@ export default function Header() {
 
                 {/* Design system */}
                 <Drawer onDeactivate={deactivate}>
-                  <Drawer.Trigger>Design System</Drawer.Trigger>
+                  <Drawer.Trigger fontSize='lg'>Design System</Drawer.Trigger>
                   <Drawer.Content pl='base'>
                     {routes.design.map(({ name, path }) => (
                       <Drawer.Trigger key={path} as={Link} to={path}>
@@ -92,7 +96,7 @@ export default function Header() {
 
                 {/* Components */}
                 <Drawer onDeactivate={deactivate}>
-                  <Drawer.Trigger>Components</Drawer.Trigger>
+                  <Drawer.Trigger fontSize='lg'>Components</Drawer.Trigger>
                   <Drawer.Content pl='base'>
                     {routes.components.map(({ name, path }) => (
                       <Drawer.Trigger key={path} as={Link} to={path}>
@@ -104,7 +108,7 @@ export default function Header() {
 
                 {/* Principles */}
                 <Drawer onDeactivate={deactivate}>
-                  <Drawer.Trigger>Principles</Drawer.Trigger>
+                  <Drawer.Trigger fontSize='lg'>Principles</Drawer.Trigger>
                   <Drawer.Content pl='base'>
                     {routes.principles.map(({ name, path }) => (
                       <Drawer.Trigger key={path} as={Link} to={path}>

@@ -2,48 +2,10 @@
  * Application styles
  */
 
-// --------------------------------------------------------
-// App font size: 16px on mobile and 20px on desktop
-html {
-  font-size: 16px;
+.raddow-1 {
+  text-shadow: theme-color(primary) 1px 0px 15px;
 }
 
-pre {
-  font-size: 12px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 20px;
-  }
-
-  pre {
-    font-size: 87.5%;
-  }
-}
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
-}
-
-// .display-2 {
-//   color: #ffc4e2;
-//   text-shadow: 2px 2px 10px #a8ffef;
-// }
-
-// --------------------------------------------------------
-// Utilities (TODO: move to Componentry)
-
-.line-height-1 {
-  line-height: 1;
-}
-
-.fullscreen-row {
-  position: relative;
-  width: 100vw;
-  margin-left: -50vw;
-  left: 50%;
+.raddow-2 {
+  text-shadow: typography-color(radvender) 2px 2px 8px;
 }

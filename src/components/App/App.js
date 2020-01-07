@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       {/* App container div sets flexbox layout for screens + sticky footers */}
-      <div className='app-container radical-theme'>
+      <div className='d-flex flex-column w-100 min-100vh'>
         <Header />
         <Switch>
           <Route exact path='/'>
