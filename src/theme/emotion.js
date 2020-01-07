@@ -8,26 +8,24 @@ export const emotionTheme = {
     fontFamilyMonospace: '"Fira Code", monospace',
     fontFamilyDisplay: '"Major Mono Display", monospace',
   },
-  grayScale: {
-    '100': '#e4e0f0',
-    '600': '#48676a',
+  themeColors: {
+    primary: '#f52277',
   },
-  themeColors: {},
   backgroundColors: {
-    ultra: '#110f16',
-    background: '#1a1722',
+    ultra: '#100f1a',
+    background: '#12111f',
     overlay: 'rgba(17, 15, 22, 0.75)',
   },
   borderColors: {
     mito: '#2c3258',
     ultra: '#681854',
   },
-  fontColors: {
-    anchor: '#5effbd',
-    header: '#ffc4e2',
-    muted: '#48676a',
-    lead: '#48676a',
-    component: '#bf9afc',
+  typographyColors: {
+    anchor: '#a6ffdd',
+    heading: '#baf0ff',
+    lead: '#b3cdd4',
+    muted: '#8e999c',
+    radvender: '#bf9afc',
   },
 }
 

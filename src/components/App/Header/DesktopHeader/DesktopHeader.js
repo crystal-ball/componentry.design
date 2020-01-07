@@ -10,8 +10,17 @@ const navContainerStyles = ({ borderColors }) => css`
   box-shadow: 0 0 10px ${borderColors.ultra};
 `
 
-const iconAnchorStyles = css`
-  font-size: 24px;
+const navButtonStyles = ({ themeColors }) => css`
+  color: ${themeColors.primary};
+  text-shadow: ${themeColors.primary} 1px 0px 10px;
+  opacity: 0.75;
+  transition: opacity 0.3s;
+
+  &:hover {
+    color: ${themeColors.primary};
+    opacity: 1;
+    text-decoration: none;
+  }
 `
 
 export default function Header() {
@@ -31,9 +40,21 @@ export default function Header() {
         css={navContainerStyles}
       >
         {renderLandingLink ? (
-          <Link to='/' fontColor='primary' className='h4 line-height-1'>
-            Componentry
-          </Link>
+          <Flex align='center'>
+            <Anchor href='https://github.com/crystal-ball/componentry' mx='sm'>
+              <Icon
+                id='github'
+                fontColor='primary'
+                fontSize={24}
+                className='d-block'
+                font={false}
+              />
+            </Anchor>
+
+            <Link to='/' fontColor='primary' className='h4 line-height-1 raddow-1'>
+              componentry
+            </Link>
+          </Flex>
         ) : (
           <div />
         )}
@@ -41,7 +62,9 @@ export default function Header() {
         <Flex align='center'>
           {/* Setup */}
           <Dropdown>
-            <Dropdown.Trigger mx='sm'>Setup</Dropdown.Trigger>
+            <Dropdown.Trigger mx='sm' css={navButtonStyles}>
+              Setup
+            </Dropdown.Trigger>
             <Dropdown.Content>
               {routes.setup.map(({ name, path }) => (
                 <Dropdown.Item key={path} as={Link} to={path}>
@@ -53,7 +76,9 @@ export default function Header() {
 
           {/* Design System */}
           <Dropdown>
-            <Dropdown.Trigger mx='sm'>Design System</Dropdown.Trigger>
+            <Dropdown.Trigger mx='sm' css={navButtonStyles}>
+              Design System
+            </Dropdown.Trigger>
             <Dropdown.Content>
               {routes.design.map(({ name, path }) => (
                 <Dropdown.Item key={path} as={Link} to={path}>
@@ -65,7 +90,9 @@ export default function Header() {
 
           {/* Components */}
           <Dropdown>
-            <Dropdown.Trigger mx='sm'>Components</Dropdown.Trigger>
+            <Dropdown.Trigger mx='sm' css={navButtonStyles}>
+              Components
+            </Dropdown.Trigger>
             <Dropdown.Content>
               {routes.components.map(({ name, path }) => (
                 <Dropdown.Item key={path} as={Link} to={path}>
@@ -77,8 +104,10 @@ export default function Header() {
 
           {/* Principles */}
           <Dropdown>
-            <Dropdown.Trigger mx='sm'>Principles</Dropdown.Trigger>
-            <Dropdown.Content>
+            <Dropdown.Trigger mx='sm' css={navButtonStyles}>
+              Principles
+            </Dropdown.Trigger>
+            <Dropdown.Content className='align-right'>
               {routes.principles.map(({ name, path }) => (
                 <Dropdown.Item key={path} as={Link} to={path}>
                   {name}
@@ -86,14 +115,6 @@ export default function Header() {
               ))}
             </Dropdown.Content>
           </Dropdown>
-
-          <Anchor
-            href='https://github.com/crystal-ball/componentry'
-            mx='sm'
-            css={iconAnchorStyles}
-          >
-            <Icon id='github' className='d-block' font={false} />
-          </Anchor>
         </Flex>
       </Flex>
     </Block>

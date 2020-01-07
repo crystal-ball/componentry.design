@@ -8,6 +8,7 @@ package-lock.json
 # Sass theme definition
 src/styles/theme.scss
 src/theme/radical.scss
+src/theme/radical-css-variables.scss
 
 # Jest LCOV output
 coverage

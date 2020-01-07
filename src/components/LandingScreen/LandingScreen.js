@@ -1,7 +1,7 @@
 import React from 'react'
-import { Card, Flex, Heading, Icon, Text, useMedia } from 'componentry'
+import { Anchor, Card, Flex, Heading, Icon, Text, useMedia } from 'componentry'
 import { css } from '@emotion/core'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import Radpack from '@/media/radpack.jpg'
 import { ScreenContainer } from '@/components/universal'
@@ -23,6 +23,7 @@ const heroTextStyles = css`
 
 const contentSectionStyles = ({ borderColors }) => css`
   box-shadow: 0 0 10px ${borderColors.ultra};
+  flex-grow: 1;
 `
 
 export default function LandingScreen() {
@@ -30,21 +31,22 @@ export default function LandingScreen() {
   return (
     <ScreenContainer>
       <div css={heroBackgroundStyles} />
-      <Flex direction='column' justify='center' py='xl' mb='xl'>
+      <Flex direction='column' justify='center' m={sm ? 'sm' : 'xl'} pb='xl'>
         <Heading
           fontColor='primary'
-          className={classnames({
+          className={cx('raddow-1', {
             'display-1': !sm,
           })}
           data-testid='title'
         >
-          Componentry
+          componentry
         </Heading>
         <Flex align='center'>
           <Icon id='tuning' className='display-1' fontColor='anchor' font={false} />
           <Text
-            className={classnames({ lead: !sm, 'font-size-xl': sm })}
+            className={cx('raddow-2', { lead: !sm, 'font-size-xl': sm })}
             ml='base'
+            mb={0}
             css={heroTextStyles}
           >
             A design system for building radical React applications
@@ -54,13 +56,13 @@ export default function LandingScreen() {
 
       <Flex
         background='background'
-        p='lg'
-        className='fullscreen-row'
+        p='xl'
+        className='screen-row'
         align='center'
         direction='column'
         css={contentSectionStyles}
       >
-        <Card className={classnames('mb-lg', { 'w-50': !sm })}>
+        <Card className={cx('mb-lg', { 'w-50': !sm })}>
           <Card.Body>
             <Heading as='h4'>
               <Icon id='color-palette' font={false} /> Radically simpler
@@ -72,7 +74,7 @@ export default function LandingScreen() {
             </p>
           </Card.Body>
         </Card>
-        <Card className={classnames('mb-lg', { 'w-50': !sm })}>
+        <Card className={cx('mb-lg', { 'w-50': !sm })}>
           <Card.Body>
             <Heading as='h4'>
               <Icon id='hot' font={false} /> Radically smaller
@@ -83,7 +85,7 @@ export default function LandingScreen() {
             </p>
           </Card.Body>
         </Card>
-        <Card className={classnames({ 'w-50': !sm })}>
+        <Card className={cx({ 'w-50': !sm })}>
           <Card.Body>
             <Heading as='h4'>
               <Icon id='mood-happy-outline' font={false} /> Radically funner
@@ -96,6 +98,19 @@ export default function LandingScreen() {
             </p>
           </Card.Body>
         </Card>
+      </Flex>
+      <Flex p='base' justify='center' background='mito' className='screen-row'>
+        <Anchor href='https://github.com/crystal-ball/componentry'>
+          <Icon
+            id='github'
+            fontColor='primary'
+            font={false}
+            css={css`
+              display: block;
+              font-size: ${sm ? '20' : '32'}px;
+            `}
+          />
+        </Anchor>
       </Flex>
     </ScreenContainer>
   )

@@ -15,8 +15,6 @@
  * convenience, the webpack configurations enable importing the theme variables
  * into any component style file with `@import 'theme';`
  */
-// @import '~componentry/styles/themes/radical';
-// @import '~componentry/styles/themes/radical-css-variables';
 @import './theme/radical';
 @import './theme/radical-css-variables';
 
