@@ -2,23 +2,66 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import { ScreenContainer } from '@/components/universal'
-import ActiveScreen from './screens/active.mdx'
-import AnchorScreen from './screens/anchor.mdx'
-import BlockScreen from './screens/block.mdx'
-import ButtonScreen from './screens/button.mdx'
-import FlexScreen from './screens/flex.mdx'
-import HeaderScreen from './screens/heading.mdx'
+import { routes } from '@/components/App/routes'
+import Active from './screens/active.mdx'
+import Alert from './screens/alert.mdx'
+import Anchor from './screens/anchor.mdx'
+import Badge from './screens/badge.mdx'
+import Block from './screens/block.mdx'
+import Button from './screens/button.mdx'
+import Card from './screens/card.mdx'
+import Close from './screens/close.mdx'
+import Drawer from './screens/drawer.mdx'
+import Dropdown from './screens/dropdown.mdx'
+import Flex from './screens/flex.mdx'
+import FormGroup from './screens/form-group.mdx'
+import Heading from './screens/heading.mdx'
+import Icon from './screens/icon.mdx'
+import Input from './screens/input.mdx'
+import ListGroup from './screens/list-group.mdx'
+import Media from './screens/media.mdx'
+import Modal from './screens/modal.mdx'
+import Nav from './screens/nav.mdx'
+import Popover from './screens/popover.mdx'
+import Tabs from './screens/tabs.mdx'
+import Text from './screens/text.mdx'
+import Theme from './screens/theme.mdx'
+import Tooltip from './screens/tooltip.mdx'
+
+const screens = {
+  Active,
+  Alert,
+  Anchor,
+  Badge,
+  Block,
+  Button,
+  Card,
+  Close,
+  Drawer,
+  Dropdown,
+  Flex,
+  FormGroup,
+  Heading,
+  Icon,
+  Input,
+  ListGroup,
+  Media,
+  Modal,
+  Nav,
+  Popover,
+  Tabs,
+  Text,
+  Theme,
+  Tooltip,
+}
 
 export default function ComponentsScreen() {
   return (
     <ScreenContainer>
       <Switch>
-        <Route path='/components/active' component={ActiveScreen} />
-        <Route path='/components/anchor' component={AnchorScreen} />
-        <Route path='/components/block' component={BlockScreen} />
-        <Route path='/components/button' component={ButtonScreen} />
-        <Route path='/components/flex' component={FlexScreen} />
-        <Route path='/components/heading' component={HeaderScreen} />
+        {routes.components.map(({ name, path }) => (
+          <Route key={path} path={path} component={screens[name]} />
+        ))}
       </Switch>
     </ScreenContainer>
   )

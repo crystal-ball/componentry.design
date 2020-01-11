@@ -4,7 +4,7 @@ import { Anchor, Block, Dropdown, Flex, Icon } from 'componentry'
 import { css } from '@emotion/core'
 
 import { Link } from '@/components/universal'
-import { routes } from '../../routes'
+import { routes } from '@/components/App/routes'
 
 const navContainerStyles = ({ borderColors }) => css`
   box-shadow: 0 0 10px ${borderColors.ultra};
