@@ -7,7 +7,12 @@ export function AnchorExamples() {
     <>
       <Flex>
         {fontColors.map(color => (
-          <Button key={color} size="sm" className='mx-2' onClick={() => updateTextColor(color)}>
+          <Button
+            key={color}
+            size='sm'
+            className='mx-2'
+            onClick={() => updateTextColor(color)}
+          >
             {color}
           </Button>
         ))}
@@ -17,6 +22,5 @@ export function AnchorExamples() {
   )
 }
 
-<ComponentHeading name="anchor" />
-
+<ComponentHeading name='anchor' />
 <AnchorExamples />
