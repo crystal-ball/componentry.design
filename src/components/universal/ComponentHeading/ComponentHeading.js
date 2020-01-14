@@ -1,6 +1,6 @@
 import React from 'react'
-import { string } from 'prop-types'
-import { Heading } from 'componentry'
+import { arrayOf, string } from 'prop-types'
+import { Anchor, Block, Heading, Icon, Text } from 'componentry'
 
 import { css } from '@emotion/core'
 
@@ -9,14 +9,33 @@ const headingStyles = ({ typographyColors, typography }) => css`
   color: ${typographyColors.radvender};
 `
 
-export default function ComponentHeading({ name }) {
+export default function ComponentHeading({ components, name }) {
   return (
-    <Heading className='raddow-1' my='xl' textAlign='right' css={headingStyles}>
-      {`<${name}/>`}
-    </Heading>
+    <>
+      <Heading className='raddow-1' mt='xl' mb={0} css={headingStyles}>
+        {`<${name.toLowerCase()}/>`}
+      </Heading>
+      <Block ml={75}>
+        <Text variant='caption' mb={0}>
+          Components: {components.join(', ')}
+        </Text>
+        <Text variant='caption'>
+          <Anchor
+            fontSize='sm'
+            target='_blank'
+            rel='noopener'
+            href={`https://github.com/crystal-ball/componentry/blob/master/src/${name}/${name}.js`}
+          >
+            <Icon id='github' mr='xs' />
+            Source
+          </Anchor>
+        </Text>
+      </Block>
+    </>
   )
 }
 
 ComponentHeading.propTypes = {
+  components: arrayOf(string).isRequired,
   name: string.isRequired,
 }

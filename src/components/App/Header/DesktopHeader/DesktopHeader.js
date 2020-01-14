@@ -51,7 +51,7 @@ export default function Header() {
               />
             </Anchor>
 
-            <Link to='/' fontColor='primary' className='h4 line-height-1 raddow-1'>
+            <Link to='/' fontColor='primary' className='heading-4 line-height-1 raddow-1'>
               componentry
             </Link>
           </Flex>

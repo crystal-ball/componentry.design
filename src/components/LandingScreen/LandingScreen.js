@@ -17,10 +17,6 @@ const heroBackgroundStyles = ({ backgroundColors }) => css`
   z-index: -1;
 `
 
-const heroTextStyles = css`
-  max-width: 450px;
-`
-
 const contentSectionStyles = ({ borderColors }) => css`
   box-shadow: 0 0 10px ${borderColors.ultra};
   flex-grow: 1;
@@ -33,22 +29,16 @@ export default function LandingScreen() {
       <div css={heroBackgroundStyles} />
       <Flex direction='column' justify='center' m={sm ? 'sm' : 'xl'} pb='xl'>
         <Heading
+          variant={sm ? 'heading-1' : 'display-1'}
           fontColor='primary'
-          className={cx('raddow-1', {
-            'display-1': !sm,
-          })}
+          className='raddow-1'
           data-testid='title'
         >
           componentry
         </Heading>
         <Flex align='center'>
           <Icon id='tuning' className='display-1' fontColor='anchor' font={false} />
-          <Text
-            className={cx('raddow-2', { lead: !sm, 'font-size-xl': sm })}
-            ml='base'
-            mb={0}
-            css={heroTextStyles}
-          >
+          <Text variant='lead' className='raddow-2' ml='base' mb={0} maxWidth={450}>
             A design system for building radical React applications
           </Text>
         </Flex>
@@ -64,7 +54,7 @@ export default function LandingScreen() {
       >
         <Card className={cx('mb-lg', { 'w-50': !sm })}>
           <Card.Body>
-            <Heading as='h4'>
+            <Heading variant='heading-4'>
               <Icon id='color-palette' font={false} /> Radically simpler
             </Heading>
 
@@ -76,7 +66,7 @@ export default function LandingScreen() {
         </Card>
         <Card className={cx('mb-lg', { 'w-50': !sm })}>
           <Card.Body>
-            <Heading as='h4'>
+            <Heading variant='heading-4'>
               <Icon id='hot' font={false} /> Radically smaller
             </Heading>
 
@@ -87,7 +77,7 @@ export default function LandingScreen() {
         </Card>
         <Card className={cx({ 'w-50': !sm })}>
           <Card.Body>
-            <Heading as='h4'>
+            <Heading variant='heading-4'>
               <Icon id='mood-happy-outline' font={false} /> Radically funner
             </Heading>
 
