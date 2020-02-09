@@ -1,26 +1,9 @@
-import { useState } from 'react'
-import { fontColors } from '@/theme/componentry'
+<ComponentHeading
+name='Anchor'
+components={['Anchor']}
+/>
+<Text variant='lead'>Create anchors</Text>
 
-export function AnchorExamples() {
-  const [textColor, updateTextColor] = useState('anchor')
-  return (
-    <>
-      <Flex>
-        {fontColors.map(color => (
-          <Button
-            key={color}
-            size='sm'
-            className='mx-2'
-            onClick={() => updateTextColor(color)}
-          >
-            {color}
-          </Button>
-        ))}
-      </Flex>
-      <Anchor color={textColor}>Radical React Components</Anchor>
-    </>
-  )
-}
-
-<ComponentHeading name='Anchor' components={['Anchor']} />
-<AnchorExamples />
+```javascript
+<Anchor href='https://componentry.design'>Componentry</Anchor>
+```

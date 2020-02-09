@@ -1,4 +1,22 @@
 <ComponentHeading
-  name='card'
-  components={['Card', 'Card.Body', 'Card.Footer', 'Card.Header', 'Card.Title']}
+name='card'
+components={['Card',
+'Card.Body',
+'Card.Footer',
+'Card.Header',
+'Card.Title']}
 />
+<Text variant='lead'>
+  Flexible and extensible content containers with multiple variants and options.
+</Text>
+
+```javascript
+<Card>
+  <Card.Header>Card Header</Card.Header>
+  <Card.Body>
+    <Card.Title>Card title</Card.Title>
+    <p className='card-text'>Card Body Content.</p>
+  </Card.Body>
+  <Card.Footer>2 days ago</Card.Footer>
+</Card>
+```
