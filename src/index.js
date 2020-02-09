@@ -4,7 +4,7 @@
  */
 import 'react-hot-loader'
 import React from 'react'
-import { render } from 'react-dom' // eslint-disable-line
+import { render } from 'react-dom'
 
 import { BrowserRouter } from 'react-router-dom'
 import { MDXProvider } from '@mdx-js/react'
