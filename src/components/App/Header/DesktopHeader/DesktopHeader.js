@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import { Anchor, Block, Dropdown, Flex, Icon } from 'componentry'
 import { css } from '@emotion/core'
+import { Anchor, Block, Dropdown, Flex, Icon } from 'componentry'
 
 import { Link } from '@/components/universal'
 import { routes } from '@/components/App/routes'

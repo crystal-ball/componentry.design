@@ -1,7 +1,7 @@
 import React from 'react'
-import { Anchor, Card, Flex, Heading, Icon, Text, useMedia } from 'componentry'
 import { css } from '@emotion/core'
 import cx from 'classnames'
+import { Anchor, Card, Flex, Heading, Icon, Text, useMedia } from 'componentry'
 
 import Radpack from '@/media/radpack.jpg'
 import { ScreenContainer } from '@/components/universal'
@@ -54,8 +54,9 @@ export default function LandingScreen() {
       >
         <Card className={cx('mb-lg', { 'w-50': !sm })}>
           <Card.Body>
-            <Heading variant='heading-4'>
-              <Icon id='color-palette' font={false} /> Radically simpler
+            <Heading variant='heading-4' className='d-flex'>
+              <Icon id='color-palette' mr='sm' />
+              Radically simpler
             </Heading>
 
             <p className='card-text flex-grow-1'>
@@ -66,8 +67,9 @@ export default function LandingScreen() {
         </Card>
         <Card className={cx('mb-lg', { 'w-50': !sm })}>
           <Card.Body>
-            <Heading variant='heading-4'>
-              <Icon id='hot' font={false} /> Radically smaller
+            <Heading variant='heading-4' className='d-flex'>
+              <Icon id='hot' mr='sm' />
+              Radically smaller
             </Heading>
 
             <p className='card-text'>
@@ -77,8 +79,9 @@ export default function LandingScreen() {
         </Card>
         <Card className={cx({ 'w-50': !sm })}>
           <Card.Body>
-            <Heading variant='heading-4'>
-              <Icon id='mood-happy-outline' font={false} /> Radically funner
+            <Heading variant='heading-4' className='d-flex'>
+              <Icon id='mood-happy-outline' mr='sm' />
+              Radically funner
             </Heading>
 
             <p className='card-text'>
@@ -94,7 +97,6 @@ export default function LandingScreen() {
           <Icon
             id='github'
             fontColor='primary'
-            font={false}
             css={css`
               display: block;
               font-size: ${sm ? '20' : '32'}px;
