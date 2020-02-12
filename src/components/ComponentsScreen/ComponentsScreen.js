@@ -18,7 +18,7 @@ import FormGroup from './screens/form-group.mdx'
 import Heading from './screens/heading.mdx'
 import Icon from './screens/icon.mdx'
 import Input from './screens/input.mdx'
-import ListGroup from './screens/list-group.mdx'
+import List from './screens/list.mdx'
 import Media from './screens/media.mdx'
 import Modal from './screens/modal.mdx'
 import Nav from './screens/nav.mdx'
@@ -44,7 +44,7 @@ const screens = {
   Heading,
   Icon,
   Input,
-  ListGroup,
+  List,
   Media,
   Modal,
   Nav,
