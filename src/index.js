@@ -8,9 +8,9 @@ import { render } from 'react-dom'
 
 import { BrowserRouter } from 'react-router-dom'
 import { MDXProvider } from '@mdx-js/react'
-import { Theme as ComponentryTheme, Media, setupOutlineHandlers } from 'componentry'
 import { ThemeProvider as EmotionTheme } from 'emotion-theming'
 import svgSymbolSpriteLoader from 'svg-symbol-sprite-loader'
+import { Theme as ComponentryTheme, Media, setupOutlineHandlers } from 'componentry'
 
 // ⚠️ Side effects imports, note styles must be imported before components to
 // ensure component styles can override them

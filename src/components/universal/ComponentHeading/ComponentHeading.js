@@ -1,8 +1,7 @@
 import React from 'react'
 import { arrayOf, string } from 'prop-types'
-import { Anchor, Block, Heading, Icon, Text } from 'componentry'
-
 import { css } from '@emotion/core'
+import { Anchor, Block, Heading, Icon, Text } from 'componentry'
 
 const headingStyles = ({ typographyColors, typography }) => css`
   font-family: ${typography.fontFamilyDisplay};

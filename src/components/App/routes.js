@@ -24,7 +24,7 @@ export const routes = {
     { name: 'Heading', path: '/components/heading' },
     { name: 'Icon', path: '/components/icon' },
     { name: 'Input', path: '/components/input' },
-    { name: 'ListGroup', path: '/components/list-group' },
+    { name: 'List', path: '/components/list' },
     { name: 'Media', path: '/components/media' },
     { name: 'Modal', path: '/components/modal' },
     { name: 'Nav', path: '/components/nav' },

@@ -1,8 +1,5 @@
-<ComponentHeading
-name='Alert'
-components={['Alert',
-'Alert.Close']}
-/>
+<ComponentHeading name='Alert' components={['Alert', 'Alert.Close']} />
+
 <Text variant='lead'>
   Provide contextual feedback messages for user actions using theme colors.
 </Text>
@@ -15,3 +12,25 @@ components={['Alert',
   </Alert>
 </Active>
 ```
+
+## Outline 
+
+<Active defaultActive>
+  <Alert color='primary' outline>
+    <h4 className='alert-heading'>Well done!</h4>
+    <p className='mb-0'>You successfully read this important alert message.</p>
+  </Alert>
+</Active>
+
+## Dismissible
+
+<Active defaultActive>
+  <Alert color='primary' dismissible>
+    <h4 className='alert-heading'>Well done!</h4>
+    <p className='mb-0'>You successfully read this important alert message.</p>
+    <hr className='hr' />
+    <a href='#' className='a alert-link'>
+      Go home
+    </a>.
+  </Alert>
+</Active>

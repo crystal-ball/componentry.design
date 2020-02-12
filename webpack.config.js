@@ -1,5 +1,3 @@
-/* global module */
-
 const path = require('path') // eslint-disable-line
 const webpackBase = require('@crystal-ball/webpack-base')
 
@@ -19,6 +17,11 @@ module.exports = () => {
   const { configs } = webpackBase({
     envVars: { PACKAGE_VERSION: '0.0.0' },
   })
+
+  // Ensure that when componentry is npm-linked only one version of React is
+  // used in the bundle or it will blow up
+  configs.resolve.alias['react-dom'] = path.resolve('node_modules/react-dom')
+  configs.resolve.alias.react = path.resolve('node_modules/react')
 
   /*
    * Handle non-standard, advanced project customization by directly updating
