@@ -1,6 +1,8 @@
 'use strict'
 
+const eloquence = require('eslint-config-eloquence')
+
 module.exports = {
   root: true,
-  extends: 'eloquence/react',
+  ...eloquence({ target: 'react' }),
 }

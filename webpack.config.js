@@ -1,4 +1,6 @@
-const path = require('path') // eslint-disable-line
+'use strict'
+
+const path = require('path')
 const webpackBase = require('@crystal-ball/webpack-base')
 
 /*

@@ -22,6 +22,7 @@ import { components } from './components/App/mdx-components'
 import { componentryTheme } from './theme/componentry'
 import { emotionTheme } from './theme/emotion'
 
+/* global process */
 // Injects SVG symbol sprite into document from local storage if it exists,
 // otherwise fetch, cache in local storage and inject.
 svgSymbolSpriteLoader({ useCache: process.env.NODE_ENV === 'production' })

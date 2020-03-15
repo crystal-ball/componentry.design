@@ -1,4 +1,4 @@
-/* eslint-env node */
+'use strict'
 
 module.exports = {
   // Provides nice test output of what's being run
@@ -27,8 +27,6 @@ module.exports = {
   // Configure Jest resolver for non-standard project import and UI resources
   // handled by webpack
   moduleNameMapper: {
-    // Configuration for resolving project `@` relative imports
-    '@/(.*)$': '<rootDir>/src/$1',
     componentry: '<rootDir>/node_modules/componentry/src',
     // webpack non-js resources loader mocks
     '\\.(png|jpg)': '<rootDir>/__mocks__/file-loader-mock.js',
