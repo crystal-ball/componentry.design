@@ -1,5 +1,41 @@
-<ComponentHeading name='Nav' components={['Nav', 'Nav.Item']} />
-<Text variant='lead'></Text>
+<ComponentHeading name='Nav' components={['Nav']} />
+
+<Text variant='lead'>Create navigation sections</Text>
+
+The Nav component creates a nav container that Anchor components are included
+in. Pass a truthy `navItem` prop to the Anchor components for flex layouts. Flex
+layout props are available on the Nav container for setting Anchor spacing and
+direction.
+
+<Nav>
+  <Anchor navItem active href='#'>
+    Active
+  </Anchor>
+  <Anchor navItem href='#'>React</Anchor>
+  <Anchor navItem href='#'>Redux</Anchor>
+  <Anchor navItem href='#' disabled>
+    Styles
+  </Anchor>
+</Nav>
 
 ```javascript
+<Nav>
+  <Anchor navItem active href='#'>
+    Active
+  </Anchor>
+  <Anchor navItem href='#'>React</Anchor>
+  <Anchor navItem href='#'>Redux</Anchor>
+  <Anchor navItem href='#' disabled>
+    Styles
+  </Anchor>
+</Nav>
 ```
+
+## A++ A11y
+
+- Nav containers are an HTML `nav` element with a role of `navigation`. They should be
+  used for demarcating navigation sections in your application.
+- HTML `nav` elements can contain lists (traditional) but also can contain anchors not in
+  a list structure. Because both are valid, Componentry defaults to a listless structure
+  for maximum flexibility. Additional motivation is from this CSS Tricks analysis:
+  [Navigation in Lists: To Be or Not To Be](https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/)

@@ -1,3 +1,5 @@
+import { Tabs } from 'componentry'
+
 <ComponentHeading
   name='Tabs'
   components={[
@@ -8,7 +10,60 @@
     'Tabs.Trigger',
   ]}
 />
-<Text variant='lead'></Text>
+<Text variant='lead'>Create tabs</Text>
+
+Tabs are a compound active component, the `activeId` passed to each tab trigger will
+control the tab content with the matching `activeId`
+
+<Tabs defaultActive='one'>
+  <Tabs.TriggersContainer aria-label='Sample Tabs'>
+    <Tabs.Trigger activeId='one'>Item 1</Tabs.Trigger>
+    <Tabs.Trigger activeId='two'>Tab with long name</Tabs.Trigger>
+    <Tabs.Trigger activeId='three'>Item 3</Tabs.Trigger>
+    <Tabs.Trigger activeId='four' disabled>
+      Disabled
+    </Tabs.Trigger>
+  </Tabs.TriggersContainer>
+  <Tabs.ContentContainer>
+    <Tabs.Content activeId='one'>Tab 1</Tabs.Content>
+    <Tabs.Content activeId='two'>Tab 2</Tabs.Content>
+    <Tabs.Content activeId='three'>Tab 3</Tabs.Content>
+    <Tabs.Content activeId='four'>This tab has been disabled</Tabs.Content>
+  </Tabs.ContentContainer>
+</Tabs>
 
 ```javascript
+<Tabs defaultActive='one'>
+  <Tabs.TriggersContainer>
+    <Tabs.Trigger activeId='one'>Item 1</Tabs.Trigger>
+    <Tabs.Trigger activeId='two'>Tab with long name</Tabs.Trigger>
+    <Tabs.Trigger activeId='three'>Item 3</Tabs.Trigger>
+    <Tabs.Trigger activeId='four' disabled>
+      Disabled
+    </Tabs.Trigger>
+  </Tabs.TriggersContainer>
+  <Tabs.ContentContainer>
+    <Tabs.Content activeId='one'>Tab 1</Tabs.Content>
+    <Tabs.Content activeId='two'>Tab 2</Tabs.Content>
+    <Tabs.Content activeId='three'>Tab 3</Tabs.Content>
+    <Tabs.Content activeId='four'>This tab has been disabled</Tabs.Content>
+  </Tabs.ContentContainer>
+</Tabs>
 ```
+
+## A++ A11y
+
+- The list of tabs has a role `tablist` and should be passed an `aria-label` describing
+  the tabs.
+- Each tab inside the `tabslist` container should be a button with the role `tab`. Using
+  buttons simplifies keyboard accessibility.
+- Each tab should also have an `aria-selected`, `aria-controls`, `id` and `tabindex`
+  property.
+- Each content panel of the tab should have a `tabpanel` role.
+- Each content panel should also have an id, a tabindex, an aria-labelledby, and a hidden
+  property.
+
+CONTAINER: `div` with role `tablist` TAB: `button` with role `tab` CONTENT: `div` with
+role `tabpanel`
+
+- [Example of an accessible tabs element from MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)

@@ -1,0 +1,18 @@
+# Library architecture decisions
+
+## Items
+
+_On Dropdown.Item, List.Item, Nav.Item_
+
+At this time Item components are not abstracted into some factory because there are enough
+differences that it isn't value added.
+
+- Dropdown content by default is not assumed to be a list, Dropdowns may have lists in
+  them, but they may also have headers, form elements, text, etc. Interactive dropdown
+  items are also most likely to be a button.
+- List content is assumed to be a list, but may be a list of text, anchors or buttons.
+  Although the default container is a `ul`, it's technically invalid HTML to include
+  anything other than an `li` in an unordered list.
+- Nav content is assumed to be a set of links, and is not structured as a list. Nav items
+  are assumed to be `a` elements within `nav` container that provides some shortcut layout
+  options.
