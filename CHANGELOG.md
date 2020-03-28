@@ -1,4 +1,4 @@
-# componentry-dot-design
+# componentry.design
 
 This project strictly adheres to semver and will err on the side of releasing
 majors when changes could possibly introduce breaking changes. This changelog is

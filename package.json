@@ -1,5 +1,5 @@
 {
-  "name": "componentry-dot-design",
+  "name": "componentry.design",
   "version": "0.0.0",
   "description": "Componentry documentation application",
   "keywords": [
@@ -12,7 +12,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/crystal-ball/componentry-dot-design.git"
+    "url": "https://github.com/crystal-ball/componentry.design"
   },
   "engines": {
     "node": "12"

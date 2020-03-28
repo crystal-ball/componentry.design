@@ -4,7 +4,7 @@
   </h1>
 
   <!-- prettier-ignore-start -->
-  <a href="https://zeit.co/crystal-ball/componentry-dot-design">
+  <a href="https://zeit.co/crystal-ball/componentry.design">
     <img src="https://img.shields.io/badge/hosting-▲%20Zeit-7de0c4" alt="Zeit Now" valign="text-top" />
   </a>
   <a href="https://renovatebot.com/">
@@ -13,7 +13,7 @@
   <a href="https://commitizen.github.io/cz-cli/">
     <img src="https://img.shields.io/badge/Commitizen-%E2%9C%93%20friendly-10e67b" alt="Commitizen friendly" valign="text-top" />
   </a>
-  <a href="https://github.com/crystal-ball/componentry-dot-design#workspaces/-projects-5b88b5c9af3c0a2186966767/board?repos=205958183">
+  <a href="https://github.com/crystal-ball/componentry.design#workspaces/-projects-5b88b5c9af3c0a2186966767/board?repos=205958183">
     <img src="https://img.shields.io/badge/ZenHub-managed-5e60ba.svg" alt="ZenHub" valign="text-top" />
   </a>
   <a href="./CODE_OF_CONDUCT.md">
