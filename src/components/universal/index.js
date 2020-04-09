@@ -1,4 +1,5 @@
 export { default as CodeBlock } from './CodeBlock/CodeBlock'
+export { default as CodePreview, PreviewPropsContainer } from './CodePreview/CodePreview'
 export { default as ComponentHeading } from './ComponentHeading/ComponentHeading'
 export { default as Link } from './Link/Link'
 export { default as ScreenContainer } from './ScreenContainer/ScreenContainer'

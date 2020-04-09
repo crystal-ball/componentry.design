@@ -7,11 +7,11 @@ import Highlight, { defaultProps } from 'prism-react-renderer'
 
 // https://mdxjs.com/guides/syntax-highlighting#build-a-codeblock-component
 export default function CodeBlock({ children, className: mdxClassName }) {
-  const language = mdxClassName.replace(/language-/, '')
+  const language = mdxClassName.replace(/language-/, '') || 'javascript'
   return (
-    <Highlight {...defaultProps} code={children} language={language}>
+    <Highlight {...defaultProps} code={children} language={language} theme={null}>
       {({ className, tokens, getLineProps, getTokenProps }) => (
-        <pre className={cx('bg-ultra border border-mito border-radius p-lg', className)}>
+        <pre className={cx('border border-mito border-radius p-lg', className)}>
           {tokens.map((line, i) => {
             // It seems like every codeblock ends with an empty line, which
             // looks bad so skip rendering them
