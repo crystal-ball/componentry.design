@@ -5,6 +5,7 @@ import { Anchor, Card, Flex, Heading, Icon, Text, useMedia } from 'componentry'
 
 import Radpack from '@/media/radpack.jpg'
 import { ScreenContainer } from '@/components/universal'
+import Hologram from './Hologram/Hologram'
 
 const heroBackgroundStyles = ({ backgroundColors }) => css`
   position: absolute;
@@ -27,20 +28,24 @@ export default function LandingScreen() {
   return (
     <ScreenContainer>
       <div css={heroBackgroundStyles} />
-      <Flex direction='column' justify='center' m={sm ? 'sm' : 'xl'} pb='xl'>
-        <Heading
-          variant={sm ? 'heading-1' : 'display-1'}
-          fontColor='primary'
-          className='raddow-1'
-          data-testid='title'
-        >
-          componentry
-        </Heading>
-        <Flex align='center'>
-          <Icon id='tuning' className='display-1' fontColor='anchor' font={false} />
-          <Text variant='lead' className='raddow-2' ml='base' mb={0} maxWidth={450}>
-            A design system for building radical React applications
-          </Text>
+      <Flex m={sm ? 'sm' : 'xl'} pb='xl'>
+        <Hologram />
+        <Flex direction='column' justify='center' ml='xl'>
+          <Heading
+            variant={sm ? 'heading-1' : 'display-1'}
+            fontColor='primary'
+            className='raddow-1'
+            mb='sm'
+            mt={0}
+            data-testid='title'
+          >
+            {`<Componentry />`}
+          </Heading>
+          <Flex align='center'>
+            <Text variant='lead' className='raddow-2' ml='base' mb={0} maxWidth={500}>
+              React component library for building radical design systems
+            </Text>
+          </Flex>
         </Flex>
       </Flex>
 

@@ -3,12 +3,12 @@ import { Route, Switch } from 'react-router-dom'
 
 import { ScreenContainer } from '@/components/universal'
 import { routes } from '@/components/App/routes'
+import ButtonScreen from './ButtonScreen/ButtonScreen'
 import Active from './screens/active.mdx'
 import Alert from './screens/alert.mdx'
 import Anchor from './screens/anchor.mdx'
 import Badge from './screens/badge.mdx'
 import Block from './screens/block.mdx'
-import Button from './screens/button.mdx'
 import Card from './screens/card.mdx'
 import Close from './screens/close.mdx'
 import Drawer from './screens/drawer.mdx'
@@ -34,7 +34,7 @@ const screens = {
   Anchor,
   Badge,
   Block,
-  Button,
+  Button: ButtonScreen,
   Card,
   Close,
   Drawer,
