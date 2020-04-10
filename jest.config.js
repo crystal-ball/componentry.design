@@ -27,7 +27,7 @@ module.exports = {
   // Configure Jest resolver for non-standard project import and UI resources
   // handled by webpack
   moduleNameMapper: {
-    componentry: '<rootDir>/node_modules/componentry/src',
+    'componentry': '<rootDir>/node_modules/componentry/src',
     // webpack non-js resources loader mocks
     '\\.(png|jpg)': '<rootDir>/__mocks__/file-loader-mock.js',
     '\\.scss': '<rootDir>/__mocks__/scss-loader-mock.js',
