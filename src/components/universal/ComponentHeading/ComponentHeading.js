@@ -11,8 +11,8 @@ const headingStyles = ({ typographyColors, typography }) => css`
 export default function ComponentHeading({ components, name }) {
   return (
     <>
-      <Heading className='raddow-1' mt='xl' mb={0} css={headingStyles}>
-        {`<${name.toLowerCase()}/>`}
+      <Heading className='raddow-1' mt='xl' mb={0} css={headingStyles} letterSpacing={0}>
+        {`<${name}/>`}
       </Heading>
       <Block ml={75}>
         <Text variant='caption' mb={0}>

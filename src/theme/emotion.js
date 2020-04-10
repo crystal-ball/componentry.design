@@ -6,7 +6,7 @@ export const emotionTheme = {
   typography: {
     fontFamilySansSerif: '"Play", serif',
     fontFamilyMonospace: '"Fira Code", monospace',
-    fontFamilyDisplay: '"Major Mono Display", monospace',
+    fontFamilyDisplay: '"Aldrich", monospace',
   },
   themeColors: {
     primary: '#f52277',
@@ -33,6 +33,6 @@ export const emotionTheme = {
  * Emotion ThemeProvider wrapper that can be used with Storybook stories or
  * unit tests.
  */
-export const emotionWrapper = render => (
+export const emotionWrapper = (render) => (
   <EmotionTheme theme={emotionTheme}>{render}</EmotionTheme>
 )
