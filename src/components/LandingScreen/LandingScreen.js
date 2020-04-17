@@ -34,7 +34,6 @@ export default function LandingScreen() {
           <Heading
             variant={sm ? 'heading-1' : 'display-1'}
             fontColor='primary'
-            className='raddow-1'
             mb='sm'
             mt={0}
             data-testid='title'
@@ -42,7 +41,13 @@ export default function LandingScreen() {
             {`<Componentry />`}
           </Heading>
           <Flex align='center'>
-            <Text variant='lead' className='raddow-2' ml='base' mb={0} maxWidth={500}>
+            <Text
+              variant='lead'
+              className='raddow-secondary'
+              ml='base'
+              mb={0}
+              maxWidth={500}
+            >
               React component library for building radical design systems
             </Text>
           </Flex>

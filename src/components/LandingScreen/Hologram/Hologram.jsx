@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Anchor, Block, Flex } from 'componentry'
+import cx from 'classnames'
 
 import UndrawHologram from './undraw_hologram.svg'
+import classes from './hologram.scss'
 
 export default function Hologram() {
   const [hovered, setHovered] = useState(false)
@@ -16,16 +18,16 @@ export default function Hologram() {
         position='absolute'
         justify='center'
         width='100%'
-        aria-hidden={String(!hovered)}
-        style={{ opacity: 0.75, bottom: 4 }}
+        className={cx(classes.anchorContainer, 'fade', { visible: hovered })}
       >
         <Anchor
           href='https://undraw.co/'
+          color='lead'
           fontSize='sm'
           target='_blank'
           rel='noopener noreferrer'
         >
-          Rad illustation by unDraw
+          Illustation by unDraw
         </Anchor>
       </Flex>
     </Block>

@@ -4,9 +4,9 @@ import { ThemeProvider as EmotionTheme } from 'emotion-theming'
 // Emotion styles theme is accessible using emotion-theming
 export const emotionTheme = {
   typography: {
-    fontFamilySansSerif: '"Play", serif',
+    fontFamilyPrimary: '"Play", serif',
+    fontFamilySecondary: '"Aldrich", monospace',
     fontFamilyMonospace: '"Fira Code", monospace',
-    fontFamilyDisplay: '"Aldrich", monospace',
   },
   themeColors: {
     primary: '#f52277',
