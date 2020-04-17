@@ -9,6 +9,11 @@ $enable-caret: false;
 // --------------------------------------------------------
 // Theme Colors
 
+
+$headings: #C7E3EE;
+$body: #b3cdd8;
+$muted: #75B7BB;
+
 $grayscale: (
   '100':  #e4e0f0,
   '500':  #457770,
@@ -17,7 +22,7 @@ $grayscale: (
 
 $theme-colors: (
   background:  #12111f,
-  foreground:  #8bb0b4,
+  foreground:  #C7E3EE,
   primary:     #f52277,
   secondary:   #a6ffdd,
   success:     #c3f920,
@@ -42,10 +47,13 @@ $border-colors: (
 $typography-colors: (
   anchor:    #5cfff1,
   code:      #f85baa,
-  heading:   #aedbe2,
+  heading:   #84bfc2,
   lead:      #aedbe2,
-  muted:     #5f7a7e,
+  muted:     #75B7BB,
   radvender: #bf9afc,
+
+  // just for subheadings -> nuke it
+  caption: #a4ccc0
 );
 
 // --------------------------------------------------------
@@ -62,9 +70,11 @@ $spacing: (
 
 // Fonts
 // ---------------------------------------------------------------------------
-$font-family-sans-serif: 'Play', serif;
+$font-family-primary: 'Play', serif;
+$font-family-secondary: 'Aldrich', monospace;
 $font-family-monospace: 'Fira Code', monospace;
-$font-family-display: 'Aldrich', monospace;
+
+$font-family-sans-serif: $font-family-primary;
 
 $font-size-sm:     var(--font-sm);
 $font-size-base:   var(--font-base);
@@ -72,8 +82,12 @@ $font-size-lg:     var(--font-lg);
 
 $line-height-base: 1.6;
 
-// Headings
-$headings-font-family: $font-family-display;
+// --- Displays
+$display1-size: var(--display1);
+$display2-size: var(--display2);
+
+// --- Headings
+$headings-font-family: $font-family-secondary;
 $headings-font-weight:     400;
 $headings-letter-spacing:  var(--heading-letter-spacing);
 $headings-line-height:     1.5;
@@ -84,16 +98,20 @@ $h2-font-size: var(--h2);
 $h3-font-size: var(--h3);
 $h4-font-size: var(--h4);
 
+// --- Subheadings
 $subheading1-font-size: var(--subheading1);
 $subheading2-font-size: var(--subheading2);
-$subheading3-font-size: var(--subheading3);
-$subheading4-font-size: var(--subheading4);
+$subheading-font-weight: 700;
 
-$display1-size: var(--display1);
-$display2-size: var(--display2);
+$subheading3-font-size: var(--subheading2);
+$subheading4-font-size: var(--subheading2);
 
-// Keep paragraphs to a readable length by default, override with mw-100 where needed
-$paragraph-max-width: 800px;
+$body: (
+  // This is defaulted to null and won't be in the generated styles, but is
+  // available to set a default paragraph width which is highly encouraged for
+  // keeping paragraphs a readable length by default
+  max-width: 800px
+);
 
 $code-font-size: var(--code);
 $lead-font-size: var(--lead);
@@ -123,3 +141,6 @@ $small-font-size: 80%;
 // Componentry defaults for unset variables
 
 @import '~componentry/src/styles/variables';
+
+
+

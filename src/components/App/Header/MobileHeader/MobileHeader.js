@@ -50,11 +50,7 @@ export default function Header() {
     >
       <div css={menuOffsetStyles}>&nbsp;</div>
       {renderLandingLink && (
-        <Heading
-          variant='heading-4'
-          fontColor='primary'
-          className='line-height-1 raddow-1'
-        >
+        <Heading variant='heading-4' fontColor='primary' className='line-height-1 raddow'>
           componentry
         </Heading>
       )}

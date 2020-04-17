@@ -10,14 +10,15 @@ const navContainerStyles = ({ borderColors }) => css`
   box-shadow: 0 0 10px ${borderColors.ultra};
 `
 
-const navButtonStyles = ({ themeColors }) => css`
-  color: ${themeColors.primary};
-  text-shadow: ${themeColors.primary} 1px 0px 10px;
+const navButtonStyles = (theme) => css`
+  font-family: ${theme.typography.fontFamilySecondary};
+  color: ${theme.themeColors.primary};
+  text-shadow: ${theme.themeColors.primary} 1px 0px 10px;
   opacity: 0.75;
   transition: opacity 0.3s;
 
   &:hover {
-    color: ${themeColors.primary};
+    color: ${theme.themeColors.primary};
     opacity: 1;
     text-decoration: none;
   }
@@ -51,7 +52,7 @@ export default function Header() {
               />
             </Anchor>
 
-            <Link to='/' fontColor='primary' className='heading-4 line-height-1 raddow-1'>
+            <Link to='/' fontColor='primary' className='heading-4 line-height-1 raddow'>
               componentry
             </Link>
           </Flex>

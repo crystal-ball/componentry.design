@@ -36,21 +36,23 @@
 
 @media (min-width: 768px) {
   :root {
-    --h1: 5.0rem; // 80px
-    --h2: 3.0rem; // 48px
-    --h3: 2.0rem; // 32px
-    --h4: 1.5rem; // 24px
+    --display1: 6rem; // 96px
+    --display2: 5rem; // 80px
+
+    --h1: 3.0rem; // 48px
+    --h2: 2.0rem; // 32px
+    --h3: 1.5rem; // 24px
     --heading-letter-spacing: 0.1em;
 
-    --display1: 6rem; // 100px
-    --display2: 5rem; // 100px
+    --subheading1: 1.125rem; // 18px
+    --subheading2: 1rem; // 16px
 
-    --font-sm:   1.0rem;   // 16px
-    --font-base: 1.25rem;  // 20px
+    --font-sm:   0.875rem; // 14px
+    --font-base: 1.125rem; // 18px
     --font-lg:   1.5rem;   // 24px
 
-    --lead: 1.75rem; // 28px
-    --code: 1.0rem;  // 16px
+    --lead: 1.5rem; // 24px
+    --code: 0.9375rem;  // 15px
 
     --s1: #{$space-base * 0.25}; // 4px
     --s2: #{$space-base * 0.5}; // 8px

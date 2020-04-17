@@ -4,14 +4,14 @@ import { css } from '@emotion/core'
 import { Anchor, Block, Heading, Icon, Text } from 'componentry'
 
 const headingStyles = ({ typographyColors, typography }) => css`
-  font-family: ${typography.fontFamilyDisplay};
+  font-family: ${typography.fontFamilySecondary};
   color: ${typographyColors.radvender};
 `
 
 export default function ComponentHeading({ components, name }) {
   return (
     <>
-      <Heading className='raddow-1' mt='xl' mb={0} css={headingStyles} letterSpacing={0}>
+      <Heading variant='display-2' mt='xl' mb={0} css={headingStyles} letterSpacing={0}>
         {`<${name}/>`}
       </Heading>
       <Block ml={75}>
