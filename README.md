@@ -31,12 +31,9 @@
   <code>:flair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
   <!-- prettier-ignore-end -->
 
-  <h1></h1>
-  <br />
-  <p align="center">
-    <em>Componentry documentation site</em>
-  </p>
-  <br />
-</div>
-
 ---
+
+<br />
+<h3 align="center">
+  <em>Componentry documentation site</em>
+</h3>
