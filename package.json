@@ -45,7 +45,7 @@
     "react-dom": "16.13.1",
     "react-hot-loader": "4.12.20",
     "react-router-dom": "5.1.2",
-    "svg-symbol-sprite-loader": "4.0.0"
+    "svg-symbol-sprite-loader": "5.0.0"
   },
   "devDependencies": {
     "@crystal-ball/babel-base": "1.6.0",
