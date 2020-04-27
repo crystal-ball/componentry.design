@@ -11,12 +11,12 @@
   "rangeStrategy": "auto",
   "prCreation": "immediate",
   "reviewers": ["dhedgecock"],
+  "schedule": ["before 3am on Thursday"],
   "updateNotScheduled": true,
 
   "packageRules": [
     {
       "depTypeList": ["devDependencies"],
-      "schedule": ["at any time"],
       "commitMessagePrefix": "Chore: ",
       "commitMessageAction": "Update",
       "commitMessageTopic": "application {{depName}}",
@@ -26,7 +26,6 @@
     },
     {
       "depTypeList": ["dependencies"],
-      "schedule": ["before 3am on Thursday"],
       "commitMessagePrefix": "Update: ",
       "commitMessageAction": "Application",
       "commitMessageTopic": "{{depName}} upgrades",
