@@ -9,14 +9,14 @@
   "masterIssue": true,
   "masterIssueTitle": "Renovate Bot - Dependencies Management",
   "rangeStrategy": "auto",
-  "schedule": ["before 3am on Thursday"],
   "prCreation": "immediate",
   "reviewers": ["dhedgecock"],
   "updateNotScheduled": true,
 
   "packageRules": [
     {
-      "packagePatterns": ["*"],
+      "depTypeList": ["devDependencies"],
+      "schedule": ["at any time"],
       "commitMessagePrefix": "Chore: ",
       "commitMessageAction": "Update",
       "commitMessageTopic": "application {{depName}}",
@@ -26,11 +26,13 @@
     },
     {
       "depTypeList": ["dependencies"],
+      "schedule": ["before 3am on Thursday"],
       "commitMessagePrefix": "Update: ",
       "commitMessageAction": "Application",
       "commitMessageTopic": "{{depName}} upgrades",
       "commitMessageSuffix": " 🆙",
-      "groupName": "dependencies"
+      "groupName": "dependencies",
+      "automerge": false
     }
   ]
 }
