@@ -2,7 +2,6 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { Anchor, Block, Dropdown, Flex, Icon } from 'componentry'
 
-import { Link } from '@/components/universal'
 import { routes } from '@/components/App/routes'
 
 import classes from './desktop-header.scss'
@@ -24,7 +23,7 @@ export default function Header() {
       >
         {renderLandingLink ? (
           <Flex align='center'>
-            <Anchor href='https://github.com/crystal-ball/componentry' mx='sm'>
+            <Anchor as='a' href='https://github.com/crystal-ball/componentry' mx='sm'>
               <Icon
                 variant='feature'
                 id='github'
@@ -34,7 +33,7 @@ export default function Header() {
               />
             </Anchor>
 
-            <Link
+            <Anchor
               to='/'
               fontColor='primary'
               fontSize='lg'
@@ -42,7 +41,7 @@ export default function Header() {
               className='line-height-1 text-shadow-display'
             >
               componentry
-            </Link>
+            </Anchor>
           </Flex>
         ) : (
           <div />
@@ -50,9 +49,9 @@ export default function Header() {
 
         <Flex align='center'>
           {/* Setup */}
-          <Link to='/setup' className={classes.button} mx='sm'>
+          <Anchor to='/setup' className={classes.button} mx='sm'>
             Setup
-          </Link>
+          </Anchor>
 
           {/* Design System */}
           <Dropdown>
@@ -61,7 +60,7 @@ export default function Header() {
             </Dropdown.Trigger>
             <Dropdown.Content>
               {routes.design.map(({ name, path }) => (
-                <Dropdown.Item key={path} as={Link} to={path}>
+                <Dropdown.Item key={path} as={Anchor} to={path}>
                   {name}
                 </Dropdown.Item>
               ))}
@@ -75,7 +74,7 @@ export default function Header() {
             </Dropdown.Trigger>
             <Dropdown.Content>
               {routes.components.map(({ name, path }) => (
-                <Dropdown.Item key={path} as={Link} to={path}>
+                <Dropdown.Item key={path} as={Anchor} to={path}>
                   {name}
                 </Dropdown.Item>
               ))}
@@ -89,7 +88,7 @@ export default function Header() {
             </Dropdown.Trigger>
             <Dropdown.Content className='align-right'>
               {routes.principles.map(({ name, path }) => (
-                <Dropdown.Item key={path} as={Link} to={path}>
+                <Dropdown.Item key={path} as={Anchor} to={path}>
                   {name}
                 </Dropdown.Item>
               ))}

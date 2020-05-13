@@ -67,7 +67,7 @@ export default function LandingScreen() {
         </Card>
       </Flex>
       <Flex py='md' justify='center' backgroundColor='mito'>
-        <Anchor href='https://github.com/crystal-ball/componentry'>
+        <Anchor as='a' href='https://github.com/crystal-ball/componentry'>
           <Icon
             variant='feature'
             id='github'

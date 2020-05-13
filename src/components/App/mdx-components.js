@@ -2,7 +2,7 @@
 import React from 'react'
 import * as componentry from 'componentry' // eslint-disable-line
 
-import { CodeBlock, ComponentHeading, Link } from '@/components/universal'
+import { CodeBlock, ComponentHeading } from '@/components/universal'
 
 const { Text, Theme, Media, setupOutlineHandlers, ...componentryComponents } = componentry
 
@@ -10,7 +10,6 @@ const { Text, Theme, Media, setupOutlineHandlers, ...componentryComponents } = c
 export const components = {
   ...componentryComponents,
   Text,
-  Link,
   ComponentHeading,
   code: CodeBlock,
   pre: (props) => <div {...props} />,

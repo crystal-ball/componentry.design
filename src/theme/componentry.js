@@ -1,5 +1,10 @@
+import { Link } from 'react-router-dom'
+
 // Componentry default prop values for application.
 export const componentryTheme = {
+  Anchor: {
+    as: Link,
+  },
   Text: {
     variantsElements: {
       'display-1': 'h1',

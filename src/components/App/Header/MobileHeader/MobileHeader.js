@@ -2,7 +2,6 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { Active, Anchor, Block, Drawer, Flex, Icon, Text } from 'componentry'
 
-import { Link } from '@/components/universal'
 import { routes } from '../../routes'
 
 import classes from './mobile-header.scss'
@@ -41,16 +40,16 @@ export default function Header() {
               <Block p='md'>
                 {/* Home */}
                 <div>
-                  <Link to='/' fontSize='lg' onClick={deactivate}>
+                  <Anchor to='/' fontSize='lg' onClick={deactivate}>
                     Home
-                  </Link>
+                  </Anchor>
                 </div>
 
                 {/* Setup */}
                 <div>
-                  <Link to='/setup' fontSize='lg' onClick={deactivate}>
+                  <Anchor to='/setup' fontSize='lg' onClick={deactivate}>
                     Setup
-                  </Link>
+                  </Anchor>
                 </div>
 
                 {/* Design system */}
@@ -58,7 +57,7 @@ export default function Header() {
                   <Drawer.Trigger fontSize='lg'>Design System</Drawer.Trigger>
                   <Drawer.Content pl='md'>
                     {routes.design.map(({ name, path }) => (
-                      <Drawer.Trigger key={path} as={Link} to={path}>
+                      <Drawer.Trigger key={path} as={Anchor} to={path}>
                         {name}
                       </Drawer.Trigger>
                     ))}
@@ -70,7 +69,7 @@ export default function Header() {
                   <Drawer.Trigger fontSize='lg'>Components</Drawer.Trigger>
                   <Drawer.Content pl='md'>
                     {routes.components.map(({ name, path }) => (
-                      <Drawer.Trigger key={path} as={Link} to={path}>
+                      <Drawer.Trigger key={path} as={Anchor} to={path}>
                         {name}
                       </Drawer.Trigger>
                     ))}
@@ -82,7 +81,7 @@ export default function Header() {
                   <Drawer.Trigger fontSize='lg'>Principles</Drawer.Trigger>
                   <Drawer.Content pl='md'>
                     {routes.principles.map(({ name, path }) => (
-                      <Drawer.Trigger key={path} as={Link} to={path}>
+                      <Drawer.Trigger key={path} as={Anchor} to={path}>
                         {name}
                       </Drawer.Trigger>
                     ))}
@@ -97,7 +96,7 @@ export default function Header() {
                 px='md'
                 backgroundColor='mito'
               >
-                <Anchor href='https://github.com/crystal-ball/componentry' mx='sm'>
+                <Anchor as='a' href='https://github.com/crystal-ball/componentry' mx='sm'>
                   <Icon variant='feature' id='github' width={32} height={32} />
                 </Anchor>
               </Flex>
