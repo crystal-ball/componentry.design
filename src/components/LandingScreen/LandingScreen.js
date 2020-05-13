@@ -1,73 +1,37 @@
 import React from 'react'
-import { css } from '@emotion/core'
 import cx from 'classnames'
-import { Anchor, Card, Flex, Heading, Icon, Text, useMedia } from 'componentry'
+import { Anchor, Card, Flex, Icon, Text, useMedia } from 'componentry'
 
-import Radpack from '@/media/radpack.jpg'
 import { ScreenContainer } from '@/components/universal'
-import Hologram from './Hologram/Hologram'
-
-const heroBackgroundStyles = ({ backgroundColors }) => css`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: ${backgroundColors.ultra};
-  background-image: url(${Radpack});
-  z-index: -1;
-`
-
-const contentSectionStyles = ({ borderColors }) => css`
-  box-shadow: 0 0 10px ${borderColors.ultra};
-  flex-grow: 1;
-`
+import Hero from './Hero/Hero'
+import classes from './landing-screen.scss'
 
 export default function LandingScreen() {
   const { sm } = useMedia()
+  const screenPadding = sm ? 'md' : 'xl'
   return (
-    <ScreenContainer>
-      <div css={heroBackgroundStyles} />
-      <Flex m={sm ? 'sm' : 'xl'} pb='xl'>
-        <Hologram />
-        <Flex direction='column' justify='center' ml='xl'>
-          <Heading
-            variant={sm ? 'heading-1' : 'display-1'}
-            fontColor='primary'
-            mb='sm'
-            mt={0}
-            data-testid='title'
-          >
-            {`<Componentry />`}
-          </Heading>
-          <Flex align='center'>
-            <Text
-              variant='lead'
-              className='raddow-secondary'
-              ml='base'
-              mb={0}
-              maxWidth={500}
-            >
-              React component library for building radical design systems
-            </Text>
-          </Flex>
-        </Flex>
+    <ScreenContainer pr={0} pl={0}>
+      <div className={classes.heroBackground} />
+
+      <Flex mt='xl' pl={screenPadding} pr={screenPadding} pb={sm ? 'xl' : '6rem'}>
+        <Hero />
       </Flex>
 
       <Flex
-        background='background'
-        p='xl'
-        className='screen-row'
+        backgroundColor='body'
+        pb='xl'
+        pl={screenPadding}
+        pr={screenPadding}
+        className={`flex-grow-1 ${classes.content}`}
         align='center'
         direction='column'
-        css={contentSectionStyles}
       >
-        <Card className={cx('mb-lg', { 'w-50': !sm })}>
+        <Card className={cx('mt-xl', { 'w-50': !sm })}>
           <Card.Body>
-            <Heading variant='heading-4' className='d-flex'>
+            <Text variant='heading-3' className='d-flex'>
               <Icon id='color-palette' mr='sm' />
               Radically simpler
-            </Heading>
+            </Text>
 
             <p className='card-text flex-grow-1'>
               Consistent component APIs mean more time spent building complex UIs and less
@@ -75,24 +39,24 @@ export default function LandingScreen() {
             </p>
           </Card.Body>
         </Card>
-        <Card className={cx('mb-lg', { 'w-50': !sm })}>
+        <Card className={cx('mt-lg', { 'w-50': !sm })}>
           <Card.Body>
-            <Heading variant='heading-4' className='d-flex'>
+            <Text variant='heading-3' className='d-flex'>
               <Icon id='hot' mr='sm' />
               Radically smaller
-            </Heading>
+            </Text>
 
             <p className='card-text'>
               A library architecture based on reuse enables a miniscule packge weight.
             </p>
           </Card.Body>
         </Card>
-        <Card className={cx({ 'w-50': !sm })}>
+        <Card className={cx('mt-lg', { 'w-50': !sm })}>
           <Card.Body>
-            <Heading variant='heading-4' className='d-flex'>
+            <Text variant='heading-3' className='d-flex'>
               <Icon id='mood-happy-outline' mr='sm' />
               Radically funner
-            </Heading>
+            </Text>
 
             <p className='card-text'>
               Accessibility helpers, hooks, theming, media observers, library tools let
@@ -102,15 +66,14 @@ export default function LandingScreen() {
           </Card.Body>
         </Card>
       </Flex>
-      <Flex p='base' justify='center' background='mito' className='screen-row'>
+      <Flex py='md' justify='center' backgroundColor='mito'>
         <Anchor href='https://github.com/crystal-ball/componentry'>
           <Icon
+            variant='feature'
             id='github'
             fontColor='primary'
-            css={css`
-              display: block;
-              font-size: ${sm ? '20' : '32'}px;
-            `}
+            width={sm ? 24 : 32}
+            height={sm ? 24 : 32}
           />
         </Anchor>
       </Flex>

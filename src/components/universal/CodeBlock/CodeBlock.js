@@ -11,7 +11,7 @@ export default function CodeBlock({ children, className: mdxClassName }) {
   return (
     <Highlight {...defaultProps} code={children} language={language} theme={null}>
       {({ className, tokens, getLineProps, getTokenProps }) => (
-        <pre className={cx('border border-mito border-radius p-lg', className)}>
+        <pre className={cx('border border-mito border-radius p-md', className)}>
           {tokens.map((line, i) => {
             // It seems like every codeblock ends with an empty line, which
             // looks bad so skip rendering them

@@ -1,36 +1,11 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import { css } from '@emotion/core'
-import { Active, Anchor, Block, Drawer, Flex, Heading, Icon } from 'componentry'
+import { Active, Anchor, Block, Drawer, Flex, Icon, Text } from 'componentry'
 
 import { Link } from '@/components/universal'
 import { routes } from '../../routes'
 
-const navContainerStyles = ({ borderColors }) => css`
-  position: sticky;
-  top: 0;
-  box-shadow: 0 0 10px ${borderColors.ultra};
-`
-
-const contentContainerStyles = ({ borderColors }) => css`
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 70%;
-  background: rgba(36, 37, 96, 0.9);
-  border-left: 5px solid ${borderColors.ultra};
-  z-index: 1;
-`
-
-const menuOffsetStyles = css`
-  display: block;
-  width: 20px;
-  height: 25px;
-`
+import classes from './mobile-header.scss'
 
 export default function Header() {
   const location = useLocation()
@@ -40,52 +15,48 @@ export default function Header() {
     <Flex
       borderBottom
       as='nav'
-      background='ultra'
+      className={classes.navContainer}
+      backgroundColor='ultra'
       justify='between'
       align='center'
       borderColor='ultra'
       py='sm'
-      px='base'
-      css={navContainerStyles}
+      px='md'
     >
-      <div css={menuOffsetStyles}>&nbsp;</div>
+      <div className={classes.menuOffset}>&nbsp;</div>
       {renderLandingLink && (
-        <Heading variant='heading-4' fontColor='primary' className='line-height-1 raddow'>
+        <Text fontColor='primary' className='line-height-1 text-shadow-display'>
           componentry
-        </Heading>
+        </Text>
       )}
       <Active clickEvents>
         {({ deactivate }) => (
           /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
           <>
-            <Active.Trigger>
+            <Active.Trigger className={classes.action}>
               <Icon id='menu' className='h4' />
             </Active.Trigger>
 
-            <Active.Content css={contentContainerStyles}>
-              <Block p='base'>
-                <div onClick={deactivate}>
-                  <Link to='/' fontSize='lg'>
+            <Active.Content className={classes.contentContainer}>
+              <Block p='md'>
+                {/* Home */}
+                <div>
+                  <Link to='/' fontSize='lg' onClick={deactivate}>
                     Home
                   </Link>
                 </div>
 
                 {/* Setup */}
-                <Drawer onDeactivate={deactivate}>
-                  <Drawer.Trigger fontSize='lg'>Setup</Drawer.Trigger>
-                  <Drawer.Content pl='base'>
-                    {routes.setup.map(({ name, path }) => (
-                      <Drawer.Trigger key={path} as={Link} to={path}>
-                        {name}
-                      </Drawer.Trigger>
-                    ))}
-                  </Drawer.Content>
-                </Drawer>
+                <div>
+                  <Link to='/setup' fontSize='lg' onClick={deactivate}>
+                    Setup
+                  </Link>
+                </div>
 
                 {/* Design system */}
                 <Drawer onDeactivate={deactivate}>
                   <Drawer.Trigger fontSize='lg'>Design System</Drawer.Trigger>
-                  <Drawer.Content pl='base'>
+                  <Drawer.Content pl='md'>
                     {routes.design.map(({ name, path }) => (
                       <Drawer.Trigger key={path} as={Link} to={path}>
                         {name}
@@ -97,7 +68,7 @@ export default function Header() {
                 {/* Components */}
                 <Drawer onDeactivate={deactivate}>
                   <Drawer.Trigger fontSize='lg'>Components</Drawer.Trigger>
-                  <Drawer.Content pl='base'>
+                  <Drawer.Content pl='md'>
                     {routes.components.map(({ name, path }) => (
                       <Drawer.Trigger key={path} as={Link} to={path}>
                         {name}
@@ -109,7 +80,7 @@ export default function Header() {
                 {/* Principles */}
                 <Drawer onDeactivate={deactivate}>
                   <Drawer.Trigger fontSize='lg'>Principles</Drawer.Trigger>
-                  <Drawer.Content pl='base'>
+                  <Drawer.Content pl='md'>
                     {routes.principles.map(({ name, path }) => (
                       <Drawer.Trigger key={path} as={Link} to={path}>
                         {name}
@@ -119,13 +90,15 @@ export default function Header() {
                 </Drawer>
               </Block>
 
-              <Flex justify='center' align='center' py='sm' px='base' background='mito'>
-                <Anchor
-                  href='https://github.com/crystal-ball/componentry'
-                  mx='sm'
-                  fontSize='xl'
-                >
-                  <Icon id='github' className='d-block' font={false} />
+              <Flex
+                justify='center'
+                align='center'
+                py='sm'
+                px='md'
+                backgroundColor='mito'
+              >
+                <Anchor href='https://github.com/crystal-ball/componentry' mx='sm'>
+                  <Icon variant='feature' id='github' width={32} height={32} />
                 </Anchor>
               </Flex>
             </Active.Content>

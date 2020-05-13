@@ -1,17 +1,11 @@
-// Application theming for Componentry component behavior, Componentry styles
-// theming is set in theme.scss
-export const componentryTheme = {}
-
-export const fontColors = [
-  'primary',
-  'secondary',
-  'info',
-  'success',
-  'warning',
-  'danger',
-  'foreground',
-  'background',
-  'muted',
-  'heading',
-  'anchor',
-]
+// Componentry default prop values for application.
+export const componentryTheme = {
+  Text: {
+    variantsElements: {
+      'display-1': 'h1',
+      'display-2': 'h1',
+      'subheading-1': 'h4',
+      'subheading-2': 'h5',
+    },
+  },
+}

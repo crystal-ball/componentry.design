@@ -4,69 +4,11 @@
 
 @import './sythwave-prism-theme';
 
-.display-1 {
-  font-family: $font-family-secondary;
-  color: theme-color(primary);
-  text-shadow: theme-color(primary) 1px 0px 15px;
-}
-
-.display-2 {
-  font-family: $font-family-secondary;
-  color: theme-color(primary);
-  text-shadow: theme-color(primary) 1px 0px 15px;
-}
-
-.raddow {
-  text-shadow: theme-color(primary) 1px 0px 15px;
-}
-
-.raddow-secondary {
-  text-shadow: typography-color(radvender) 2px 2px 8px;
-}
-
-p {
-  max-width: 800px;
-}
-
 // --------------------------------------------------------
 // Componentry wants
-
-// 1. Font family util classes
-.font-family-primary {
-  font-family: $font-family-primary;
-}
-
-.font-family-secondary {
-  font-family: $font-family-secondary;
-}
-
-.font-family-monospace {
-  font-family: $font-family-monospace;
-}
 
 // 2. Button font family config
 // 2a. Should buttons have line-height 1??
 .btn {
   font-family: $font-family-secondary;
-}
-
-// 3. Display, header, and subheading variants, each with their own font family
-.subheading-1,
-.subheading-2 {
-  font-family: $font-family-secondary;
-}
-
-// 4. Override margins for display headings
-.display-1,
-.display-2 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-// 5. Make lead a  custom variant here
-
-.lead {
-  color: typography-color(lead);
-  font-size: $lead-font-size;
-  font-weight: $lead-font-weight;
 }

@@ -7,6 +7,7 @@ import classes from './hologram.scss'
 
 export default function Hologram() {
   const [hovered, setHovered] = useState(false)
+
   return (
     <Block
       position='relative'

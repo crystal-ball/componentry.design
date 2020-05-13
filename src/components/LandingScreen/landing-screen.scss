@@ -1,0 +1,15 @@
+:local .heroBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: theme('palette.backgrounds.ultra');
+  background-image: url('../../media/radpack.jpg');
+  z-index: -1;
+}
+
+:local .content {
+  box-shadow: theme('shadows.primary');
+  flex-grow: 1;
+}

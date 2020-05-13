@@ -7,7 +7,7 @@ export default function SetupScreen({ children, className, flex, ...rest }) {
   const { sm } = useMedia()
   const Container = flex ? Flex : Block
 
-  const paddingSize = sm ? 'base' : 'xl'
+  const paddingSize = sm ? 'md' : 'xl'
   return (
     <Container
       className={cx(className, 'flex-grow-1')}
