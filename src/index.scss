@@ -16,8 +16,8 @@
  * into any component style file with `@import 'theme';`
  */
 
-@import './styles/theme';
-@import './theme/radical'; // 🔥
+@import './theme/radical';
+@import './theme/radical-legacy'; // 🔥
 
 /*
  * --- Componentry styles ---
@@ -25,6 +25,13 @@
  * Componentry includes a browser reboot, component styles and utility styles.
  */
 @import '~componentry/src/componentry';
+
+/*
+ * --- Prism highlighting styles ---
+ *
+ * Theme for PrismJS code syntax highlighting
+ */
+@import './theme/radical-prism-theme';
 
 /*
  * --- Application styles ---

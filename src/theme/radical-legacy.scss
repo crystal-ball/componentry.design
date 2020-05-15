@@ -1,0 +1,145 @@
+/**
+ *                                       🔮 Radical Theme
+ * --------------------------------------------------------
+ */
+
+// Theme defaults
+$enable-caret: false;
+
+// --------------------------------------------------------
+// Theme Colors
+
+$headings: #C7E3EE;
+$body: #b3cdd8;
+$muted: #75B7BB;
+
+$grayscale: (
+  '100':  #e4e0f0,
+  '500':  #457770,
+  '600':  #48676a,
+);
+
+$theme-colors: (
+  background:  #12111f,
+  foreground:  #C7E3EE,
+  primary:     #f52277,
+  secondary:   #a6ffdd,
+  success:     #c3f920,
+  info:        #2bf5e9,
+  warning:     #ffc300,
+  danger:      #fc4552,
+);
+
+$background-colors: (
+  ultra:       #100f1a,
+  background:  #12111f,
+  elevated:    #141322,
+  overlay:     rgba(21,20,33, 0.9),
+  mito:        #242560
+);
+
+$border-colors: (
+  mito:  #2c3258,
+  ultra: #681854,
+);
+
+$typography-colors: (
+  anchor:    #5cfff1,
+  code:      #f85baa,
+  heading:   #84bfc2,
+  lead:      #aedbe2,
+  muted:     #75B7BB,
+  radvender: #bf9afc,
+
+  // just for subheadings -> nuke it
+  caption: #a4ccc0
+);
+
+// --------------------------------------------------------
+// Spacing
+
+$space-base: 1rem;
+$spacing: (
+  xs:   var(--s1),
+  sm:   var(--s2),
+  base: var(--s3),
+  lg:   var(--s4),
+  xl:   var(--s5),
+);
+
+// Fonts
+// ---------------------------------------------------------------------------
+$font-family-primary: 'Play', serif;
+$font-family-secondary: 'Aldrich', monospace;
+$font-family-monospace: 'Fira Code', monospace;
+
+$font-family-sans-serif: $font-family-primary;
+
+$font-size-sm:     var(--font-sm);
+$font-size-base:   var(--font-base);
+$font-size-lg:     var(--font-lg);
+
+$line-height-base: 1.6;
+
+// --- Displays
+$display1-size: var(--display1);
+$display2-size: var(--display2);
+
+// --- Headings
+$headings-font-family: $font-family-secondary;
+$headings-font-weight:     400;
+$headings-letter-spacing:  var(--heading-letter-spacing);
+$headings-line-height:     1.5;
+$headings-margin-bottom:   0;
+
+$h1-font-size: var(--h1);
+$h2-font-size: var(--h2);
+$h3-font-size: var(--h3);
+$h4-font-size: var(--h4);
+
+// --- Subheadings
+$subheading1-font-size: var(--subheading1);
+$subheading2-font-size: var(--subheading2);
+$subheading-font-weight: 700;
+
+$subheading3-font-size: var(--subheading2);
+$subheading4-font-size: var(--subheading2);
+
+$body: (
+  // This is defaulted to null and won't be in the generated styles, but is
+  // available to set a default paragraph width which is highly encouraged for
+  // keeping paragraphs a readable length by default
+  max-width: 800px
+);
+
+$code-font-size: var(--code);
+$lead-font-size: var(--lead);
+
+// --------------------------------------------------------
+// Cards
+
+$card-border-color:  map-get($grayscale, '500');
+$card-bg:            map-get($background-colors, 'elevated');
+
+// --------------------------------------------------------
+// Dropdowns
+
+$dropdown-anchor-hover-bg:     map-get($background-colors, mito);
+
+// --------------------------------------------------------
+// Icons
+
+$icon-bottom: -0.2em;
+
+// --------------------------------------------------------
+// HTML elements
+
+$small-font-size: 80%;
+
+// --------------------------------------------------------
+// Componentry defaults for unset variables
+
+@import '~componentry/src/styles/variables';
+
+
+
