@@ -14,7 +14,7 @@ export default function Hero() {
         </Text>
 
         <Text variant='lead' align='center' className='text-shadow-subtitle'>
-          React component library for building radical design systems
+          A React component library for building radical design systems
         </Text>
       </Flex>
     )
@@ -28,7 +28,7 @@ export default function Hero() {
           {`<Componentry />`}
         </Text>
         <Text variant='lead' className='text-shadow-subtitle' ml='md' maxWidth={500}>
-          React component library for building radical design systems
+          A React component library for building radical design systems
         </Text>
       </Flex>
     </>

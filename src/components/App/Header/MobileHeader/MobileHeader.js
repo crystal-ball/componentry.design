@@ -45,18 +45,23 @@ export default function Header() {
                   </Anchor>
                 </div>
 
-                {/* Setup */}
-                <div>
-                  <Anchor to='/setup' fontSize='lg' onClick={deactivate}>
-                    Setup
-                  </Anchor>
-                </div>
+                {/* Getting Started */}
+                <Drawer onDeactivate={deactivate}>
+                  <Drawer.Trigger fontSize='lg'>Getting Started</Drawer.Trigger>
+                  <Drawer.Content pl='md'>
+                    {routes.gettingStarted.map(({ name, path }) => (
+                      <Drawer.Trigger key={path} as={Anchor} to={path}>
+                        {name}
+                      </Drawer.Trigger>
+                    ))}
+                  </Drawer.Content>
+                </Drawer>
 
                 {/* Design system */}
                 <Drawer onDeactivate={deactivate}>
                   <Drawer.Trigger fontSize='lg'>Design System</Drawer.Trigger>
                   <Drawer.Content pl='md'>
-                    {routes.design.map(({ name, path }) => (
+                    {routes.designSystem.map(({ name, path }) => (
                       <Drawer.Trigger key={path} as={Anchor} to={path}>
                         {name}
                       </Drawer.Trigger>

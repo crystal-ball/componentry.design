@@ -22,6 +22,7 @@ export default function Hologram() {
         className={cx(classes.anchorContainer, 'fade', { visible: hovered })}
       >
         <Anchor
+          as='a'
           href='https://undraw.co/'
           color='lead'
           fontSize='sm'

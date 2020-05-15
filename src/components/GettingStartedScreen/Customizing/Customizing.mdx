@@ -1,0 +1,52 @@
+<Text variant='heading-1' mt='xl'>
+  Customizing
+</Text>
+
+### Theme customization
+
+Override values in the `$theme` map.
+
+```scss
+$theme: (
+  palette: (),
+  spacing: (),
+  typography: (),
+);
+```
+
+### Component style overrides
+
+Each component uses a SASS map to define style variants and modifier classes, any of them
+can be overriden, eg:
+
+```scss
+$text: (
+  variants: (
+    body: (
+      color: hotpink,
+    ),
+    caption: (
+      font-size: 0.5rem,
+    ),
+  ),
+);
+```
+
+### Component prop overrides
+
+Including the `ThemeProvider` allows you to globally set defaults for component props.
+
+```javascript
+import { Link } from 'react-router-dom'
+import { Theme } from 'componentry'
+
+render(
+  <Theme theme={{
+    Anchor: { as: Link },
+    Button: { color: 'primary' }
+  }}>
+    <App />
+  </Theme>
+  document.getElementById('root')
+)
+```

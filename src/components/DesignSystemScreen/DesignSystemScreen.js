@@ -1,18 +1,25 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
+import { routes } from '@/components/App/routes'
 import { ScreenContainer } from '@/components/universal'
-import ColorsScreen from './screens/colors.mdx'
-import SpacingScreen from './screens/spacing.mdx'
-import TypographyScreen from './screens/typography.mdx'
+import PaletteScreen from './Palette/Palette.mdx'
+import SpacingScreen from './Spacing/Spacing.mdx'
+import TypographyScreen from './Typography/Typography.mdx'
+
+const screens = {
+  Palette: PaletteScreen,
+  Spacing: SpacingScreen,
+  Typography: TypographyScreen,
+}
 
 export default function DesignSystemScreen() {
   return (
     <ScreenContainer>
       <Switch>
-        <Route path='/design-system/colors' component={ColorsScreen} />
-        <Route path='/design-system/spacing' component={SpacingScreen} />
-        <Route path='/design-system/typography' component={TypographyScreen} />
+        {routes.designSystem.map(({ name, path }) => (
+          <Route key={path} path={path} component={screens[name]} />
+        ))}
       </Switch>
     </ScreenContainer>
   )

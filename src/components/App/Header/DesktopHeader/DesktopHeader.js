@@ -48,10 +48,19 @@ export default function Header() {
         )}
 
         <Flex align='center'>
-          {/* Setup */}
-          <Anchor to='/setup' className={classes.button} mx='sm'>
-            Setup
-          </Anchor>
+          {/* Getting Started */}
+          <Dropdown>
+            <Dropdown.Trigger className={classes.button} mx='sm'>
+              Getting Started
+            </Dropdown.Trigger>
+            <Dropdown.Content>
+              {routes.gettingStarted.map(({ name, path }) => (
+                <Dropdown.Item key={path} as={Anchor} to={path}>
+                  {name}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Content>
+          </Dropdown>
 
           {/* Design System */}
           <Dropdown>
@@ -59,7 +68,7 @@ export default function Header() {
               Design System
             </Dropdown.Trigger>
             <Dropdown.Content>
-              {routes.design.map(({ name, path }) => (
+              {routes.designSystem.map(({ name, path }) => (
                 <Dropdown.Item key={path} as={Anchor} to={path}>
                   {name}
                 </Dropdown.Item>

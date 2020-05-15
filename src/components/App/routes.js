@@ -1,12 +1,13 @@
 export const routes = {
-  setup: [
-    { name: 'Getting Started', path: '/setup/getting-started' },
-    { name: 'Theme Customization', path: '/setup/theme-customization' },
+  gettingStarted: [
+    { name: 'Overview', path: '/getting-started/overview' },
+    { name: 'Setup', path: '/getting-started/setup' },
+    { name: 'Customizing', path: '/getting-started/customizing' },
   ],
-  design: [
-    { name: 'Colors', path: '/design-system/colors' },
-    { name: 'Typography', path: '/design-system/typography' },
+  designSystem: [
+    { name: 'Palette', path: '/design-system/palette' },
     { name: 'Spacing', path: '/design-system/spacing' },
+    { name: 'Typography', path: '/design-system/typography' },
   ],
   components: [
     // { name: 'Active', path: '/components/active' },
