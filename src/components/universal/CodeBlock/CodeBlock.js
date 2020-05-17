@@ -4,12 +4,28 @@ import React from 'react'
 import { node, string } from 'prop-types'
 import cx from 'classnames'
 import Highlight, { defaultProps } from 'prism-react-renderer'
+import prettier from 'prettier/standalone'
+import parserSCSS from 'prettier/parser-postcss'
+import parserBabel from 'prettier/parser-babel'
+
+const prettierLanguages = {
+  scss: 'scss',
+  javascript: 'babel',
+  jsx: 'babel',
+}
+
+// https://prettier.io/docs/en/options.html#parser
 
 // https://mdxjs.com/guides/syntax-highlighting#build-a-codeblock-component
 export default function CodeBlock({ children, className: mdxClassName }) {
   const language = mdxClassName.replace(/language-/, '') || 'javascript'
+  const validCode = children.replace(/✨/g, '')
+  const formattedCode = prettier.format(validCode, {
+    parser: prettierLanguages[language],
+    plugins: [parserBabel, parserSCSS],
+  })
   return (
-    <Highlight {...defaultProps} code={children} language={language} theme={null}>
+    <Highlight {...defaultProps} code={formattedCode} language={language} theme={null}>
       {({ className, tokens, getLineProps, getTokenProps }) => (
         <pre className={cx('border border-mito border-radius p-md', className)}>
           {tokens.map((line, i) => {
