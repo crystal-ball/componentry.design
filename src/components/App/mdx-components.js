@@ -17,4 +17,5 @@ export const components = {
   h2: (props) => <Text variant='heading-2' {...props} />,
   h3: (props) => <Text variant='heading-3' {...props} />,
   p: (props) => <Text {...props} />,
+  inlineCode: (props) => <Text variant='code' {...props} />,
 }

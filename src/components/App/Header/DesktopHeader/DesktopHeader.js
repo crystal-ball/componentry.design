@@ -91,7 +91,7 @@ export default function Header() {
           </Dropdown>
 
           {/* Principles */}
-          <Dropdown>
+          {/* <Dropdown>
             <Dropdown.Trigger className={classes.button} mx='sm'>
               Principles
             </Dropdown.Trigger>
@@ -102,7 +102,7 @@ export default function Header() {
                 </Dropdown.Item>
               ))}
             </Dropdown.Content>
-          </Dropdown>
+          </Dropdown> */}
         </Flex>
       </Flex>
     </Block>

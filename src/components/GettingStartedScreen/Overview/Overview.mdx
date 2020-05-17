@@ -1,13 +1,46 @@
-<Text variant='heading-1' mt='xl'>
-  Library overview
+# Library overview
+
+## Base theming
+
+<Text>
+  Styles in componentry use a{' '}
+  <Anchor as='a' href='https://sass-lang.com/documentation/values/maps'>
+    SASS Map
+  </Anchor>{' '}
+  for the base theme. The theme defines shared design elements such as spacing, palette,
+  and typography values. A set of utility styles inspired by{' '}
+  <Anchor as='a' href='https://tailwindcss.com/'>
+    Tailwind CSS
+  </Anchor>{' '}
+  is generated using the theme values. Under the hood the library components use the
+  utility styles for most of the System props, and the classNames can also be used
+  directly.
 </Text>
 
-- Componentry styles are grouped into utility styles and component styles.
-- Utility styles are generated using the application `$theme` values.
-- Component styles are generated using per component SASS maps.
-- All theme values and component styles can be overridden by defining values in your
-  application.
+<Text>
+  📝 Theme definition and customization is covered in the{' '}
+  <Anchor to='/getting-started/customizing'>Customizing guide</Anchor>.
+</Text>
 
-- All components accept System props, Tailwind/Styled System inspired props for setting
-  utility style classes.
-- Component props can be customized at the application level using the `Theme` component.
+## Component styles
+
+Componentry styles are written in SASS, but instead of using variables to customize styles
+Componentry uses <Anchor as='a' href='https://sass-lang.com/documentation/values/maps'>
+SASS Maps</Anchor>. Every component has a SASS map that can be overridden at any level.
+This provides 100% control over the base styles your application is built on.
+
+<Text>
+  📝 Overriding component maps is covered in the{' '}
+  <Anchor to='/getting-started/customizing'>Customizing guide</Anchor>.
+</Text>
+
+## Component variants
+
+Componentry separates CSS styles for component behavior from component appearance.
+Component appearance is handled by _variants_, a mechanism that enables creating custom
+versions of components to match your design system needs.
+
+<Text>
+  📝 Creating and customizing variants is covered in the{' '}
+  <Anchor to='/getting-started/customizing'>Customizing guide</Anchor>.
+</Text>

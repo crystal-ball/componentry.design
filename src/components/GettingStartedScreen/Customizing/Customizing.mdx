@@ -1,6 +1,4 @@
-<Text variant='heading-1' mt='xl'>
-  Customizing
-</Text>
+# Customizing
 
 ### Theme customization
 
@@ -41,12 +39,14 @@ import { Link } from 'react-router-dom'
 import { Theme } from 'componentry'
 
 render(
-  <Theme theme={{
-    Anchor: { as: Link },
-    Button: { color: 'primary' }
-  }}>
+  <Theme
+    theme={{
+      Anchor: { as: Link },
+      Button: { color: 'primary' },
+    }}
+  >
     <App />
-  </Theme>
-  document.getElementById('root')
+  </Theme>,
+  document.getElementById('root'),
 )
 ```

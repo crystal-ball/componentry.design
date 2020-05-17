@@ -33,11 +33,11 @@ $theme: theme();
   --lead: 1.25rem; // 20px
   --code: 0.75rem; // 12px
 
-  --s1: 0.274rem;
-  --s2: 0.555rem;
-  --s3: 1rem;
-  --s4: 1.424rem;
-  --s5: 1.802rem;
+  --s-xs: 0.274rem;
+  --s-sm: 0.555rem;
+  --s-md: 1rem;
+  --s-lg: 1.424rem;
+  --s-xl: 1.802rem;
 }
 
 // --- Large screens
@@ -61,11 +61,11 @@ $theme: theme();
     --lead: 1.5rem; // 24px
     --code: 0.9375rem; // 15px
 
-    --s1: 0.25rem; // 4px
-    --s2: 0.5rem; // 8px
-    --s3: 1rem; // 16px
-    --s4: 2rem; // 24px
-    --s5: 3rem; // 48px
+    --s-xs: 0.25rem; // 4px
+    --s-sm: 0.5rem; // 8px
+    --s-md: 1rem; // 16px
+    --s-lg: 2rem; // 24px
+    --s-xl: 3rem; // 48px
   }
 }
 

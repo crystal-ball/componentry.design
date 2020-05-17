@@ -82,7 +82,7 @@ export default function Header() {
                 </Drawer>
 
                 {/* Principles */}
-                <Drawer onDeactivate={deactivate}>
+                {/* <Drawer onDeactivate={deactivate}>
                   <Drawer.Trigger fontSize='lg'>Principles</Drawer.Trigger>
                   <Drawer.Content pl='md'>
                     {routes.principles.map(({ name, path }) => (
@@ -91,7 +91,7 @@ export default function Header() {
                       </Drawer.Trigger>
                     ))}
                   </Drawer.Content>
-                </Drawer>
+                </Drawer> */}
               </Block>
 
               <Flex

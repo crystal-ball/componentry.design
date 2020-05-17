@@ -1,0 +1,23 @@
+// Set documentation friendly spacing for heading and sibling body elements for
+// convenience
+:local(.docsSpacing) {
+  .✨heading-1 {
+    margin-top: var(--s-xl);
+  }
+
+  .✨heading-2 {
+    margin-top: var(--s-lg);
+
+    & + .✨body {
+      margin-top: var(--s-md);
+    }
+  }
+
+  .✨heading-3 {
+    margin-top: var(--s-md);
+
+    & + .✨body {
+      margin-top: var(--s-sm);
+    }
+  }
+}

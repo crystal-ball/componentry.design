@@ -9,7 +9,7 @@ export default function LandingScreen() {
   const { sm } = useMedia()
   const screenPadding = sm ? 'md' : 'xl'
   return (
-    <ScreenContainer pr={0} pl={0}>
+    <ScreenContainer pr={0} pl={0} docsSpacing={false}>
       <div className={classes.heroBackground} />
 
       <Flex mt='xl' pl={screenPadding} pr={screenPadding} pb={sm ? 'xl' : '6rem'}>

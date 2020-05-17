@@ -1,4 +1,4 @@
-:local .navContainer {
+:local(.navContainer) {
   position: sticky;
   top: 0;
   box-shadow: theme('shadows.primary');
@@ -7,11 +7,11 @@
   z-index: 1;
 }
 
-:local .action {
+:local(.action) {
   border: none;
 }
 
-:local .contentContainer {
+:local(.contentContainer) {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   border-left: 5px solid theme('palette.borders.ultra');
 }
 
-:local menuOffset {
+:local(menuOffset) {
   display: block;
   width: 20px;
   height: 25px;

@@ -1,4 +1,4 @@
-:local .button {
+:local(.button) {
   font-family: theme('typography.font-families.secondary');
   font-size: var(--font-md);
   color: theme('palette.typography.primary');
