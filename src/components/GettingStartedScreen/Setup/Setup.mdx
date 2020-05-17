@@ -1,0 +1,43 @@
+# Setup
+
+### 1. Install
+
+```sh
+npm install componentry
+```
+
+### 2. Styles
+
+Import the library styles after defining theme and component style overrides.
+
+```scss
+// Values defined before importing the library will override default values
+@import './styles/componentry-theme';
+
+// Library entry point includes foundation browser styles, component styles,
+// and utility styles
+@import '~componentry/src/componentry';
+```
+
+The <Anchor to='/getting-started/customizing'>Customizing</Anchor> guide details how to
+customize the theme values and component styles.
+
+### 3. Outlines handler (optional)
+
+Componentry includes a `setupOutlineHandler` function that uses event listeners for mouse
+and keyboard events to suppress browser outline styles for mouse events. Use this optional
+utility if you'd like to only show focus outlines for keyboard navigation.
+
+```javascript
+import { setupOutlineHandlers } from 'componentry'
+
+setupOutlineHandlers()
+```
+
+<Text mt='xl'>
+  🎉 Setup complete, next learn about{' '}
+  <Anchor to='/getting-started/customizing'>
+    customizing the theme and component styles
+  </Anchor>
+  .
+</Text>

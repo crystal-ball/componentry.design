@@ -14,7 +14,7 @@ styles to be rendered.
 | `borderColor`   | `$border-colors()`                        |
 | `borderWidth`   | sm, lg, xl                                |
 | `fontColor`     | `$typography-colors()`                    |
-| `fontSize`      | string, number, xs, sm, base, lg, xl      |
+| `fontSize`      | string, number, xs, sm, md, lg, xl        |
 | `fontWeight`    | lighter, light, normal, bold, bolder      |
 | `letterSpacing` | string                                    |
 | `lineHeight`    | string                                    |
@@ -35,13 +35,13 @@ styles to be rendered.
 ## Sizes
 
 Style props that accept sizes are configured to handle a set of library values as
-classNames and pass through all other values. Setting the size to one of: `xs`, `sm`,
-`base` `lg`, or `xl` will return a class, passing any other string or numeric value will
-return a style.
+classNames and pass through all other values. Setting the size to one of: `xs`, `sm`, `md`
+`lg`, or `xl` will return a class, passing any other string or numeric value will return a
+style.
 
 ```jsx
-// Will render utility class: `.p-base`
-<Block p='base' />
+// Will render utility class: `.p-md`
+<Block p='md' />
 
 // Will render style: `{ padding: 5 }`
 <Block p={5} />

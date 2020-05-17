@@ -1,0 +1,29 @@
+# Palette
+
+The theme palette values are used in component styles and utility classes. By default only
+theme colors with a full range of shades are included.
+
+```scss
+$theme: (
+  palette: (
+    // Components will create a color modifier for each of the listed theme-colors, themes
+      // can optionally add additional theme colors
+      theme-colors: (/* primary, success, warning, error */),
+    // Each of the default grayscale, primary, success, warning, and error maps
+      // include shades from 100-900
+      grayscale: (),
+    primary: (),
+    success: (),
+    warning: (),
+    error: (),
+    // font-color-* classes
+      typography: (/* body, code, inverse, success, warning, error */),
+    // background-color-* classes
+      backgrounds: (/* body */),
+    // border-color-* classes
+      borders: (),
+    // box-shadow-* classes
+      shadows: (),
+  ),
+);
+```

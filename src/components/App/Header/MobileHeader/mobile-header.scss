@@ -1,0 +1,31 @@
+:local(.navContainer) {
+  position: sticky;
+  top: 0;
+  box-shadow: theme('shadows.primary');
+  // ℹ️ it's necessary to set a positive z-index on this positioned element,
+  // otherwise non-positioned elements will be stacked higher than it
+  z-index: 1;
+}
+
+:local(.action) {
+  border: none;
+}
+
+:local(.contentContainer) {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  background: rgba(36, 37, 96, 0.9);
+  border-left: 5px solid theme('palette.borders.ultra');
+}
+
+:local(menuOffset) {
+  display: block;
+  width: 20px;
+  height: 25px;
+}

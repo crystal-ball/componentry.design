@@ -8,18 +8,11 @@ import Header from './Header/Header'
 
 // Screens
 import LandingScreen from '../LandingScreen/LandingScreen'
-import SetupScreen from '../SetupScreen/SetupScreen'
+import GettingStartedScreen from '../GettingStartedScreen/GettingStartedScreen'
 import DesignSystemScreen from '../DesignSystemScreen/DesignSystemScreen'
 import ComponentsScreen from '../ComponentsScreen/ComponentsScreen'
 import PrinciplesScreen from '../PrinciplesScreen/PrinciplesScreen'
 import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
-
-// ℹ️ Screens overview
-// 1. Landing - Library overview/highlights
-// 2. Setup - Install, ThemeProvider, outline handler
-// 3. Design System - SASS customization, Colors, Typography, Spacing
-// 4. Components - Button, Card, Drawer, etc.
-// 5. Principles - API design, component composition
 
 function App() {
   return (
@@ -31,8 +24,8 @@ function App() {
           <Route exact path='/'>
             <LandingScreen />
           </Route>
-          <Route path='/setup'>
-            <SetupScreen />
+          <Route path='/getting-started'>
+            <GettingStartedScreen />
           </Route>
           <Route path='/design-system'>
             <DesignSystemScreen />

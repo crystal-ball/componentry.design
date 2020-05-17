@@ -7,6 +7,7 @@ import classes from './hologram.scss'
 
 export default function Hologram() {
   const [hovered, setHovered] = useState(false)
+
   return (
     <Block
       position='relative'
@@ -21,6 +22,7 @@ export default function Hologram() {
         className={cx(classes.anchorContainer, 'fade', { visible: hovered })}
       >
         <Anchor
+          as='a'
           href='https://undraw.co/'
           color='lead'
           fontSize='sm'

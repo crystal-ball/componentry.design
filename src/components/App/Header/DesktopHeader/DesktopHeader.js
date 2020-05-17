@@ -1,35 +1,17 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import { css } from '@emotion/core'
 import { Anchor, Block, Dropdown, Flex, Icon } from 'componentry'
 
-import { Link } from '@/components/universal'
 import { routes } from '@/components/App/routes'
 
-const navContainerStyles = ({ borderColors }) => css`
-  box-shadow: 0 0 10px ${borderColors.ultra};
-`
-
-const navButtonStyles = (theme) => css`
-  font-family: ${theme.typography.fontFamilySecondary};
-  color: ${theme.themeColors.primary};
-  text-shadow: ${theme.themeColors.primary} 1px 0px 10px;
-  opacity: 0.75;
-  transition: opacity 0.3s;
-
-  &:hover {
-    color: ${theme.themeColors.primary};
-    opacity: 1;
-    text-decoration: none;
-  }
-`
+import classes from './desktop-header.scss'
 
 export default function Header() {
   const location = useLocation()
   const renderLandingLink = location.pathname !== '/'
 
   return (
-    <Block className='bg-ultra'>
+    <Block backgroundColor='ultra'>
       <Flex
         borderBottom
         as='nav'
@@ -37,38 +19,43 @@ export default function Header() {
         align='center'
         borderColor='ultra'
         borderWidth='3'
-        className='px-4 py-3'
-        css={navContainerStyles}
+        className='box-shadow-primary px-lg py-md'
       >
         {renderLandingLink ? (
           <Flex align='center'>
-            <Anchor href='https://github.com/crystal-ball/componentry' mx='sm'>
+            <Anchor as='a' href='https://github.com/crystal-ball/componentry' mx='sm'>
               <Icon
+                variant='feature'
                 id='github'
                 fontColor='primary'
-                fontSize={24}
-                className='d-block'
-                font={false}
+                width={24}
+                height={24}
               />
             </Anchor>
 
-            <Link to='/' fontColor='primary' className='heading-4 line-height-1 raddow'>
+            <Anchor
+              to='/'
+              fontColor='primary'
+              fontSize='lg'
+              letterSpacing='0.1em'
+              className='line-height-1 text-shadow-display'
+            >
               componentry
-            </Link>
+            </Anchor>
           </Flex>
         ) : (
           <div />
         )}
 
         <Flex align='center'>
-          {/* Setup */}
+          {/* Getting Started */}
           <Dropdown>
-            <Dropdown.Trigger mx='sm' css={navButtonStyles}>
-              Setup
+            <Dropdown.Trigger className={classes.button} mx='sm'>
+              Getting Started
             </Dropdown.Trigger>
             <Dropdown.Content>
-              {routes.setup.map(({ name, path }) => (
-                <Dropdown.Item key={path} as={Link} to={path}>
+              {routes.gettingStarted.map(({ name, path }) => (
+                <Dropdown.Item key={path} as={Anchor} to={path}>
                   {name}
                 </Dropdown.Item>
               ))}
@@ -77,12 +64,12 @@ export default function Header() {
 
           {/* Design System */}
           <Dropdown>
-            <Dropdown.Trigger mx='sm' css={navButtonStyles}>
+            <Dropdown.Trigger className={classes.button} mx='sm'>
               Design System
             </Dropdown.Trigger>
             <Dropdown.Content>
-              {routes.design.map(({ name, path }) => (
-                <Dropdown.Item key={path} as={Link} to={path}>
+              {routes.designSystem.map(({ name, path }) => (
+                <Dropdown.Item key={path} as={Anchor} to={path}>
                   {name}
                 </Dropdown.Item>
               ))}
@@ -91,12 +78,12 @@ export default function Header() {
 
           {/* Components */}
           <Dropdown>
-            <Dropdown.Trigger mx='sm' css={navButtonStyles}>
+            <Dropdown.Trigger className={classes.button} mx='sm'>
               Components
             </Dropdown.Trigger>
             <Dropdown.Content>
               {routes.components.map(({ name, path }) => (
-                <Dropdown.Item key={path} as={Link} to={path}>
+                <Dropdown.Item key={path} as={Anchor} to={path}>
                   {name}
                 </Dropdown.Item>
               ))}
@@ -104,18 +91,18 @@ export default function Header() {
           </Dropdown>
 
           {/* Principles */}
-          <Dropdown>
-            <Dropdown.Trigger mx='sm' css={navButtonStyles}>
+          {/* <Dropdown>
+            <Dropdown.Trigger className={classes.button} mx='sm'>
               Principles
             </Dropdown.Trigger>
             <Dropdown.Content className='align-right'>
               {routes.principles.map(({ name, path }) => (
-                <Dropdown.Item key={path} as={Link} to={path}>
+                <Dropdown.Item key={path} as={Anchor} to={path}>
                   {name}
                 </Dropdown.Item>
               ))}
             </Dropdown.Content>
-          </Dropdown>
+          </Dropdown> */}
         </Flex>
       </Flex>
     </Block>

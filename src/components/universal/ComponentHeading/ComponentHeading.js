@@ -1,25 +1,28 @@
 import React from 'react'
 import { arrayOf, string } from 'prop-types'
-import { css } from '@emotion/core'
-import { Anchor, Block, Heading, Icon, Text } from 'componentry'
+import { Anchor, Block, Icon, Text } from 'componentry'
 
-const headingStyles = ({ typographyColors, typography }) => css`
-  font-family: ${typography.fontFamilySecondary};
-  color: ${typographyColors.radvender};
-`
+import classes from './component-heading.scss'
 
 export default function ComponentHeading({ components, name }) {
   return (
     <>
-      <Heading variant='display-2' mt='xl' mb={0} css={headingStyles} letterSpacing={0}>
+      <Text
+        variant='display-2'
+        className={classes.heading}
+        mt='xl'
+        mb={0}
+        letterSpacing={0}
+      >
         {`<${name}/>`}
-      </Heading>
+      </Text>
       <Block ml={75}>
         <Text variant='caption' mb={0}>
           Components: {components.join(', ')}
         </Text>
         <Text variant='caption'>
           <Anchor
+            as='a'
             fontSize='sm'
             target='_blank'
             rel='noopener'
