@@ -3,19 +3,19 @@ import { Route, Switch } from 'react-router-dom'
 
 import { ScreenContainer } from '@/components/universal'
 import { routes } from '@/components/App/routes'
-import ButtonScreen from './ButtonScreen/ButtonScreen'
+import ButtonScreen from './Button/Button'
 // import Active from './screens/active.mdx'
 // import Alert from './screens/alert.mdx'
 import Anchor from './screens/anchor.mdx'
 // import Badge from './screens/badge.mdx'
-import Block from './screens/block.mdx'
+import BlockScreen from './Block/Block'
 // import Card from './screens/card.mdx'
 // import Close from './screens/close.mdx'
 // import Drawer from './screens/drawer.mdx'
 // import Dropdown from './screens/dropdown.mdx'
-import Flex from './screens/flex.mdx'
+import FlexScreen from './Flex/Flex'
 // import FormGroup from './screens/form-group.mdx'
-import Icon from './screens/icon.mdx'
+import IconScreen from './Icon/Icon'
 // import Input from './screens/input.mdx'
 // import List from './screens/list.mdx'
 import Media from './screens/media.mdx'
@@ -23,8 +23,8 @@ import Media from './screens/media.mdx'
 // import Nav from './screens/nav.mdx'
 // import Popover from './screens/popover.mdx'
 // import Tabs from './screens/tabs.mdx'
-import Text from './screens/text.mdx'
-import Theme from './screens/theme.mdx'
+import TextScreen from './Text/Text'
+import ThemeScreen from './Theme/Theme'
 // import Tooltip from './screens/tooltip.mdx'
 
 const screens = {
@@ -32,15 +32,15 @@ const screens = {
   // Alert,
   Anchor,
   // Badge,
-  Block,
+  Block: BlockScreen,
   Button: ButtonScreen,
   // Card,
   // Close,
   // Drawer,
   // Dropdown,
-  Flex,
+  Flex: FlexScreen,
   // FormGroup,
-  Icon,
+  Icon: IconScreen,
   // Input,
   // List,
   Media,
@@ -48,8 +48,8 @@ const screens = {
   // Nav,
   // Popover,
   // Tabs,
-  Text,
-  Theme,
+  Text: TextScreen,
+  Theme: ThemeScreen,
   // Tooltip,
 }
 

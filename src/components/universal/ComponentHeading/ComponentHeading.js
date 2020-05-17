@@ -22,6 +22,7 @@ export default function ComponentHeading({ components, name }) {
         </Text>
         <Text variant='caption'>
           <Anchor
+            as='a'
             fontSize='sm'
             target='_blank'
             rel='noopener'

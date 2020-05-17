@@ -2,6 +2,11 @@
  * Application styles
  */
 
+.demo-div {
+  background-color: theme('palette.shadows.widget');
+  min-height: 8px;
+}
+
 // --------------------------------------------------------
 // Componentry wants
 

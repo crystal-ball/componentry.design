@@ -41,6 +41,7 @@ module.exports = {
     },
     shadows: {
       ultra: '#f52277',
+      widget: '#ff428e80',
     },
     typography: {
       body: '#c7e3ee',
