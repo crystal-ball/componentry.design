@@ -22,7 +22,7 @@ export default function CodeBlock({ children, className: mdxClassName }) {
 
   let formattedCode = children
   if (prettierLanguages[language]) {
-    formattedCode = prettier.format(children.replace(/✨/g, ''), {
+    formattedCode = prettier.format(children, {
       parser: prettierLanguages[language],
       plugins: [parserBabel, parserSCSS],
     })

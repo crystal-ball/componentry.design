@@ -35,7 +35,7 @@
     "@hot-loader/react-dom": "16.13.0",
     "@mdx-js/react": "1.6.1",
     "classnames": "2.2.6",
-    "componentry": "3.0.0-rc.7",
+    "componentry": "3.0.0",
     "prettier": "2.0.5",
     "pretty-format": "26.0.1",
     "prism-react-renderer": "1.1.0",
