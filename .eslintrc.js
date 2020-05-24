@@ -2,7 +2,6 @@
 
 const eloquence = require('eslint-config-eloquence')
 
-module.exports = {
-  root: true,
-  ...eloquence({ target: 'react' }),
-}
+const configs = eloquence({ target: 'react' })
+
+module.exports = configs
