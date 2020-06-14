@@ -2,17 +2,14 @@ import React from 'react'
 import { hot } from 'react-hot-loader/root'
 import { Route, Switch } from 'react-router-dom'
 
-// Application
 import { ScrollToTop } from '@/components/universal'
-import Header from './Header/Header'
-
-// Screens
 import LandingScreen from '../LandingScreen/LandingScreen'
 import GettingStartedScreen from '../GettingStartedScreen/GettingStartedScreen'
 import DesignSystemScreen from '../DesignSystemScreen/DesignSystemScreen'
 import ComponentsScreen from '../ComponentsScreen/ComponentsScreen'
 import PrinciplesScreen from '../PrinciplesScreen/PrinciplesScreen'
 import FourOhFourScreen from '../FourOhFourScreen/FourOhFourScreen'
+import Header from './Header/Header'
 
 function App() {
   return (
