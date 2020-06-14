@@ -1,9 +1,9 @@
 'use strict'
 
 const path = require('path')
-const webpackBase = require('@crystal-ball/webpack-base')
 const sass = require('sass')
-const { SassDimension, typeOf } = require('node-sass-utils')(sass)
+const webpackBase = require('@crystal-ball/webpack-base')
+const { SassDimension } = require('node-sass-utils')(sass)
 
 const theme = require('./src/theme/radical')
 

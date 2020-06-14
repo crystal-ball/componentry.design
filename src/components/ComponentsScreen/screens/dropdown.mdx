@@ -17,22 +17,21 @@ import { Dropdown } from 'componentry'
 </Dropdown>
 ```
 
-- Drodpowns don't include menu or list settings by default because they may
-  include headers, dividers, inputs, etc.
+- Drodpowns don't include menu or list settings by default because they may include
+  headers, dividers, inputs, etc.
 
 ## Recipes
 
 ### Menus
 
-Menus are a stricter subset of dropdowns that should only include menu options.
-You can create a menu by adding the `menu` and `menuitem` roles to the dropdown 
-content.
+Menus are a stricter subset of dropdowns that should only include menu options. You can
+create a menu by adding the `menu` and `menuitem` roles to the dropdown content.
 
 <Dropdown>
   <Dropdown.Trigger>Update</Dropdown.Trigger>
-  <Dropdown.Content role="menu">
-    <Dropdown.Item role="menuitem">Save</Dropdown.Item>
-    <Dropdown.Item role="menuitem">Print</Dropdown.Item>
-    <Dropdown.Item role="menuitem">Delete</Dropdown.Item>
+  <Dropdown.Content role='menu'>
+    <Dropdown.Item role='menuitem'>Save</Dropdown.Item>
+    <Dropdown.Item role='menuitem'>Print</Dropdown.Item>
+    <Dropdown.Item role='menuitem'>Delete</Dropdown.Item>
   </Dropdown.Content>
 </Dropdown>
