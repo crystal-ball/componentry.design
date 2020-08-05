@@ -52,7 +52,7 @@
     "@crystal-ball/prettier-base": "2.2.0",
     "@crystal-ball/webpack-base": "9.9.0",
     "@testing-library/jest-dom": "5.11.2",
-    "@testing-library/react": "10.4.7",
+    "@testing-library/react": "10.4.8",
     "@types/jest": "26.0.8",
     "eslint-config-eloquence": "14.9.0",
     "husky": "4.2.5",
