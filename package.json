@@ -53,7 +53,7 @@
     "@crystal-ball/webpack-base": "9.11.0",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "10.4.9",
-    "@types/jest": "26.0.10",
+    "@types/jest": "26.0.12",
     "eslint-config-eloquence": "14.10.0",
     "husky": "4.2.5",
     "jest": "26.4.2",
