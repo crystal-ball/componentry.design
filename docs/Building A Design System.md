@@ -27,7 +27,7 @@ _Define the design elements for creating visual styles in the system_
 - [ ] Heading
 - [ ] Icon
 
-## Phase 2 - Interaction targets
+## Phase 2 - Action elements
 
 - [ ] Anchors: Set color and decoration for anchors
 - [ ] Buttons: Set colors and variants for buttons

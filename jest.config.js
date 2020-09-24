@@ -18,11 +18,7 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.js', '!**/*.stories.js'],
 
   // Environment setup entrypoints in order of execution
-  setupFilesAfterEnv: ['<rootDir>/test/jest-after-env-setup.js'],
-
-  // Snapshot custom component css (it should be used sparingly and be important
-  // enough to verify in tests)
-  snapshotSerializers: ['jest-emotion'],
+  setupFilesAfterEnv: ['<rootDir>/.jest/jest-after-env-setup.js'],
 
   // Configure Jest resolver for non-standard project import and UI resources
   // handled by webpack

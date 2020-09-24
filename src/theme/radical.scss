@@ -72,12 +72,44 @@ $theme: theme();
 // --------------------------------------------------------
 // Components
 
+// For each component, the default structure is:
+$component: (
+  variants: (),
+);
+
+// Some components have a base class that sets styles shared across variants:
+// (this is analagous to the MUI `root` styles)
+$component: (
+  base: (),
+  variants: (),
+);
+
+// Some components have additional styles like sizes and colors:
+$component: (
+  variants: (
+    primary: (
+      // Primary variant styles...
+        colors:
+        (
+          // Primary variant color variations
+            success: (),
+          warning: (),
+          critical: ()
+        ),
+    ),
+  ),
+  sizes: (
+    sm: (),
+    md: (),
+  ),
+);
+
 // --- <Anchor />
 $a-primary: (
   color: theme('palette.secondary.500'),
   '&:hover': (
-    color: theme('palette.secondary.700')
-  )
+    color: theme('palette.secondary.700'),
+  ),
 );
 
 // --- <Icon />
@@ -155,5 +187,26 @@ $text: (
       font-size: var(--lead),
       font-weight: theme('typography.font-weights.heading'),
     ),
+  ),
+);
+
+// --- <Button />
+
+// ? Colors ?
+
+$button: (
+  variants: (
+    primary: (),
+    secondary: (),
+    text: (
+      font-size: 14,
+      colors: (
+        success: (),
+      ),
+    ),
+  ),
+  sizes: (
+    sm: (),
+    lg: (),
   ),
 );
