@@ -13,13 +13,13 @@ export default function Header() {
   return (
     <Block backgroundColor='ultra'>
       <Flex
-        borderBottom
         as='nav'
         justify='between'
         align='center'
         borderColor='ultra'
         borderWidth='3'
         className='box-shadow-primary px-lg py-md'
+        borderBottom
       >
         {renderLandingLink ? (
           <Flex align='center'>

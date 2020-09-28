@@ -18,7 +18,7 @@ function App() {
       <div className='d-flex flex-column w-100 min-100vh'>
         <Header />
         <Switch>
-          <Route exact path='/'>
+          <Route path='/' exact>
             <LandingScreen />
           </Route>
           <Route path='/getting-started'>

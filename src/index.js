@@ -2,7 +2,7 @@
  * ℹ️ RHL must be imported before React/DOM for some setup magic, note during
  * development react-dom is aliased to @hot-loader/react-dom in webpack configs
  */
-import 'react-hot-loader' // eslint-disable-line import/no-unassigned-import
+import 'react-hot-loader'
 import React from 'react'
 import { render } from 'react-dom'
 
@@ -13,8 +13,8 @@ import { Media, Theme, setupOutlineHandlers } from 'componentry'
 
 // ⚠️ Side effects imports, note styles must be imported before components to
 // ensure component styles can override them
-import './index.scss' // eslint-disable-line import/no-unassigned-import -- Side effect: Styles
-import './utils/require-icons' // eslint-disable-line import/no-unassigned-import -- Side effect: SVG icons
+import './index.scss'
+import './utils/require-icons'
 
 import App from './components/App/App'
 import { components } from './components/App/mdx-components'

@@ -12,7 +12,6 @@ export default function Header() {
 
   return (
     <Flex
-      borderBottom
       as='nav'
       className={classes.navContainer}
       backgroundColor='ultra'
@@ -21,6 +20,7 @@ export default function Header() {
       borderColor='ultra'
       py='sm'
       px='md'
+      borderBottom
     >
       <div className={classes.menuOffset}>&nbsp;</div>
       {renderLandingLink && (
@@ -30,7 +30,6 @@ export default function Header() {
       )}
       <Active clickEvents>
         {({ deactivate }) => (
-          /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
           <>
             <Active.Trigger className={classes.action}>
               <Icon id='menu' className='h4' />

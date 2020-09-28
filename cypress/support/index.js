@@ -14,4 +14,4 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands' // eslint-disable-line import/no-unassigned-import -- Side effect: Cypress commands
+import './commands'

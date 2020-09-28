@@ -9,50 +9,49 @@ $enable-caret: false;
 // --------------------------------------------------------
 // Theme Colors
 
-$headings: #C7E3EE;
+$headings: #c7e3ee;
 $body: #b3cdd8;
-$muted: #75B7BB;
+$muted: #75b7bb;
 
 $grayscale: (
-  '100':  #e4e0f0,
-  '500':  #457770,
-  '600':  #48676a,
+  '100': #e4e0f0,
+  '500': #457770,
+  '600': #48676a,
 );
 
 $theme-colors: (
-  background:  #12111f,
-  foreground:  #C7E3EE,
-  primary:     #f52277,
-  secondary:   #a6ffdd,
-  success:     #c3f920,
-  info:        #2bf5e9,
-  warning:     #ffc300,
-  danger:      #fc4552,
+  background: #12111f,
+  foreground: #c7e3ee,
+  primary: #f52277,
+  secondary: #a6ffdd,
+  success: #c3f920,
+  info: #2bf5e9,
+  warning: #ffc300,
+  danger: #fc4552,
 );
 
 $background-colors: (
-  ultra:       #100f1a,
-  background:  #12111f,
-  elevated:    #141322,
-  overlay:     rgba(21,20,33, 0.9),
-  mito:        #242560
+  ultra: #100f1a,
+  background: #12111f,
+  elevated: #141322,
+  overlay: rgba(21, 20, 33, 0.9),
+  mito: #242560,
 );
 
 $border-colors: (
-  mito:  #2c3258,
+  mito: #2c3258,
   ultra: #681854,
 );
 
 $typography-colors: (
-  anchor:    #5cfff1,
-  code:      #f85baa,
-  heading:   #84bfc2,
-  lead:      #aedbe2,
-  muted:     #75B7BB,
+  anchor: #5cfff1,
+  code: #f85baa,
+  heading: #84bfc2,
+  lead: #aedbe2,
+  muted: #75b7bb,
   radvender: #bf9afc,
-
   // just for subheadings -> nuke it
-  caption: #a4ccc0
+  caption: #a4ccc0,
 );
 
 // --------------------------------------------------------
@@ -60,11 +59,11 @@ $typography-colors: (
 
 $space-base: 1rem;
 $spacing: (
-  xs:   var(--s1),
-  sm:   var(--s2),
+  xs: var(--s1),
+  sm: var(--s2),
   base: var(--s3),
-  lg:   var(--s4),
-  xl:   var(--s5),
+  lg: var(--s4),
+  xl: var(--s5),
 );
 
 // Fonts
@@ -75,9 +74,9 @@ $font-family-monospace: 'Fira Code', monospace;
 
 $font-family-sans-serif: $font-family-primary;
 
-$font-size-sm:     var(--font-sm);
-$font-size-base:   var(--font-base);
-$font-size-lg:     var(--font-lg);
+$font-size-sm: var(--font-sm);
+$font-size-base: var(--font-base);
+$font-size-lg: var(--font-lg);
 
 $line-height-base: 1.6;
 
@@ -87,10 +86,10 @@ $display2-size: var(--display2);
 
 // --- Headings
 $headings-font-family: $font-family-secondary;
-$headings-font-weight:     400;
-$headings-letter-spacing:  var(--heading-letter-spacing);
-$headings-line-height:     1.5;
-$headings-margin-bottom:   0;
+$headings-font-weight: 400;
+$headings-letter-spacing: var(--heading-letter-spacing);
+$headings-line-height: 1.5;
+$headings-margin-bottom: 0;
 
 $h1-font-size: var(--h1);
 $h2-font-size: var(--h2);
@@ -118,13 +117,13 @@ $lead-font-size: var(--lead);
 // --------------------------------------------------------
 // Cards
 
-$card-border-color:  map-get($grayscale, '500');
-$card-bg:            map-get($background-colors, 'elevated');
+$card-border-color: map-get($grayscale, '500');
+$card-bg: map-get($background-colors, 'elevated');
 
 // --------------------------------------------------------
 // Dropdowns
 
-$dropdown-anchor-hover-bg:     map-get($background-colors, mito);
+$dropdown-anchor-hover-bg: map-get($background-colors, mito);
 
 // --------------------------------------------------------
 // Icons
@@ -140,6 +139,3 @@ $small-font-size: 80%;
 // Componentry defaults for unset variables
 
 @import '~componentry/src/styles/variables';
-
-
-

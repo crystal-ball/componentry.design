@@ -1,16 +1,10 @@
-/* eslint-disable react/no-multi-comp */
 import React from 'react'
-import * as componentry from 'componentry' // eslint-disable-line
+import { Text } from 'componentry'
 
-import { CodeBlock, ComponentHeading } from '@/components/universal'
-
-const { Text, Theme, Media, setupOutlineHandlers, ...componentryComponents } = componentry
+import { CodeBlock } from '@/components/universal'
 
 // Include all component library components in MDX context for slimmer files
 export const components = {
-  ...componentryComponents,
-  Text,
-  ComponentHeading,
   code: CodeBlock,
   pre: (props) => <div {...props} />,
   h1: (props) => <Text variant='heading-1' {...props} />,

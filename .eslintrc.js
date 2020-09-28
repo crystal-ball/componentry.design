@@ -2,4 +2,4 @@
 
 const eloquence = require('eslint-config-eloquence')
 
-module.exports = eloquence({ target: 'react', enableTS: false })
+module.exports = eloquence({ target: 'react', enableMDX: true })

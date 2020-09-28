@@ -1,4 +1,4 @@
-/* eslint-disable react/no-multi-comp, react/prop-types */
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import prettyFormat from 'pretty-format'
 

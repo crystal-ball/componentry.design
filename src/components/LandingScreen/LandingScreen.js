@@ -63,13 +63,13 @@ export default function LandingScreen() {
 
           <Text>Build something radical!</Text>
           <Flex
-            borderTop
             mt='lg'
             pt='lg'
             direction={sm ? 'column' : null}
             justify='evenly'
             width='100%'
             fontSize='lg'
+            borderTop
           >
             <Anchor to='getting-started/overview'>Getting started</Anchor>
             <Anchor to='principles/library-principles'>Library Principles</Anchor>
