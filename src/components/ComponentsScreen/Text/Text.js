@@ -8,7 +8,6 @@ import {
   PreviewPropsContainer,
 } from '@/components/universal'
 
-/* eslint-disable jsx-a11y/label-has-associated-control, jsx-a11y/label-has-for */
 export default function TextScreen() {
   return (
     <>
