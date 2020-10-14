@@ -1,6 +1,6 @@
 # Dockerfile is used primarily for running tests and building in CI/CD
 
-FROM node:12.18-alpine as base
+FROM node:12.19-alpine as base
 LABEL maintainer="hedgecock.d@gmail.com"
 
 # Install bash for repo scripts
