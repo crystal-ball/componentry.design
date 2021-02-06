@@ -47,14 +47,14 @@
     "svg-symbol-sprite-loader": "5.0.0"
   },
   "devDependencies": {
-    "@crystal-ball/babel-base": "1.13.0",
+    "@crystal-ball/babel-base": "3.0.0",
     "@crystal-ball/commitizen-base": "2.9.0",
     "@crystal-ball/prettier-base": "2.6.0",
-    "@crystal-ball/webpack-base": "9.13.0",
+    "@crystal-ball/webpack-base": "10.2.0",
     "@testing-library/jest-dom": "5.11.9",
     "@testing-library/react": "11.2.5",
     "@types/jest": "26.0.20",
-    "eslint-config-eloquence": "16.3.1",
+    "eslint-config-eloquence": "17.3.0",
     "eslint-plugin-mdx": "1.8.2",
     "husky": "4.3.8",
     "jest": "26.6.3",
