@@ -1,4 +1,3 @@
-import React from 'react'
 import { Icon } from 'componentry'
 
 export default function FourOhFourScreen() {

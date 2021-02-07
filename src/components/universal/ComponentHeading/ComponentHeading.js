@@ -1,4 +1,3 @@
-import React from 'react'
 import { arrayOf, string } from 'prop-types'
 import { Anchor, Block, Icon, Text } from 'componentry'
 

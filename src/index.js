@@ -3,7 +3,7 @@
  * development react-dom is aliased to @hot-loader/react-dom in webpack configs
  */
 import 'react-hot-loader'
-import React from 'react'
+import { StrictMode } from 'react'
 import { render } from 'react-dom'
 
 import { BrowserRouter } from 'react-router-dom'
@@ -31,7 +31,7 @@ setupOutlineHandlers()
 // Start the party 🎉
 // Render all of the root application providers then application root component
 render(
-  <React.StrictMode>
+  <StrictMode>
     <MDXProvider components={components}>
       <Theme theme={componentryTheme}>
         <Media>
@@ -41,6 +41,6 @@ render(
         </Media>
       </Theme>
     </MDXProvider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root'),
 )

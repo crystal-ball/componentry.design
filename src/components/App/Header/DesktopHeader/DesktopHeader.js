@@ -1,4 +1,3 @@
-import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { Anchor, Block, Dropdown, Flex, Icon } from 'componentry'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Anchor, Block, Flex, Icon, Text, useMedia } from 'componentry'
 
 import { ScreenContainer } from '@/components/universal'

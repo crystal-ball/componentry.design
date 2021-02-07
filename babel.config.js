@@ -1,7 +1,9 @@
 'use strict'
 
-const babelBase = require('@crystal-ball/babel-base').default
+const { babelBase } = require('@crystal-ball/babel-base')
 
 module.exports = function babelConfigs(api) {
-  return babelBase({ env: api.env, target: 'react' })
+  api.cache(() => process.env.NODE_ENV)
+
+  return babelBase({ env: process.env.NODE_ENV, target: 'react' })
 }
