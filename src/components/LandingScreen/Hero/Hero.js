@@ -1,4 +1,3 @@
-import React from 'react'
 import { Flex, Text, useMedia } from 'componentry'
 
 import Hologram from './Hologram/Hologram'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button, Dropdown, Text } from 'componentry'
 
 import {

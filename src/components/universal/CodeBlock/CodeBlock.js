@@ -1,6 +1,5 @@
 /* eslint-disable react/no-array-index-key */
 
-import React from 'react'
 import { node, string } from 'prop-types'
 import cx from 'classnames'
 import Highlight, { defaultProps } from 'prism-react-renderer'

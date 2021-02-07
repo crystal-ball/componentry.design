@@ -1,4 +1,3 @@
-import React from 'react'
 import { Text } from 'componentry'
 
 import { CodeBlock, ComponentHeading } from '@/components/universal'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useMedia } from 'componentry'
 
 import DesktopHeader from './DesktopHeader/DesktopHeader'

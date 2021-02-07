@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Anchor, Block, Flex } from 'componentry'
 import cx from 'classnames'
 
