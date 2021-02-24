@@ -15,7 +15,7 @@
     "url": "https://github.com/crystal-ball/componentry.design"
   },
   "engines": {
-    "node": "12"
+    "node": "14"
   },
   "scripts": {
     "commit": "cz commit",
