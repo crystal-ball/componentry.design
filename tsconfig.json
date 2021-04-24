@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    // --- Type checking
+    "allowJs": true, // Allow JS file to be compiled
+    "checkJs": true, // Check all JS files by default
+    "strict": true,
+    "forceConsistentCasingInFileNames": true, // Check import path casing matches file system (recommended by TS)
+    "noUncheckedIndexedAccess": true, // Every property access with an index could be undefined
+    "skipLibCheck": true, // Skip type checking .d.ts declaration files (recommended by TS)
+
+    // --- Language support
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "preserve",
+
+    // --- Code generation
+    "noEmit": true, // Don't emit files (Compilation handled by Babel)
+
+    // --- Module resolution
+    "esModuleInterop": true, // Interop commonJS and ESM, fixes some issues importing commonJS (recommended by TS)
+    "isolatedModules": true, // Disallow features that require cross-file information for compilation (Babel safety check)
+    "moduleResolution": "node", // Use Node.js algorithm to resolve modules
+    "resolveJsonModule": true,
+
+    // --- Alias resolution
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"] // Resolve `@/` import base to scr/
+    }
+  },
+
+  "include": ["next-env.d.ts", "src/**/*"],
+  "exclude": ["node_modules"]
+}
