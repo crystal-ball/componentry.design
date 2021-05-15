@@ -1,0 +1,9 @@
+@import './theme.scss';
+
+/* --- Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- App base styles */
+@import '~componentry/styles';
