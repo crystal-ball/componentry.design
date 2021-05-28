@@ -2,8 +2,8 @@
 // --------------------------------------------------------
 
 $font-families: (
-  heading: '"Libre Baskerville", serif',
   body: '"Nunito Sans", sans-serif',
+  heading: '"Libre Baskerville", serif',
   monospace: '"Fira Code", monospace',
 );
 
@@ -33,18 +33,18 @@ $theme: (
   palette:
     (
       grayscale: (
-        100: '#F5F5F5',
-        300: '#E0E0E0',
-        500: '#9E9E9E',
-        700: '#616161',
-        900: '#212121',
+        '100': '#F5F5F5',
+        '300': '#E0E0E0',
+        '500': '#9E9E9E',
+        '700': '#616161',
+        '900': '#212121',
       ),
       primary: (
-        100: '#BDBDDD',
-        300: '#686AAF',
-        500: '#2B2E90',
-        700: '#1D1E7C',
-        900: '#01015C',
+        '100': '#BDBDDD',
+        '300': '#686AAF',
+        '500': '#2B2E90',
+        '700': '#1D1E7C',
+        '900': '#01015C',
       ),
       backgrounds: (),
       borders: (),
@@ -83,7 +83,7 @@ $button: (
   variants: (
     secondary: (
       display: inline-flex,
-      padding: 0 24px 0 24px,
+      padding: 0 24px,
       height: 32px,
       border-color: #616161,
       color: #616161,
@@ -101,10 +101,6 @@ $button: (
     ),
   ),
 );
-
-.🅲-button.button-secondary {
-  padding: 0 24px;
-}
 
 $text: (
   variants: (
