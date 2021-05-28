@@ -1,8 +1,13 @@
-<div align="right">
-  <h1>
-    <img height=75 src="./docs/assets/componentry.png" alt="Componentry">
-  </h1>
+<p align="center">
+  <a href="https://componentry.design">
+    <img src="./docs/assets/logo.png" height="128">
+    <h1 align="center">Componentry</h1>
+  </a>
+</p>
 
+---
+
+<div align="right">
   <!-- prettier-ignore-start -->
   <a href="https://zeit.co/crystal-ball/componentry.design">
     <img src="https://img.shields.io/badge/hosting-▲%20Zeit-7de0c4" alt="Zeit Now" valign="text-top" />
