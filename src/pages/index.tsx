@@ -51,7 +51,6 @@ export default function Home(): JSX.Element {
           </Block>
         </Flex>
       </Flex>
-      <footer>Footer</footer>
     </ScreenContainer>
   )
 }
