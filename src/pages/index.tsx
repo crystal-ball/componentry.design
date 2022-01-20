@@ -26,12 +26,14 @@ export default function Home(): JSX.Element {
             </Text>
             <Flex mt={4} gap={2}>
               <NextLink href='/getting-started/installation'>
+                {/* @ts-expect-error -- augmentation not available yet */}
                 <Button variant='outlined' size='large'>
                   Get started
                 </Button>
               </NextLink>
               <Button
                 variant='outlined'
+                // @ts-expect-error -- augmentation not available yet
                 size='large'
                 href='https://github.com/crystal-ball/componentry'
               >
