@@ -1,48 +1,43 @@
-import Head from 'next/head'
 import NextLink from 'next/link'
 import { Block, Button, Flex, Text } from 'componentry'
 
+import { AppHead } from '@/components/AppHead/AppHead'
 import Header from '@/components/Header/Header'
 import { ScreenContainer } from '@/components/ScreenContainer/ScreenContainer'
 import Github from '@/media/github.svg'
 import Hologram from '@/media/hologram.svg'
 
+import classes from './index.module.css'
+
 export default function Home(): JSX.Element {
   return (
     <ScreenContainer>
-      <Head>
-        <title>Componentry</title>
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Libre+Baskerville:wght@700&family=Nunito+Sans:wght@400;600&display=swap'
-          rel='stylesheet'
-        />
-      </Head>
-
+      <AppHead />
       <Header />
+
       <Flex as='main' className='flex-1' justify='center' align='center'>
         <Flex>
           <Hologram width={360} height={295} />
-          <Block ml={80}>
+          <Block ml={10}>
             <Text variant='title'>Componentry</Text>
-            <Text variant='lead' width='500px' mt={32}>
+            <Text variant='lead' mt={4} className={classes.tagline}>
               A high performance React component library for building delightful
               applications.
             </Text>
-            <Flex mt={64}>
+            <Flex mt={4} gap={2}>
               <NextLink href='/getting-started/installation'>
-                <Button variant='secondary' size='lg'>
+                {/* @ts-expect-error -- augmentation not available yet */}
+                <Button variant='outlined' size='large'>
                   Get started
                 </Button>
               </NextLink>
               <Button
-                variant='secondary'
-                size='lg'
-                ml={24}
+                variant='outlined'
+                // @ts-expect-error -- augmentation not available yet
+                size='large'
                 href='https://github.com/crystal-ball/componentry'
               >
-                <Block mr={8}>
+                <Block mr={0.5}>
                   <Github width={18} height={18} />
                 </Block>
                 Github

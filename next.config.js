@@ -1,16 +1,29 @@
+'use strict'
+
 module.exports = {
+  swcMinify: true,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
       use: [
         {
           loader: '@svgr/webpack',
+
           options: {
             svgo: true,
-            // SVGO strips out `viewbox` attrs by default which makes it impossible to
-            // scale attrs so it needs to be explicitly disabled
             svgoConfig: {
-              plugins: [{ removeViewBox: false }],
+              plugins: [
+                {
+                  name: 'preset-default',
+                  params: {
+                    overrides: {
+                      // By default svgo is configured to remove viewbox attrs which breaks
+                      // svg scaling so we disable that plugin
+                      removeViewBox: false,
+                    },
+                  },
+                },
+              ],
             },
           },
         },

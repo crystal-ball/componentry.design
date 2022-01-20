@@ -10,7 +10,7 @@ export default function ComponentCustomization(): JSX.Element {
       <Header />
       <Flex px={128} pb={48} direction='column'>
         <Text variant='overline'>Getting started</Text>
-        <Text variant='heading-1' mt={8}>
+        <Text variant='h1' mt={8}>
           Component customization
         </Text>
         <Text variant='lead' mt={24}>

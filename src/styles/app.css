@@ -1,0 +1,26 @@
+@tailwind base;
+
+@layer base {
+  body {
+    @apply font-body leading-body;
+  }
+
+  /* Include font smoothing in screens that support it */
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 2dppx) {
+    html {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}
+
+@tailwind components;
+@componentry alert;
+@componentry button;
+@componentry close;
+@componentry icon;
+@componentry link;
+@componentry text;
+
+@tailwind utilities;

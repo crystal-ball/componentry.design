@@ -1,5 +1,9 @@
 'use strict'
 
-const eloquence = require('eslint-config-eloquence')
+module.exports = {
+  extends: 'eloquence/react',
 
-module.exports = eloquence({ target: 'react', parser: 'default' })
+  rules: {
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+  },
+}

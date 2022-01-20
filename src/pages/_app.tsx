@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app'
 import { Theme } from 'componentry'
-import '@/styles/app.scss'
+import '@/styles/app.css'
 
 const theme = {
   Text: {
