@@ -7,6 +7,7 @@ node_modules
 # Build output
 build
 storybook-static
+tsconfig.tsbuildinfo
 
 # Test output
 .nyc_output
