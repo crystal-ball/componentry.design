@@ -11,10 +11,13 @@
     "test:types": "tsc"
   },
   "dependencies": {
+    "clsx": "1.1.1",
     "componentry": "4.0.0-alpha.1",
+    "hast-to-hyperscript": "10.0.1",
     "next": "12.0.8",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "refractor": "4.4.0"
   },
   "devDependencies": {
     "@types/node": "17.0.10",
