@@ -1,5 +1,4 @@
-import React from 'react'
-import { Flex, Text } from 'componentry'
+import { Text } from 'componentry'
 
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'

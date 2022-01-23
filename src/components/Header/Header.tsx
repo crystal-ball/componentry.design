@@ -18,7 +18,7 @@ export default function Header(): JSX.Element {
           </Link>
         </NextLink>
         <NextLink href='/blog' passHref>
-          <Link bold className='no-underline'>
+          <Link fontWeight='bold' className='no-underline'>
             Blog
           </Link>
         </NextLink>

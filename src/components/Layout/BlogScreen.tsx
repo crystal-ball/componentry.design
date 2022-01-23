@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Flex } from 'componentry'
 
 import { AppHead } from '../AppHead/AppHead'
