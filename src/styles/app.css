@@ -16,11 +16,6 @@
 }
 
 @tailwind components;
-@componentry alert;
-@componentry button;
-@componentry close;
-@componentry icon;
-@componentry link;
-@componentry text;
+@componentry components;
 
 @tailwind utilities;
