@@ -4,13 +4,12 @@ import { Block, Button, Flex, Text } from 'componentry'
 import { AppHead } from '@/components/AppHead/AppHead'
 import Header from '@/components/Header/Header'
 import { Icon } from '@/components/Icon/Icon'
-import { ScreenContainer } from '@/components/ScreenContainer/ScreenContainer'
 
 import classes from './index.module.css'
 
 export default function Home(): JSX.Element {
   return (
-    <ScreenContainer>
+    <Flex direction='column' className='min-h-screen'>
       <AppHead />
       <Header />
 
@@ -24,7 +23,7 @@ export default function Home(): JSX.Element {
               applications.
             </Text>
             <Flex mt={4} gap={2}>
-              <NextLink href='/getting-started/installation'>
+              <NextLink href='/docs/installation' passHref>
                 <Button variant='outlined' size='large'>
                   Get started
                 </Button>
@@ -43,6 +42,6 @@ export default function Home(): JSX.Element {
           </Block>
         </Flex>
       </Flex>
-    </ScreenContainer>
+    </Flex>
   )
 }
