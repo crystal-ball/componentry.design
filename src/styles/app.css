@@ -1,6 +1,14 @@
 @tailwind base;
 
 @layer base {
+  @font-face {
+    font-family: 'Fira Code VF';
+    font-weight: 300 700;
+    font-style: normal;
+    src: url('../fonts/FiraCode-VF.woff2') format('woff2-variations'),
+      url('../fonts/FiraCode-VF.woff') format('woff-variations');
+  }
+
   body {
     @apply font-body leading-body;
   }
@@ -12,6 +20,12 @@
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
     }
+  }
+
+  /* Code styles not set in prism-night-owl */
+  code {
+    font-size: theme('fontSize.code');
+    font-family: theme('fontFamily.monospace');
   }
 }
 

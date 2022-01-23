@@ -22,7 +22,7 @@ const gray = {
 const fontFamily = {
   body: '"Nunito Sans", sans-serif',
   heading: '"Libre Baskerville", serif',
-  monospace: '"Fira Code", monospace',
+  monospace: '"Fira Code VF", monospace',
 }
 
 const fontWeight = {
@@ -32,7 +32,11 @@ const fontWeight = {
 }
 
 module.exports = {
-  extend: {},
+  extend: {
+    fontSize: {
+      code: '0.875rem', // 14px
+    },
+  },
   screens: {
     lg: '1200px',
   },

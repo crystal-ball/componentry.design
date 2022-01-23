@@ -1,6 +1,8 @@
 import { AppProps } from 'next/app'
 import { Theme } from 'componentry'
+
 import '@/styles/app.css'
+import '@/styles/prism-night-owl.css'
 
 const theme = {
   Text: {
