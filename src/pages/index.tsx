@@ -34,7 +34,7 @@ export default function Home(): JSX.Element {
                 href='https://github.com/crystal-ball/componentry'
               >
                 <Block mr={0.5}>
-                  <Icon id='github' width={18} height={18} />
+                  <Icon id='github' width={18} height={18} visible />
                 </Block>
                 Github
               </Button>
