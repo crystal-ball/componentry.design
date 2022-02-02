@@ -1,7 +1,6 @@
 import NextLink from 'next/link'
 import { Flex, Link, Text } from 'componentry'
 
-import { AppHead } from '../AppHead/AppHead'
 import Header from '../Header/Header'
 
 import classes from './DocsScreen.module.css'
@@ -9,7 +8,6 @@ import classes from './DocsScreen.module.css'
 export function DocsScreenLayout({ children }: ScreenContainerProps) {
   return (
     <Flex direction='column' className='min-h-screen'>
-      <AppHead />
       <Header />
       <Flex px={16} mt={3}>
         <DocsNav />
@@ -30,6 +28,9 @@ function DocsNav() {
     <Flex as='nav' direction='column' pb={3} className={classes.nav}>
       <Text variant='lead'>Getting Started</Text>
       <Flex pl={1} pt={0.5} direction='column' gap={0.5} borderLeft>
+        <NextLink href='/docs/overview' passHref>
+          <Link>Overview</Link>
+        </NextLink>
         <NextLink href='/docs/installation' passHref>
           <Link>Installation</Link>
         </NextLink>

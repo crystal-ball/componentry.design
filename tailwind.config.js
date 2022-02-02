@@ -9,10 +9,15 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
   safelist: [
     // margin, padding, gap
-    { pattern: /m[trblxy]?-[\d.]+/ },
-    { pattern: /p[trblxy]?-[\d.]+/ },
-    { pattern: /gap(-[xy])?-[\d.]+/ },
+    { pattern: /m[trblxy]?-.*/ },
+    { pattern: /p[trblxy]?-.*/ },
+    { pattern: /gap(-[xy])?-.*/ },
+
+    { pattern: /text-(heading|body|muted|link|heart)/ },
   ],
 }

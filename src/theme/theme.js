@@ -28,17 +28,17 @@ const primary = {
 }
 
 const fontFamily = {
-  body: '"Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
-  heading:
-    '"Libre Baskerville", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+  body: '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+  display:
+    '"Racing Sans One", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
   monospace:
-    '"Fira Code VF", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+    '"Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
 }
 
 const fontWeight = {
-  heading: 600,
+  // heading: 600,
   normal: 400,
-  bold: 600,
+  bold: 700,
 }
 
 const fontSize = {
@@ -91,13 +91,13 @@ module.exports = {
       700: '#E64A19',
       900: '#BF360C',
     },
-    text: {
-      heading: gray[900],
-      body: gray[700],
-      muted: gray[500],
-      link: primary[700],
-      heart: '#fcc4dd',
-    },
+
+    // Text colors
+    heading: gray[900],
+    body: gray[700],
+    muted: gray[500],
+    link: primary[500],
+    heart: '#fcc4dd',
   },
   spacing: {
     0: 0,
@@ -120,6 +120,6 @@ module.exports = {
   },
   lineHeight: {
     none: 1,
-    body: 1.375,
+    normal: 1.375,
   },
 }
