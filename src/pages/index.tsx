@@ -1,7 +1,7 @@
+import Head from 'next/head'
 import NextLink from 'next/link'
 import { Block, Button, Flex, Text } from 'componentry'
 
-import { AppHead } from '@/components/AppHead/AppHead'
 import Header from '@/components/Header/Header'
 import { Icon } from '@/components/Icon/Icon'
 
@@ -10,8 +10,10 @@ import classes from './index.module.css'
 export default function Home(): JSX.Element {
   return (
     <Flex direction='column' className='min-h-screen'>
-      <AppHead />
-      <Header />
+      <Head>
+        <title>Componentry</title>
+      </Head>
+      <Header isLandingScreen />
 
       <Flex as='main' className='flex-1' justify='center' align='center'>
         <Flex>

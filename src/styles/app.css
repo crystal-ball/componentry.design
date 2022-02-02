@@ -1,18 +1,7 @@
+@componentry foundation;
 @tailwind base;
 
 @layer base {
-  @font-face {
-    font-family: 'Fira Code VF';
-    font-weight: 300 700;
-    font-style: normal;
-    src: url('../fonts/FiraCode-VF.woff2') format('woff2-variations'),
-      url('../fonts/FiraCode-VF.woff') format('woff-variations');
-  }
-
-  body {
-    @apply font-body leading-body;
-  }
-
   /* Include font smoothing in screens that support it */
   @media screen and (-webkit-min-device-pixel-ratio: 2),
     screen and (min-resolution: 2dppx) {
@@ -29,7 +18,7 @@
   }
 }
 
-@tailwind components;
 @componentry components;
+@tailwind components;
 
 @tailwind utilities;
