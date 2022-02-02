@@ -5,7 +5,7 @@ class AppDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel='icon' href='/favicon.ico' />
+          <link rel='icon' href='/favicon.ico?v=2' />
           <link
             href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;700&family=Racing+Sans+One&display=swap'
             rel='stylesheet'
