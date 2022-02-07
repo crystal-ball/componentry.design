@@ -28,7 +28,7 @@ export const GettingStarted = () => {
 }
 `
 
-export default function Installation(): JSX.Element {
+export default function Installation() {
   return (
     <DocsScreenLayout>
       <Text variant='overline'>Getting started</Text>

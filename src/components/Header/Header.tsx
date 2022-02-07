@@ -3,9 +3,18 @@ import NextLink from 'next/link'
 
 import { Icon } from '@/components/Icon/Icon'
 
+const stickyClasses =
+  'sticky top-0 bg-background border-0 border-b border-solid border-container'
+
 export default function Header({ isLandingScreen }: HeaderProps) {
   return (
-    <Flex as='nav' justify='between' p={2} align='center' borderBottom>
+    <Flex
+      as='nav'
+      className={isLandingScreen ? undefined : stickyClasses}
+      justify='between'
+      p={2}
+      align='center'
+    >
       {isLandingScreen ? (
         <div />
       ) : (

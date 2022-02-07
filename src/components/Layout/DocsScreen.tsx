@@ -11,7 +11,7 @@ export function DocsScreenLayout({ children }: ScreenContainerProps) {
       <Header />
       <Flex px={16} mt={3}>
         <DocsNav />
-        <Flex pb={6} direction='column'>
+        <Flex className={classes.content} pb={6} direction='column'>
           {children}
         </Flex>
       </Flex>
@@ -35,7 +35,13 @@ function DocsNav() {
           <Link>Installation</Link>
         </NextLink>
         <NextLink href='/docs/theme-customization' passHref>
-          <Link>Theme Customization</Link>
+          <Link>Customizing: Theme</Link>
+        </NextLink>
+        <NextLink href='/docs/components-customization' passHref>
+          <Link>Customizing: Components</Link>
+        </NextLink>
+        <NextLink href='/docs/tailwind-integration' passHref>
+          <Link>Tailwind Integration</Link>
         </NextLink>
       </Flex>
       <Text variant='lead' mt={2}>

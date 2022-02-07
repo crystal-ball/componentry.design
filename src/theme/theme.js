@@ -45,14 +45,10 @@ const fontSize = {
   base: '1rem', // 16px
   sm: '0.75rem', // 12px
   lg: '1.25rem', // 20px
+  code: '0.875rem', // 14px
 }
 
 module.exports = {
-  extend: {
-    fontSize: {
-      code: '0.875rem', // 14px
-    },
-  },
   screens: {
     lg: '1200px',
   },
@@ -98,6 +94,9 @@ module.exports = {
     muted: gray[500],
     link: primary[500],
     heart: '#fcc4dd',
+
+    // Border colors
+    container: gray[300],
   },
   spacing: {
     0: 0,

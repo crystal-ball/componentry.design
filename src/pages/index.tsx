@@ -7,7 +7,7 @@ import { Icon } from '@/components/Icon/Icon'
 
 import classes from './index.module.css'
 
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
     <Flex direction='column' className='min-h-screen'>
       <Head>
@@ -25,7 +25,7 @@ export default function Home(): JSX.Element {
               systems.
             </Text>
             <Flex mt={4} gap={2}>
-              <NextLink href='/docs/installation' passHref>
+              <NextLink href='/docs/overview' passHref>
                 <Button variant='outlined' size='large'>
                   Get started
                 </Button>
