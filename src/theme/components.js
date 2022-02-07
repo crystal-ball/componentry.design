@@ -65,12 +65,18 @@ const Text = {
     letterSpacing: '0.5px',
   },
   '.🅲Text-lead': {
-    fontSize: '1.25rem',
-    color: theme.colors.body,
-    fontFamily: theme.fontFamily.body,
-    fontWeight: theme.fontWeight.normal,
-    lineHeight: 1.5,
-    letterSpacing: '0.5px',
+    'fontSize': '1.25rem',
+    'color': theme.colors.body,
+    'fontFamily': theme.fontFamily.body,
+    'fontWeight': theme.fontWeight.normal,
+    'lineHeight': 1.5,
+    'letterSpacing': '0.5px',
+
+    // Set spacing between multiple paragraphs using sibling selector and
+    // margin-top.
+    '& + &': {
+      marginTop: theme.spacing[2],
+    },
   },
   '.🅲Text-body': {
     fontSize: '1rem',
