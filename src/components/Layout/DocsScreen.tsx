@@ -11,7 +11,7 @@ export function DocsScreenLayout({ children }: ScreenContainerProps) {
       <Header />
       <Flex px={16} mt={3}>
         <DocsNav />
-        <Flex className={classes.content} pb={6} direction='column'>
+        <Flex pb={6} direction='column'>
           {children}
         </Flex>
       </Flex>

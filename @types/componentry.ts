@@ -2,7 +2,16 @@ export {}
 
 declare module 'componentry/types/components/Text/Text' {
   interface TextPropsOverrides {
-    variant: 'title' | 'h1' | 'h2' | 'h3' | 'lead' | 'body' | 'detail' | 'overline'
+    variant:
+      | 'title'
+      | 'h1'
+      | 'h2'
+      | 'h3'
+      | 'subtitle'
+      | 'lead'
+      | 'body'
+      | 'detail'
+      | 'overline'
   }
 }
 

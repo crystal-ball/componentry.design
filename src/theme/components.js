@@ -64,6 +64,13 @@ const Text = {
     lineHeight: 1.25,
     letterSpacing: '0.5px',
   },
+  '.🅲Text-subtitle': {
+    fontSize: '1rem',
+    color: theme.colors.body,
+    fontWeight: theme.fontWeight.bold,
+    lineHeight: 1,
+    letterSpacing: '0.5px',
+  },
   '.🅲Text-lead': {
     'fontSize': '1.25rem',
     'color': theme.colors.body,

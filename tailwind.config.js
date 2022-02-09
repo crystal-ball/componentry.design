@@ -2,6 +2,10 @@
 
 const theme = require('./src/theme/theme')
 
+theme.extend.gridTemplateColumns = {
+  instructions: 'minmax(200px, 1fr) minmax(200px, 2fr)',
+}
+
 module.exports = {
   theme,
   content: [
@@ -13,6 +17,7 @@ module.exports = {
     preflight: false,
   },
   safelist: [
+    'sr-only',
     // margin, padding, gap
     { pattern: /m[trblxy]?-.*/ },
     { pattern: /p[trblxy]?-.*/ },

@@ -1,3 +1,9 @@
 .tagline {
-  width: 500px;
+  width: 100%;
+
+  @screen lg {
+    & {
+      width: 500px;
+    }
+  }
 }

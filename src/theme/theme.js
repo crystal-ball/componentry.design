@@ -49,6 +49,7 @@ const fontSize = {
 }
 
 module.exports = {
+  extend: {}, // Include for easy additions in tailwind.config.js
   screens: {
     lg: '1200px',
   },

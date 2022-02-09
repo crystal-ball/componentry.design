@@ -16,7 +16,7 @@ export const CodeBlock = ({ code, language }: CodeBlockProps) => {
   }
 
   return (
-    <pre className={`language-${language ?? 'none'} rounded`}>
+    <pre className={`language-${language ?? 'none'} rounded-lg`}>
       <code>{contents}</code>
     </pre>
   )
