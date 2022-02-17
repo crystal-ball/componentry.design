@@ -18,12 +18,17 @@ module.exports = {
   },
   safelist: [
     'sr-only',
-    // margin, padding, gap
+
+    // color
+    { pattern: /bg-primary-.*/ },
+
+    // spacing
     { pattern: /m[trblxy]?-.*/ },
     { pattern: /p[trblxy]?-.*/ },
     { pattern: /gap(-[xy])?-.*/ },
 
+    // typography
     { pattern: /text-(heading|body|muted|link|heart)/ },
-    { pattern: /bg-primary-.*/ },
+    { pattern: /font-(body|monospace)/ },
   ],
 }
