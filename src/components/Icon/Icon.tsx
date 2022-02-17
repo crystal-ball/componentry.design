@@ -1,6 +1,6 @@
 import clsx, { type ClassValue } from 'clsx'
 import { type ComponentPropsWithoutRef } from 'react'
-import { type UtilityProps, utilityClasses } from 'componentry'
+import { type UtilityProps, createUtilityClasses } from 'componentry'
 
 import { Github } from './Github'
 import { Menu } from './Menu'
@@ -13,15 +13,15 @@ const icons = {
 }
 
 export const Icon = ({ className, id, width, height, ...rest }: IconProps) => {
-  const { passThroughProps, utilityCx } = utilityClasses(rest)
+  const { filteredProps, utilityClasses } = createUtilityClasses(rest)
 
   const IconInstance = icons[id]
   return (
     <IconInstance
-      className={clsx(className, utilityCx)}
+      className={clsx(className, utilityClasses)}
       width={width}
       height={height}
-      {...passThroughProps}
+      {...filteredProps}
     />
   )
 }

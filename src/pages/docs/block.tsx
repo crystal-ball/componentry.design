@@ -1,13 +1,46 @@
-import { Text } from 'componentry'
+import { Block, Text } from 'componentry'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
+import { ContentSection } from '@/components/Layout/ContentSection'
+import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 
-export default function Block() {
+const blockExample = `<Block backgroundColor='primary-100' p={2} m={0.5}>
+  01
+</Block>
+<Block backgroundColor='primary-100' p={2} m={0.5}>
+  02
+</Block>
+<Block backgroundColor='primary-100' p={2} m={0.5}>
+  03
+</Block>`
+
+export default function BlockDocs() {
   return (
     <DocsScreenLayout>
-      <Text variant='h1'>Block</Text>
-      <Text variant='lead'>
-        Block is a convenience component for creating block layouts
-      </Text>
+      <Text variant='h1'>{`<Block />`}</Text>
+      <ContentSection>
+        <Text variant='lead'>
+          Block is a layout component that makes it easy to create block layouts.
+        </Text>
+
+        {/* --- USAGE --- */}
+        <Text variant='h2'>Usage</Text>
+
+        <Text mt={1}>Block will render a div by default, creating a block element.</Text>
+
+        <Block fontFamily='monospace' fontWeight='bold' my={2}>
+          <Block backgroundColor='primary-100' p={2} m={0.5}>
+            01
+          </Block>
+          <Block backgroundColor='primary-100' p={2} m={0.5}>
+            02
+          </Block>
+          <Block backgroundColor='primary-100' p={2} m={0.5}>
+            03
+          </Block>
+        </Block>
+
+        <CodeBlock code={blockExample} language='tsx' />
+      </ContentSection>
     </DocsScreenLayout>
   )
 }

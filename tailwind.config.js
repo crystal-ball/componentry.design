@@ -24,5 +24,6 @@ module.exports = {
     { pattern: /gap(-[xy])?-.*/ },
 
     { pattern: /text-(heading|body|muted|link|heart)/ },
+    { pattern: /bg-primary-.*/ },
   ],
 }
