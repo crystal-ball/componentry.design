@@ -21,10 +21,14 @@ const gray = {
 
 const primary = {
   100: '#BDBDDD',
+  200: '#8687C0',
   300: '#686AAF',
-  500: '#2B2E90',
-  700: '#1D1E7C',
-  900: '#01015C',
+  400: '#3F42AE',
+  500: '#2A2D99',
+  600: '#232688',
+  700: '#171872',
+  800: '#0B0C62',
+  900: '#02024D',
 }
 
 const fontFamily = {
@@ -36,7 +40,6 @@ const fontFamily = {
 }
 
 const fontWeight = {
-  // heading: 600,
   normal: 400,
   bold: 700,
 }
