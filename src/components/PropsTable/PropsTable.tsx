@@ -1,6 +1,9 @@
 import { Table } from 'componentry'
+import apiDocs from 'componentry/api-docs'
+import invariant from 'tiny-invariant'
 
-export function PropsTable({ props }: PropsTableProps) {
+export function PropsTable({ componentProps }: PropsTableProps) {
+  invariant(Array.isArray(componentProps.children), 'Props doc entry missing')
   return (
     <Table>
       <Table.Header>
@@ -11,12 +14,12 @@ export function PropsTable({ props }: PropsTableProps) {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {props.map((prop) => (
+        {componentProps.children.map((prop) => (
           <Table.Row key={prop.name} className='grid-cols-propsTable'>
             <Table.Cell>
               <code>{prop.name}</code>
             </Table.Cell>
-            <Table.Cell>{createTypeCell(prop.type)}</Table.Cell>
+            <Table.Cell>{createTypeCell(prop.type as PropType)}</Table.Cell>
             <Table.Cell>{prop.comment.shortText}</Table.Cell>
           </Table.Row>
         ))}
@@ -25,17 +28,9 @@ export function PropsTable({ props }: PropsTableProps) {
   )
 }
 
+type DocElement = typeof apiDocs.children
 type PropsTableProps = {
-  props: Array<{
-    name: string
-    comment: {
-      shortText: string
-    }
-    flags: {
-      isOptional: boolean
-    }
-    type: PropType
-  }>
+  componentProps: DocElement[number]
 }
 
 type PropType =

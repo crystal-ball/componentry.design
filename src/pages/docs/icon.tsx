@@ -1,5 +1,6 @@
 import { Block, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
+import invariant from 'tiny-invariant'
 
 import { ClassesLink } from '@/components/ClassesLink/ClassesLink'
 import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
@@ -59,6 +60,9 @@ const classes = [
 ]
 
 export default function IconDocs() {
+  invariant(iconPropsAPIDocs, 'IconPropsBase doc entry missing')
+  invariant(iconStyleAPIDocs, 'IconPropsBase doc entry missing')
+
   return (
     <DocsScreenLayout>
       <Text variant='h1'>{`<Icon />`}</Text>
@@ -129,7 +133,7 @@ export default function IconDocs() {
 
         <Text variant='h2'>Props</Text>
         <Block my={2}>
-          <PropsTable props={iconPropsAPIDocs.children} />
+          <PropsTable componentProps={iconPropsAPIDocs} />
         </Block>
       </ContentSection>
     </DocsScreenLayout>

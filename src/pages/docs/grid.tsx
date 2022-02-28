@@ -1,5 +1,6 @@
 import { Block, Grid, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
+import invariant from 'tiny-invariant'
 
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { ContentSection } from '@/components/Layout/ContentSection'
@@ -40,6 +41,8 @@ const shorthandExample = `<Grid
 </Grid>`
 
 export default function GridDocs() {
+  invariant(gridPropsAPIDocs, 'GridPropsBase doc entry missing')
+
   return (
     <DocsScreenLayout>
       <Text variant='h1'>{`<Grid />`}</Text>
@@ -113,7 +116,7 @@ export default function GridDocs() {
 
         <Text variant='h2'>Props</Text>
         <Block my={2}>
-          <PropsTable props={gridPropsAPIDocs.children} />
+          <PropsTable componentProps={gridPropsAPIDocs} />
         </Block>
       </ContentSection>
     </DocsScreenLayout>

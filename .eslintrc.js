@@ -7,6 +7,11 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
 
+    'import/no-unresolved': [
+      'error',
+      { ignore: ['componentry', 'componentry/api-docs'] },
+    ],
+
     // Removing ' and " from entities that require escaping, this rule is
     // intended to help accidentally messing up the JSX but linting/highlighting
     // catch 99% of that and escaping quotes is cumbersome

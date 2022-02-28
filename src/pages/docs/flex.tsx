@@ -1,5 +1,6 @@
 import { Block, Flex, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
+import invariant from 'tiny-invariant'
 
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { ContentSection } from '@/components/Layout/ContentSection'
@@ -31,6 +32,8 @@ const shorthandExample = `// With utility props
 </Flex>`
 
 export default function FlexDocs() {
+  invariant(flexPropsAPIDocs, 'FlexPropsBase doc entry missing')
+
   return (
     <DocsScreenLayout>
       <Text variant='h1'>Flex</Text>
@@ -86,7 +89,7 @@ export default function FlexDocs() {
 
         <Text variant='h2'>Props</Text>
         <Block my={2}>
-          <PropsTable props={flexPropsAPIDocs.children} />
+          <PropsTable componentProps={flexPropsAPIDocs} />
         </Block>
       </ContentSection>
     </DocsScreenLayout>
