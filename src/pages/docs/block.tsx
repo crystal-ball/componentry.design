@@ -18,8 +18,8 @@ export default function BlockDocs() {
     <DocsScreenLayout>
       <Text variant='h1'>{`<Block />`}</Text>
       <ContentSection>
-        <Text variant='lead'>
-          Block is a layout component that makes it easy to create block layouts.
+        <Text variant='lead' mt={1.5}>
+          Block is a layout component for creating block elements.
         </Text>
 
         {/* --- USAGE --- */}

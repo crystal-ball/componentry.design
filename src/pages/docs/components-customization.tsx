@@ -7,7 +7,7 @@ import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 const override = `// componentry.config.js
 module.exports = {
   components: {
-    '.🅲Text-h1': {
+    '.C9Y-Text-h1': {
       fontSize: '5rem'
     }
   }
@@ -16,12 +16,12 @@ module.exports = {
 const extend = `// componentry.config.js
 module.exports = {
   components: {
-    '.🅲Text-h1': {
+    '.C9Y-Text-h1': {
       // Add a style to an existing class
       textTransform: 'uppercase'
     }
     // Or add completely new classes
-    '.🅲Text-subtitle': {
+    '.C9Y-Text-subtitle': {
       fontSize: '5rem'
     }
   }
