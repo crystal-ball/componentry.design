@@ -1,7 +1,7 @@
-import { Flex, Link, Text } from 'componentry'
+import { Flex, Icon, Link, Text } from 'componentry'
 import NextLink from 'next/link'
 
-import { Icon } from '@/components/Icon/Icon'
+import classes from './Header.module.css'
 
 const stickyClasses =
   'sticky top-0 bg-background border-0 border-b border-solid border-container'
@@ -18,11 +18,11 @@ export default function Header({ isLandingScreen }: HeaderProps) {
       {isLandingScreen ? (
         <div />
       ) : (
-        <NextLink href='/' passHref>
-          <Text variant='h3'>
+        <Text variant='h3'>
+          <NextLink href='/' passHref>
             <Link className='no-underline font-display'>Componentry</Link>
-          </Text>
-        </NextLink>
+          </NextLink>
+        </Text>
       )}
 
       <Flex align='center' gap={2}>
@@ -37,7 +37,7 @@ export default function Header({ isLandingScreen }: HeaderProps) {
           </Link>
         </NextLink>
         <Link href='https://github.com/crystal-ball/componentry'>
-          <Icon id='github' width={24} height={24} color='link' />
+          <Icon id='github' color='link' className={classes.github} />
         </Link>
       </Flex>
     </Flex>

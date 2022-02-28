@@ -1,7 +1,13 @@
 import { Block, Flex, Text } from 'componentry'
+import apiDocs from 'componentry/api-docs'
+import invariant from 'tiny-invariant'
+
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
+import { PropsTable } from '@/components/PropsTable/PropsTable'
+
+const flexPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'FlexPropsBase')
 
 const blockExample = `<Flex backgroundColor='primary-100'>
   <Block backgroundColor='primary-200' p={2} m={0.5}>
@@ -26,13 +32,14 @@ const shorthandExample = `// With utility props
 </Flex>`
 
 export default function FlexDocs() {
+  invariant(flexPropsAPIDocs, 'FlexPropsBase doc entry missing')
+
   return (
     <DocsScreenLayout>
       <Text variant='h1'>Flex</Text>
       <ContentSection>
-        <Text variant='lead'>
-          Flex is a layout component that makes it easy to create flex layouts. Using
-          theme values for spacing with Flex helps make consistent layouts easy.
+        <Text variant='lead' mt={1.5}>
+          Flex is a layout component that makes creating flex layouts easy.
         </Text>
 
         {/* --- USAGE --- */}
@@ -59,7 +66,7 @@ export default function FlexDocs() {
         <CodeBlock code={blockExample} language='tsx' />
 
         {/* --- SHORTHAND --- */}
-        <Text variant='h3'>Shorthand props</Text>
+        <Text variant='h2'>Shorthand props</Text>
         <Text mt={1}>
           Flex provides shorthand props for common flex layout values for convenience:
         </Text>
@@ -79,6 +86,11 @@ export default function FlexDocs() {
           </li>
         </ul>
         <CodeBlock code={shorthandExample} language='tsx' />
+
+        <Text variant='h2'>Props</Text>
+        <Block my={2}>
+          <PropsTable componentProps={flexPropsAPIDocs} />
+        </Block>
       </ContentSection>
     </DocsScreenLayout>
   )

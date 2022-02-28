@@ -23,6 +23,8 @@ type ScreenContainerProps = {
   children: React.ReactNode
 }
 
+const components = ['block', 'flex', 'icon', 'grid', 'text']
+
 function DocsNav() {
   return (
     <Flex as='nav' direction='column' pb={3} className={classes.nav}>
@@ -48,12 +50,11 @@ function DocsNav() {
         Components
       </Text>
       <Flex pl={1} pt={0.5} direction='column' gap={0.5} borderLeft>
-        <NextLink href='/docs/block' passHref>
-          <Link>Block</Link>
-        </NextLink>
-        <NextLink href='/docs/flex' passHref>
-          <Link>Flex</Link>
-        </NextLink>
+        {components.map((component) => (
+          <NextLink key={component} href={`/docs/${component}`} passHref>
+            <Link className='capitalize'>{component}</Link>
+          </NextLink>
+        ))}
       </Flex>
     </Flex>
   )

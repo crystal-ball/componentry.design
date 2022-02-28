@@ -1,26 +1,35 @@
+import { configureIconElementsMap, configureTextElementsMap } from 'componentry'
 import { AppProps } from 'next/app'
-import { Theme } from 'componentry'
+import Head from 'next/head'
+
+import { Github } from '@/theme/icons/Github'
+import { Menu } from '@/theme/icons/Menu'
+import { Hologram } from '@/theme/icons/Hologram'
 
 import '@/styles/app.css'
 import '@/styles/prism-night-owl.css'
-import Head from 'next/head'
 
-const theme = {
-  Text: {
-    elementsMap: {
-      title: 'h1',
-    },
-  },
-}
+configureIconElementsMap({
+  github: Github,
+  menu: Menu,
+  hologram: Hologram,
+})
+
+configureTextElementsMap({
+  title: 'h1',
+  subtitle: 'h4',
+  detail: 'p',
+  overline: 'div',
+})
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Theme theme={theme}>
+    <>
       <Head>
         <title>Componentry</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <Component {...pageProps} />
-    </Theme>
+    </>
   )
 }

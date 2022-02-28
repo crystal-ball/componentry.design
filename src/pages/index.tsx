@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import NextLink from 'next/link'
-import { Block, Button, Flex, Text } from 'componentry'
+import { Block, Button, Flex, Icon, Text } from 'componentry'
 
 import Header from '@/components/Header/Header'
-import { Icon } from '@/components/Icon/Icon'
 
 import classes from './index.module.css'
 
@@ -17,7 +16,7 @@ export default function Home() {
 
       <Flex as='main' className='flex-1' justify='center' align='center'>
         <Flex pb={6}>
-          <Icon id='hologram' width={360} height={295} />
+          <Icon id='hologram' className={classes.hologram} />
           <Block ml={10}>
             <Text variant='title'>Componentry</Text>
             <Text variant='lead' mt={4} className={classes.tagline}>
@@ -36,7 +35,7 @@ export default function Home() {
                 href='https://github.com/crystal-ball/componentry'
               >
                 <Block mr={0.5}>
-                  <Icon id='github' width={18} height={18} visible />
+                  <Icon id='github' className={classes.github} visible />
                 </Block>
                 Github
               </Button>
