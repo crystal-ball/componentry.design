@@ -51,7 +51,7 @@ function DocsNav() {
       </Text>
       <Flex pl={1} pt={0.5} direction='column' gap={0.5} borderLeft>
         {components.map((component) => (
-          <NextLink key={component} href={`/docs/${component}`} passHref>
+          <NextLink key={component} href={`/docs/components/${component}`} passHref>
             <Link className='capitalize'>{component}</Link>
           </NextLink>
         ))}
