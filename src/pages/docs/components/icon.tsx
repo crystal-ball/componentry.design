@@ -44,24 +44,9 @@ configureIconElementsMap({
 // You can then use Icon with the mapped id:
 <Icon id="code" />`
 
-const classes = [
-  {
-    className: '.C9Y-Icon-base',
-    description: 'Base class applied to all variants for shared structural styles',
-  },
-  {
-    className: '.C9Y-Icon-font',
-    description: (
-      <>
-        Variant class applied when <code>variant="font"</code>
-      </>
-    ),
-  },
-]
-
 export default function IconDocs() {
   invariant(iconPropsAPIDocs, 'IconPropsBase doc entry missing')
-  invariant(iconStyleAPIDocs, 'IconPropsBase doc entry missing')
+  invariant(iconStyleAPIDocs, 'IconStyles doc entry missing')
 
   return (
     <DocsScreenLayout>
@@ -120,20 +105,20 @@ export default function IconDocs() {
           your icons and font family.
         </Text>
 
+        <Text variant='h2'>Props</Text>
+        <Block my={2}>
+          <PropsTable componentProps={iconPropsAPIDocs} />
+        </Block>
+
         <Text variant='h2' display='flex' justifyContent='between' alignItems='end'>
-          Styles
+          Styling
           <Text>
             <ClassesLink sources={iconStyleAPIDocs.sources} name='Icon' />
           </Text>
         </Text>
 
         <Block my={2}>
-          <ClassesTable classes={classes} />
-        </Block>
-
-        <Text variant='h2'>Props</Text>
-        <Block my={2}>
-          <PropsTable componentProps={iconPropsAPIDocs} />
+          <ClassesTable componentStyles={iconStyleAPIDocs} />
         </Block>
       </ContentSection>
     </DocsScreenLayout>
