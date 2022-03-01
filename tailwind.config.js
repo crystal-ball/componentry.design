@@ -5,7 +5,7 @@ const theme = require('./src/theme/theme')
 theme.extend.gridTemplateColumns = {
   instructions: 'minmax(200px, 1fr) minmax(200px, 2fr)',
   classesTable: '1fr 3fr',
-  propsTable: '1fr 1fr 2.5fr',
+  propsTable: '1fr 2.5fr',
 }
 
 module.exports = {

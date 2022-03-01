@@ -46,6 +46,7 @@ function DocsNav() {
           <Link>Tailwind Integration</Link>
         </NextLink>
       </Flex>
+
       <Text variant='lead' mt={2}>
         Components
       </Text>
@@ -55,6 +56,15 @@ function DocsNav() {
             <Link className='capitalize'>{component}</Link>
           </NextLink>
         ))}
+      </Flex>
+
+      <Text variant='lead' mt={2}>
+        Utilities
+      </Text>
+      <Flex pl={1} pt={0.5} direction='column' gap={0.5} borderLeft>
+        <NextLink href='/docs/utility-props' passHref>
+          <Link>Utility Props</Link>
+        </NextLink>
       </Flex>
     </Flex>
   )
