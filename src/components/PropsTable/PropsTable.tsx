@@ -1,6 +1,5 @@
 import { Table, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
-import { Fragment } from 'react'
 import invariant from 'tiny-invariant'
 
 export function PropsTable({ componentProps }: PropsTableProps) {
@@ -56,19 +55,10 @@ function createTypeCell(propType: PropType): JSX.Element | string {
   switch (propType.type) {
     case 'intrinsic':
       return propType.name
-    // return <code key={propType.name}>{propType.name}</code>
     case 'literal':
       return `"${propType.value}"`
-    // return <code key={propType.value}>"{propType.value}"</code>
     case 'union':
-      return (
-        <Fragment key='union'>
-          {propType.types
-            .map(createTypeCell)
-            // eslint-disable-next-line react/no-array-index-key
-            .map((el, idx) => (idx === 0 ? el : <Fragment key={idx}> | {el}</Fragment>))}
-        </Fragment>
-      )
+      return propType.types.map(createTypeCell).join(' | ')
     default:
       throw new Error(`Unknown prop: ${propType}`)
   }
