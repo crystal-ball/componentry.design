@@ -17,6 +17,11 @@
     margin-bottom: theme('spacing[0.5]');
   }
 
+  & :global(.C9Y-Text-subtitle) {
+    margin-top: theme('spacing[1.5]');
+    margin-bottom: theme('spacing[0.5]');
+  }
+
   & :global(.C9Y-Text-body) {
     max-width: 700px;
   }
