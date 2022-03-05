@@ -30,7 +30,7 @@ module.exports = {
   theme,
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
-    './node_modules/componentry/types/utils/tailwind-classes.d.ts',
+    './node_modules/componentry/types/utils/tailwind-safelist.d.ts',
   ],
   corePlugins: {
     preflight: false,
