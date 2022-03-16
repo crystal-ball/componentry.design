@@ -11,7 +11,7 @@ export function DocsScreenLayout({ children }: ScreenContainerProps) {
       <Header />
       <Flex px={16} mt={3}>
         <DocsNav />
-        <Flex pb={6} direction='column'>
+        <Flex pt={4} pb={6} direction='column'>
           {children}
         </Flex>
       </Flex>
@@ -27,9 +27,9 @@ const components = ['block', 'flex', 'icon', 'grid', 'text']
 
 function DocsNav() {
   return (
-    <Flex as='nav' direction='column' pb={3} className={classes.nav}>
+    <Flex as='nav' direction='column' pb={6} className={classes.nav}>
       <Text variant='lead'>Getting Started</Text>
-      <Flex pl={1} pt={0.5} direction='column' gap={0.5} borderLeft>
+      <Flex pl={2} pt={1} direction='column' gap={1} borderLeft>
         <NextLink href='/docs/overview' passHref>
           <Link>Overview</Link>
         </NextLink>
@@ -47,10 +47,19 @@ function DocsNav() {
         </NextLink>
       </Flex>
 
-      <Text variant='lead' mt={2}>
+      <Text variant='lead' mt={4}>
+        Customization
+      </Text>
+      <Flex pl={2} pt={1} direction='column' gap={1} borderLeft>
+        <NextLink href='/docs/spacing' passHref>
+          <Link>Spacing</Link>
+        </NextLink>
+      </Flex>
+
+      <Text variant='lead' mt={4}>
         Components
       </Text>
-      <Flex pl={1} pt={0.5} direction='column' gap={0.5} borderLeft>
+      <Flex pl={2} pt={1} direction='column' gap={1} borderLeft>
         {components.map((component) => (
           <NextLink key={component} href={`/docs/components/${component}`} passHref>
             <Link className='capitalize'>{component}</Link>
@@ -58,10 +67,10 @@ function DocsNav() {
         ))}
       </Flex>
 
-      <Text variant='lead' mt={2}>
+      <Text variant='lead' mt={4}>
         Utilities
       </Text>
-      <Flex pl={1} pt={0.5} direction='column' gap={0.5} borderLeft>
+      <Flex pl={2} pt={1} direction='column' gap={1} borderLeft>
         <NextLink href='/docs/utility-props' passHref>
           <Link>Utility Props</Link>
         </NextLink>

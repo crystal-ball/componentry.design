@@ -19,22 +19,22 @@ export default function UtilityProps() {
   return (
     <DocsScreenLayout>
       <Text variant='overline'>Utilities</Text>
-      <Text variant='h1' mt={1}>
+      <Text variant='h1' mt={2}>
         Utility Props
       </Text>
       <ContentSection>
-        <Text variant='lead' mt={3}>
+        <Text variant='lead' mt={6}>
           Every Componentry component accepts a standard set of utility props. These
           provide easy access to theme styling using utility classes.
         </Text>
 
-        <Block my={2}>
+        <Block my={4}>
           <CodeBlock code={usage} language='tsx' />
         </Block>
 
         <Text variant='h3'>Available Props</Text>
 
-        <Block my={2}>
+        <Block my={4}>
           <PropsTable componentProps={utilityPropsAPIDocs} />
         </Block>
       </ContentSection>

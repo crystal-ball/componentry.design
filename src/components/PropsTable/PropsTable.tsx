@@ -19,7 +19,7 @@ export function PropsTable({ componentProps }: PropsTableProps) {
               <code>{prop.name}</code>
             </Table.Cell>
             <Table.Cell>
-              <Text mb={0.5}>{prop.comment.shortText}</Text>
+              <Text mb={1}>{prop.comment.shortText}</Text>
               <code>{createTypeCell(prop.type as PropType)}</code>
             </Table.Cell>
           </Table.Row>

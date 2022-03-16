@@ -95,7 +95,7 @@ export default function Overview() {
           component at all.
         </Text>
 
-        <Block mt={6}>
+        <Block mt={12}>
           <Text variant='subtitle'>
             <NextLink href='/docs/installation' passHref>
               <Link>Next: Installation</Link>

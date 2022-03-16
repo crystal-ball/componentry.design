@@ -12,8 +12,6 @@ import { PropsTable } from '@/components/PropsTable/PropsTable'
 const textPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'TextPropsBase')
 const textStyleAPIDocs = apiDocs.children.find((entry) => entry.name === 'TextStyles')
 
-console.log(textStyleAPIDocs)
-
 const basicUsage = `<Text variant='h3'>Componentry Components</Text>`
 
 const defaultMapping = `const textElementMap = {
@@ -49,27 +47,27 @@ export default function TextDocs() {
     <DocsScreenLayout>
       <Text variant='h1'>{`<Text />`}</Text>
       <ContentSection>
-        <Text variant='lead' mt={1.5}>
+        <Text variant='lead' mt={3}>
           Text provides performant, consistently themed typography for your application.
         </Text>
 
         {/* --- USAGE --- */}
         <Text variant='h2'>Usage</Text>
 
-        <Text mt={1}>
+        <Text mt={2}>
           Use the <code>variant</code> prop to switch between typography styles. You can
           omit a variant value to default to <code>'body'</code>.
         </Text>
 
         <Text variant='h3'>Componentry Components</Text>
 
-        <Block my={2}>
+        <Block my={4}>
           <CodeBlock code={basicUsage} language='tsx' />
         </Block>
 
         <Text variant='h2'>Variant to element mapping</Text>
 
-        <Text mt={1}>
+        <Text mt={2}>
           Text renders elements based on its variant value. Out of the box Componentry
           includes the following text elements mapping:
         </Text>
@@ -78,27 +76,27 @@ export default function TextDocs() {
           <CodeBlock code={defaultMapping} language='tsx' />
         </Block>
 
-        <Text mt={1}>
+        <Text mt={2}>
           With this default mapping the following usage would render an <code>h1</code>{' '}
           and <code>p</code> element:
         </Text>
 
-        <Block my={2}>
+        <Block my={4}>
           <CodeBlock code={elementsRendered} language='tsx' />
         </Block>
 
-        <Text mt={1}>
+        <Text mt={2}>
           You can customize this mapping using the exported{' '}
           <code>configureTextElementsMap</code> helper. Any mapping you pass is merged
           with the default, simplifying adding new variants and customizing the defaults.
         </Text>
 
-        <Block my={2}>
+        <Block my={4}>
           <CodeBlock code={mappingCustomization} language='tsx' />
         </Block>
 
         <Text variant='h2'>Props</Text>
-        <Block my={2}>
+        <Block my={4}>
           <PropsTable componentProps={textPropsAPIDocs} />
         </Block>
 
@@ -109,7 +107,7 @@ export default function TextDocs() {
           </Text>
         </Text>
 
-        <Block my={2}>
+        <Block my={4}>
           <ClassesTable componentStyles={textStyleAPIDocs} />
         </Block>
       </ContentSection>
