@@ -1,5 +1,11 @@
 'use strict'
 
 module.exports = {
-  plugins: ['postcss-nested', 'componentry/postcss', 'tailwindcss', 'autoprefixer'],
+  plugins: [
+    'postcss-nested',
+    'componentry/postcss',
+    'tailwindcss',
+    'autoprefixer',
+    'cssnano',
+  ],
 }
