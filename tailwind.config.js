@@ -29,6 +29,10 @@ module.exports = {
     { pattern: /p[trblxy]?-.*/ },
     { pattern: /gap(-[xy])?-.*/ },
 
+    // sizing
+    { pattern: /w-.*/ },
+    { pattern: /h-.*/ },
+
     // typography
     { pattern: /text-(heading|body|muted|link|heart)/ },
     { pattern: /font-(body|monospace)/ },

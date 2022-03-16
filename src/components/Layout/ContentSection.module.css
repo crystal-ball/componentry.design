@@ -4,22 +4,22 @@
   max-width: 750px;
 
   & :global(.C9Y-Text-h1) {
-    margin-bottom: theme('spacing[2]');
+    margin-bottom: theme('spacing.4');
   }
 
   & :global(.C9Y-Text-h2) {
-    margin-top: theme('spacing[3]');
-    margin-bottom: theme('spacing[1]');
+    margin-top: theme('spacing.6');
+    margin-bottom: theme('spacing.2');
   }
 
   & :global(.C9Y-Text-h3) {
-    margin-top: theme('spacing[2]');
-    margin-bottom: theme('spacing[0.5]');
+    margin-top: theme('spacing.2');
+    margin-bottom: theme('spacing.1');
   }
 
   & :global(.C9Y-Text-subtitle) {
-    margin-top: theme('spacing[1.5]');
-    margin-bottom: theme('spacing[0.5]');
+    margin-top: theme('spacing.3');
+    margin-bottom: theme('spacing.1');
   }
 
   & :global(.C9Y-Text-body) {

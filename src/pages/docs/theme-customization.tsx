@@ -133,33 +133,33 @@ export default function ThemeCustomization() {
   return (
     <DocsScreenLayout>
       <Text variant='overline'>Getting started</Text>
-      <Text variant='h1' mt={1}>
+      <Text variant='h1' mt={2}>
         Theme customization
       </Text>
       <ContentSection>
-        <Text variant='lead' mt={3}>
+        <Text variant='lead' mt={6}>
           Componentry uses a base theme for generating styles that can be customized to
           match your theme. You can then use that theme throughout your application using
           the <code>useTheme</code> hook and Tailwind's <code>theme()</code> directive.
         </Text>
       </ContentSection>
       {/* --- FILE --- */}
-      <Grid width='full' gap={3} mt={6} className='grid-cols-instructions'>
+      <Grid width='full' gap={6} mt={12} className='grid-cols-instructions'>
         <div>
           <Text variant='subtitle'>
             1. Create a <code>componentry.config.js</code>
           </Text>
-          <Text mt={1} ml={1}>
+          <Text mt={2} ml={2}>
             Componentry will merge the values from your config with the library defaults.
           </Text>
         </div>
         <CodeBlock code={config} language='tsx' />
       </Grid>
       {/* --- OVERRIDE --- */}
-      <Grid width='full' gap={3} mt={6} className='grid-cols-instructions'>
+      <Grid width='full' gap={6} mt={12} className='grid-cols-instructions'>
         <div>
           <Text variant='subtitle'>2. Override theme values</Text>
-          <Text mt={1} ml={1}>
+          <Text mt={2} ml={2}>
             Setting a theme value will override all the default values, this allows
             constraining the theme values to only the ones you define.
           </Text>
@@ -167,10 +167,10 @@ export default function ThemeCustomization() {
         <CodeBlock code={override} language='tsx' />
       </Grid>
       {/* --- EXTENDS --- */}
-      <Grid width='full' gap={3} mt={6} className='grid-cols-instructions'>
+      <Grid width='full' gap={6} mt={12} className='grid-cols-instructions'>
         <div>
           <Text variant='subtitle'>2. Extend theme values</Text>
-          <Text mt={1} ml={1}>
+          <Text mt={2} ml={2}>
             Default theme values can be extended using the <code>extend</code> field, this
             allows you to add custom theme values to the Componentry default set.
           </Text>
@@ -180,7 +180,7 @@ export default function ThemeCustomization() {
       {/* --- DEFAULTS --- */}
       <ContentSection>
         <Text variant='h2'>Theme defaults</Text>
-        <Text mb={2}>
+        <Text mb={4}>
           Componentry's default theme shape includes fields for setting z-index, color,
           spacing, and typography values.
         </Text>

@@ -52,7 +52,7 @@ export default function IconDocs() {
     <DocsScreenLayout>
       <Text variant='h1'>{`<Icon />`}</Text>
       <ContentSection>
-        <Text variant='lead' mt={1.5}>
+        <Text variant='lead' mt={3}>
           Icon works with SVG symbol sprites for creating consistent iconography using
           theme values.
         </Text>
@@ -60,41 +60,41 @@ export default function IconDocs() {
         {/* --- USAGE --- */}
         <Text variant='h2'>Usage</Text>
 
-        <Text mt={1}>
+        <Text mt={2}>
           Componentry is a "Bring Your Own Icons" system, and there are two ways to
           include your icons.
         </Text>
 
-        <Text variant='subtitle' mt={1.5}>
+        <Text variant='subtitle' mt={3}>
           SVG Symbol Sprite
         </Text>
 
-        <Text mt={1}>
+        <Text mt={2}>
           If your SVGs are loaded on the page as SVG symbols you can pass the symbol ID to
           Icon and it will be used for the SVG's <code>href</code>:
         </Text>
 
-        <Block my={2}>
+        <Block my={4}>
           <CodeBlock code={symbolSprite} language='tsx' />
         </Block>
 
-        <Text variant='subtitle' mt={1.5}>
+        <Text variant='subtitle' mt={3}>
           SVG elements
         </Text>
 
-        <Text mt={1}>
+        <Text mt={2}>
           If your SVGs are defined inline or imported with a tool like SVGR you can use{' '}
           <code>configureIconElementsMap</code> to create a mapping of IDs to the correct
           SVG elements:
         </Text>
 
-        <Block my={2}>
+        <Block my={4}>
           <CodeBlock code={elementsMap} language='tsx' />
         </Block>
 
         <Text variant='h2'>Alignment</Text>
 
-        <Text mt='1'>
+        <Text mt={2}>
           Icons are vertically centered in their containers by default. In flex layouts
           this is accomplished with <code>self-align: center</code>, and outside flex
           layouts this is accomplished with <code>vertical-align: -0.15em</code>.
@@ -106,7 +106,7 @@ export default function IconDocs() {
         </Text>
 
         <Text variant='h2'>Props</Text>
-        <Block my={2}>
+        <Block my={4}>
           <PropsTable componentProps={iconPropsAPIDocs} />
         </Block>
 
@@ -117,7 +117,7 @@ export default function IconDocs() {
           </Text>
         </Text>
 
-        <Block my={2}>
+        <Block my={4}>
           <ClassesTable componentStyles={iconStyleAPIDocs} />
         </Block>
       </ContentSection>

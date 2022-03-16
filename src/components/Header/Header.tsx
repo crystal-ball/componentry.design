@@ -12,7 +12,7 @@ export default function Header({ isLandingScreen }: HeaderProps) {
       as='nav'
       className={isLandingScreen ? undefined : stickyClasses}
       justify='between'
-      p={2}
+      p={4}
       align='center'
     >
       {isLandingScreen ? (
@@ -25,7 +25,7 @@ export default function Header({ isLandingScreen }: HeaderProps) {
         </Text>
       )}
 
-      <Flex align='center' gap={2}>
+      <Flex align='center' gap={4}>
         <NextLink href='/docs/installation' passHref>
           <Link fontWeight='bold' className='no-underline'>
             Docs

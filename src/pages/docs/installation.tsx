@@ -35,19 +35,19 @@ export default function Installation() {
   return (
     <DocsScreenLayout>
       <Text variant='overline'>Getting started</Text>
-      <Text variant='h1' mt={1}>
+      <Text variant='h1' mt={2}>
         Installation
       </Text>
 
       <ContentSection>
-        <Text variant='lead' mt={3}>
+        <Text variant='lead' mt={6}>
           Install componentry and import the styles. Componentry uses PostCSS to convert
           custom <code>@componentry</code> directives to CSS.
         </Text>
       </ContentSection>
 
       {/* --- NPM --- */}
-      <Grid width='full' gap={3} mt={6} className='grid-cols-instructions'>
+      <Grid width='full' gap={6} mt={12} className='grid-cols-instructions'>
         <div>
           <Text variant='subtitle'>1. Install Componentry and PostCSS</Text>
         </div>
@@ -55,10 +55,10 @@ export default function Installation() {
       </Grid>
 
       {/* --- FOUNDATION --- */}
-      <Grid width='full' gap={3} mt={3} className='grid-cols-instructions'>
+      <Grid width='full' gap={6} mt={6} className='grid-cols-instructions'>
         <div>
           <Text variant='subtitle'>2. Add Componentry to your PostCSS config</Text>
-          <Text mt={1} ml={1}>
+          <Text mt={2} ml={2}>
             Include Componentry's PostCSS plugin in your config. The plugin converts the
             <code>@componentry</code> directives into styles.
           </Text>
@@ -67,10 +67,10 @@ export default function Installation() {
       </Grid>
 
       {/* --- DIRECTIVES --- */}
-      <Grid width='full' gap={3} mt={3} className='grid-cols-instructions'>
+      <Grid width='full' gap={6} mt={6} className='grid-cols-instructions'>
         <div>
           <Text variant='subtitle'>3. Add directives to your CSS</Text>
-          <Text mt={1} ml={1}>
+          <Text mt={2} ml={2}>
             The <code>foundation</code> directive is converted to the base styles, and the{' '}
             <code>components</code>
             directive is converted to the component styles.
@@ -80,10 +80,10 @@ export default function Installation() {
       </Grid>
 
       {/* --- DIRECTIVES --- */}
-      <Grid width='full' gap={3} mt={3} className='grid-cols-instructions'>
+      <Grid width='full' gap={6} mt={6} className='grid-cols-instructions'>
         <div>
           <Text variant='subtitle'>4. Build something radical</Text>
-          <Text mt={1} ml={1}>
+          <Text mt={2} ml={2}>
             You're ready to start using Componentry.
           </Text>
         </div>
