@@ -12,11 +12,11 @@
   },
   "dependencies": {
     "clsx": "1.1.1",
-    "componentry": "4.0.0-beta.8",
+    "componentry": "4.1.0-beta.2",
     "hast-to-hyperscript": "10.0.1",
-    "next": "12.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "12.1.4",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
     "refractor": "4.5.0",
     "tiny-invariant": "1.2.0"
   },
