@@ -2,9 +2,9 @@ import { Block, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
+import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
-import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
 
 const utilityPropsAPIDocs = apiDocs.children.find(

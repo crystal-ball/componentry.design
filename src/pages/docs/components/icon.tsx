@@ -5,8 +5,8 @@ import invariant from 'tiny-invariant'
 import { ClassesLink } from '@/components/ClassesLink/ClassesLink'
 import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
 
 const iconPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'IconPropsBase')

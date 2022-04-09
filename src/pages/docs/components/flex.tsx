@@ -2,9 +2,9 @@ import { Block, Flex, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
-import { ContentSection } from '@/components/Layout/ContentSection'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
+import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
 
 const flexPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'FlexPropsBase')
@@ -50,7 +50,7 @@ export default function FlexDocs() {
           flex container.
         </Text>
 
-        <Block fontFamily='monospace' fontWeight='bold' my={4}>
+        <Block fontFamily='mono' fontWeight='bold' my={4}>
           <Flex backgroundColor='primary-100'>
             <Block backgroundColor='primary-200' p={4} m={1}>
               01

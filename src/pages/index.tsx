@@ -1,6 +1,6 @@
+import { Block, Button, Flex, Icon, Text } from 'componentry'
 import Head from 'next/head'
 import NextLink from 'next/link'
-import { Block, Button, Flex, Icon, Text } from 'componentry'
 
 import Header from '@/components/Header/Header'
 

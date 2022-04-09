@@ -14,7 +14,7 @@
   /* Code styles not set in prism-night-owl */
   code {
     font-size: theme('fontSize.code');
-    font-family: theme('fontFamily.monospace');
+    font-family: theme('fontFamily.mono');
   }
 }
 

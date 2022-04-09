@@ -1,8 +1,8 @@
 import { toH } from 'hast-to-hyperscript'
 import { createElement } from 'react'
-import { refractor } from 'refractor/lib/core'
-import tsx from 'refractor/lang/tsx'
 import css from 'refractor/lang/css'
+import tsx from 'refractor/lang/tsx'
+import { refractor } from 'refractor/lib/core'
 
 refractor.register(css)
 refractor.register(tsx)

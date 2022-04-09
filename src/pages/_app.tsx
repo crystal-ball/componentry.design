@@ -3,8 +3,8 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import { Github } from '@/theme/icons/Github'
-import { Menu } from '@/theme/icons/Menu'
 import { Hologram } from '@/theme/icons/Hologram'
+import { Menu } from '@/theme/icons/Menu'
 
 import '@/styles/app.css'
 import '@/styles/prism-night-owl.css'

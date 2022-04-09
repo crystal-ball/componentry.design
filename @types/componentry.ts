@@ -3,7 +3,6 @@ export {}
 declare module 'componentry/types/utils/utility-classes' {
   interface UtilityPropsOverrides {
     backgroundColor: 'primary-100' | 'primary-200'
-    fontFamily: 'body' | 'monospace'
   }
 }
 

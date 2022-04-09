@@ -1,7 +1,7 @@
 import { Block, Text } from 'componentry'
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
-import { ContentSection } from '@/components/Layout/ContentSection'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
+import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 
 const blockExample = `<Block backgroundColor='primary-100' p={4} m={1}>
   01
@@ -27,7 +27,7 @@ export default function BlockDocs() {
 
         <Text mt={2}>Block will render a div by default, creating a block element.</Text>
 
-        <Block fontFamily='monospace' fontWeight='bold' my={4}>
+        <Block fontFamily='mono' fontWeight='bold' my={4}>
           <Block backgroundColor='primary-100' p={4} m={1}>
             01
           </Block>

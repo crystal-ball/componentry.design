@@ -1,7 +1,7 @@
 import { Block, Flex, Text } from 'componentry'
 
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 
 export default function Spacing() {
   return (
@@ -22,7 +22,7 @@ export default function Spacing() {
         <Flex
           className='pattern-background'
           direction='column'
-          fontFamily='monospace'
+          fontFamily='mono'
           gap-y='px'
           mt={4}
           p={5}
@@ -42,8 +42,7 @@ export default function Spacing() {
             </Text>
           </Flex>
           {[
-            0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 24, 28, 32,
-            36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96,
+            0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 20, 24, 32, 48, 64,
           ].map((base) => (
             <Flex key={base} align='center'>
               <Block className='w-10'>{base}</Block>

@@ -1,5 +1,5 @@
-import NextLink from 'next/link'
 import { Flex, Link, Text } from 'componentry'
+import NextLink from 'next/link'
 
 import Header from '../Header/Header'
 

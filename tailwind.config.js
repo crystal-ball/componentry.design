@@ -1,7 +1,10 @@
 'use strict'
 
+const { borderPlugin } = require('componentry')
+const plugin = require('tailwindcss/plugin')
 const theme = require('./src/theme/theme')
 
+theme.extend = {}
 theme.extend.gridTemplateColumns = {
   instructions: 'minmax(200px, 1fr) minmax(200px, 2fr)',
   classesTable: '1fr 3fr',
@@ -14,27 +17,15 @@ module.exports = {
     './node_modules/componentry/types/utils/tailwind-safelist.d.ts',
     './src/**/*.{ts,tsx}',
   ],
-  plugins: [],
+  plugins: [plugin(borderPlugin)],
   corePlugins: {
     preflight: false,
   },
   safelist: [
     'sr-only',
 
-    // color
+    // background/text colors
     { pattern: /bg-primary-.*/ },
-
-    // spacing
-    { pattern: /m[trblxy]?-.*/ },
-    { pattern: /p[trblxy]?-.*/ },
-    { pattern: /gap(-[xy])?-.*/ },
-
-    // sizing
-    { pattern: /w-.*/ },
-    { pattern: /h-.*/ },
-
-    // typography
     { pattern: /text-(heading|body|muted|link|heart)/ },
-    { pattern: /font-(body|monospace)/ },
   ],
 }
