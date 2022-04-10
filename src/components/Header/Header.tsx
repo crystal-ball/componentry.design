@@ -11,7 +11,7 @@ export default function Header({ isLandingScreen }: HeaderProps) {
     <Flex
       as='nav'
       className={isLandingScreen ? undefined : stickyClasses}
-      justify='between'
+      justify='space-between'
       p={4}
       align='center'
     >

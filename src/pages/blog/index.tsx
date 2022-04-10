@@ -11,7 +11,7 @@ export default function Blog() {
         </Text>
         <NextLink href='/blog/v4'>
           <Flex direction='column' style={{ maxWidth: '600px', cursor: 'pointer' }}>
-            <Flex mt={1} justify='between' align='center'>
+            <Flex mt={1} justify='space-between' align='center'>
               <Text variant='h3' color='link'>
                 Componentry v4.0.0
               </Text>

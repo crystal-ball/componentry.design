@@ -110,7 +110,7 @@ export default function IconDocs() {
           <PropsTable componentProps={iconPropsAPIDocs} />
         </Block>
 
-        <Text variant='h2' display='flex' justifyContent='between' alignItems='end'>
+        <Text variant='h2' display='flex' justifyContent='space-between' alignItems='end'>
           Styling
           <Text>
             <ClassesLink sources={iconStyleAPIDocs.sources} name='Icon' />

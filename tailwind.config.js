@@ -2,7 +2,7 @@
 
 const { borderPlugin } = require('componentry')
 const plugin = require('tailwindcss/plugin')
-const theme = require('./src/theme/theme')
+const { theme } = require('./src/theme/theme')
 
 theme.extend = {}
 theme.extend.gridTemplateColumns = {

@@ -1,4 +1,4 @@
-/* eslint-disable */
+// @ts-check
 
 'use strict'
 
@@ -7,7 +7,7 @@ const { createTheme } = require('componentry')
 // --- Componentry.design application theme
 // --------------------------------------------------------
 
-const gray = {
+const gray = /** @type {const} */ ({
   // Tailwind Gray - https://tailwindcss.com/docs/customizing-colors
   50: '#f9fafb',
   100: '#f3f4f6',
@@ -19,9 +19,9 @@ const gray = {
   700: '#374151',
   800: '#1f2937',
   900: '#111827',
-}
+})
 
-const primary = {
+const primary = /** @type {const} */ ({
   100: '#BDBDDD',
   200: '#8687C0',
   300: '#686AAF',
@@ -31,12 +31,15 @@ const primary = {
   700: '#171872',
   800: '#0B0C62',
   900: '#02024D',
-}
+})
 
-module.exports = createTheme({
+const themeOverrides = /** @type {const} */ ({
   screens: {
     lg: '1200px',
   },
+
+  // --------------------------------------------------------
+  // COLORS
   colors: {
     current: 'currentColor',
     transparent: 'transparent',
@@ -72,10 +75,10 @@ module.exports = createTheme({
       700: '#E64A19',
       900: '#BF360C',
     },
-
-    // Border colors
-    // container: gray[300],
   },
+
+  // --------------------------------------------------------
+  // TYPOGRAPHY
   textColor: {
     heading: gray[900],
     body: gray[700],
@@ -106,4 +109,14 @@ module.exports = createTheme({
     none: 1,
     normal: 1.375,
   },
+
+  // --------------------------------------------------------
+  // BORDERS
+  border: {
+    container: `1px solid ${gray[300]}`,
+  },
 })
+
+const theme = createTheme(themeOverrides)
+
+module.exports = { theme, themeOverrides }

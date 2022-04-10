@@ -1,8 +1,8 @@
-/* eslint-disable */
+// @ts-check
 
 'use strict'
 
-const theme = require('./theme')
+const { theme } = require('./theme')
 
 const Button = {
   '.C9Y-Button-outlined': {
@@ -45,35 +45,35 @@ const Text = {
   },
   '.C9Y-Text-h1': {
     fontSize: '3rem',
-    color: theme.colors.heading,
+    color: theme.textColor.heading,
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1.25,
     letterSpacing: '0.5px',
   },
   '.C9Y-Text-h2': {
     fontSize: '2rem',
-    color: theme.colors.heading,
+    color: theme.textColor.heading,
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1.25,
     letterSpacing: 0,
   },
   '.C9Y-Text-h3': {
     fontSize: '1.5rem',
-    color: theme.colors.heading,
+    color: theme.textColor.heading,
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1.25,
     letterSpacing: '0.5px',
   },
   '.C9Y-Text-subtitle': {
     fontSize: '1rem',
-    color: theme.colors.body,
+    color: theme.textColor.body,
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1,
     letterSpacing: '0.5px',
   },
   '.C9Y-Text-lead': {
     'fontSize': '1.25rem',
-    'color': theme.colors.body,
+    'color': theme.textColor.body,
     'fontFamily': theme.fontFamily.body,
     'fontWeight': theme.fontWeight.normal,
     'lineHeight': 1.5,
@@ -87,14 +87,14 @@ const Text = {
   },
   '.C9Y-Text-body': {
     fontSize: '1rem',
-    color: theme.colors.body,
+    color: theme.textColor.body,
     fontFamily: theme.fontFamily.body,
     fontWeight: theme.fontWeight.normal,
     lineHeight: theme.lineHeight.normal,
   },
   '.C9Y-Text-detail': {
     fontSize: '0.875rem',
-    color: theme.colors.body,
+    color: theme.textColor.body,
     fontFamily: theme.fontFamily.body,
     fontWeight: theme.fontWeight.normal,
     lineHeight: '1.125rem',
@@ -102,7 +102,7 @@ const Text = {
   '.C9Y-Text-overline': {
     fontSize: '0.75rem',
     fontFamily: theme.fontFamily.body,
-    color: theme.colors.muted,
+    color: theme.textColor.muted,
     textTransform: 'uppercase',
     lineHeight: 1,
   },

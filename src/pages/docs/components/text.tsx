@@ -100,7 +100,7 @@ export default function TextDocs() {
           <PropsTable componentProps={textPropsAPIDocs} />
         </Block>
 
-        <Text variant='h2' display='flex' justifyContent='between' alignItems='end'>
+        <Text variant='h2' display='flex' justifyContent='space-between' alignItems='end'>
           Styling
           <Text>
             <ClassesLink sources={textStyleAPIDocs.sources} name='Text' />

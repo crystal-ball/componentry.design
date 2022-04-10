@@ -17,5 +17,14 @@ module.exports = {
         project: ['tsconfig.json'],
       },
     },
+    {
+      files: ['src/theme/*.js'],
+      parserOptions: {
+        sourceType: 'script',
+      },
+      env: {
+        node: true,
+      },
+    },
   ],
 }
