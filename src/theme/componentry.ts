@@ -29,8 +29,15 @@ declare module 'componentry/types/theme/theme' {
 }
 
 declare module 'componentry/types/utils/utility-classes' {
+  type Border = 'nav' | 'container'
+
   interface UtilityPropsOverrides {
     backgroundColor: 'primary-100' | 'primary-200'
+    border: Border
+    borderTop: Border
+    borderRight: Border
+    borderBottom: Border
+    borderLeft: Border
   }
 }
 

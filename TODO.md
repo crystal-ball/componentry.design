@@ -17,3 +17,5 @@ this.
 2. Pass it to `createTheme` if you want to use Componentry defaults
 3. Use it for componentry.config and tailwind.config
 4. Pass it to ThemeProvider
+
+How do I add to the theme?

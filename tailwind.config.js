@@ -4,25 +4,40 @@ const { borderPlugin } = require('componentry')
 const plugin = require('tailwindcss/plugin')
 const { theme } = require('./src/theme/theme')
 
-theme.extend = {}
-theme.extend.gridTemplateColumns = {
-  instructions: 'minmax(200px, 1fr) minmax(200px, 2fr)',
-  classesTable: '1fr 3fr',
-  propsTable: '1fr 2.5fr',
+const { width, height, ...themeOverrides } = theme
+
+const tailwindTheme = {
+  ...themeOverrides,
+  extend: {
+    height,
+    width,
+    gridTemplateColumns: {
+      instructions: 'minmax(200px, 1fr) minmax(200px, 2fr)',
+      classesTable: '1fr 3fr',
+      propsTable: '1fr 2.5fr',
+    },
+  },
 }
 
 module.exports = {
-  theme,
   content: [
     './node_modules/componentry/types/utils/tailwind-safelist.d.ts',
     './src/**/*.{ts,tsx}',
   ],
-  plugins: [plugin(borderPlugin)],
   corePlugins: {
     preflight: false,
   },
+
+  plugins: [plugin(borderPlugin)],
+  theme: tailwindTheme,
   safelist: [
     'sr-only',
+
+    // width
+    { pattern: /w-[\d]+/ },
+
+    // borders
+    { pattern: /border(-[trbl])?-(nav|container)/ },
 
     // background/text colors
     { pattern: /bg-primary-.*/ },

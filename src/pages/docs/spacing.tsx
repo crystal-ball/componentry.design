@@ -1,9 +1,23 @@
-import { Block, Flex, Text } from 'componentry'
+import { Block, Flex, Text, useTheme } from 'componentry'
+import { useMemo } from 'react'
 
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 
 export default function Spacing() {
+  const theme = useTheme()
+
+  const spacingScale = useMemo(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars -- Use destructuring to pull out spacing scale keys with values
+    const { '0': zero, px, ...scale } = theme.spacing
+
+    return [
+      '0',
+      'px',
+      ...Object.keys(scale).sort((a, b) => parseInt(a, 10) - parseInt(b, 10)),
+    ]
+  }, [theme.spacing])
+
   return (
     <DocsScreenLayout>
       <ContentSection>
@@ -27,31 +41,24 @@ export default function Spacing() {
           mt={4}
           p={5}
         >
-          <Flex align='center'>
-            <Block className='w-10'>0</Block>
-            <Block className='bg-primary-900 w-0 h-4 rounded' />
-            <Text variant='detail' color='muted' ml={4}>
-              (0px)
-            </Text>
-          </Flex>
-          <Flex align='center'>
-            <Block className='w-10'>px</Block>
-            <Block className='bg-primary-900 w-px h-4 rounded' />
-            <Text variant='detail' color='muted' ml={4}>
-              (1px)
-            </Text>
-          </Flex>
-          {[
-            0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 20, 24, 32, 48, 64,
-          ].map((base) => (
-            <Flex key={base} align='center'>
-              <Block className='w-10'>{base}</Block>
-              <Block className={`bg-primary-900 w-${base} h-4 rounded`} />
-              <Text variant='detail' color='muted' ml={4}>
-                ({base / 4}rem/{base * 4}px)
-              </Text>
-            </Flex>
-          ))}
+          {spacingScale.map((base) => {
+            const numValue = base === 'px' ? 1 : Number.parseFloat(base)
+
+            let description
+            if (base === '0') description = '(0px)'
+            else if (base === 'px') description = '(1px)'
+            else description = `(${numValue / 4}rem/${numValue * 4}px)`
+
+            return (
+              <Flex key={base} align='center'>
+                <Block className='w-10'>{base}</Block>
+                <Block className={`bg-primary-900 w-${base} h-4 rounded`} />
+                <Text variant='detail' color='muted' ml={4}>
+                  {description}
+                </Text>
+              </Flex>
+            )
+          })}
         </Flex>
       </ContentSection>
     </DocsScreenLayout>
