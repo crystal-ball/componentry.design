@@ -34,7 +34,7 @@ module.exports = {
     'sr-only',
 
     // width
-    { pattern: /w-[\d]+/ },
+    { pattern: /w-([\d]+|px)/ },
 
     // borders
     { pattern: /border(-[trbl])?-(nav|container)/ },

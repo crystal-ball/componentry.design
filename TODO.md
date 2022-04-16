@@ -7,6 +7,7 @@
 5. color constraints
 6. ComponentryProvider
 7. useTheme()
+8. note about TW and width/height
 
 ## Theme setup workflow
 
@@ -19,3 +20,7 @@ this.
 4. Pass it to ThemeProvider
 
 How do I add to the theme?
+
+---
+
+Updating TS for your custom theme
