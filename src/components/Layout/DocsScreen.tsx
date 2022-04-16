@@ -23,7 +23,7 @@ type ScreenContainerProps = {
   children: React.ReactNode
 }
 
-const components = ['block', 'flex', 'icon', 'grid', 'text']
+const components = ['block', 'flex', 'icon', 'grid', 'text', 'componentry-provider']
 
 function DocsNav() {
   return (
@@ -48,6 +48,15 @@ function DocsNav() {
       </Flex>
 
       <Text variant='lead' mt={4}>
+        Guides
+      </Text>
+      <Flex pl={2} pt={1} direction='column' gap={1} borderLeft='nav'>
+        <NextLink href='/docs/utility-props' passHref>
+          <Link>Utility Props</Link>
+        </NextLink>
+      </Flex>
+
+      <Text variant='lead' mt={4}>
         Customization
       </Text>
       <Flex pl={2} pt={1} direction='column' gap={1} borderLeft='nav'>
@@ -62,7 +71,9 @@ function DocsNav() {
       <Flex pl={2} pt={1} direction='column' gap={1} borderLeft='nav'>
         {components.map((component) => (
           <NextLink key={component} href={`/docs/components/${component}`} passHref>
-            <Link className='capitalize'>{component}</Link>
+            <Link className='capitalize'>
+              {component.replace(/-[a-z]/, (match) => match.slice(1).toUpperCase())}
+            </Link>
           </NextLink>
         ))}
       </Flex>
@@ -71,8 +82,8 @@ function DocsNav() {
         Utilities
       </Text>
       <Flex pl={2} pt={1} direction='column' gap={1} borderLeft='nav'>
-        <NextLink href='/docs/utility-props' passHref>
-          <Link>Utility Props</Link>
+        <NextLink href='/docs/utilities/use-theme' passHref>
+          <Link>useTheme</Link>
         </NextLink>
       </Flex>
     </Flex>
