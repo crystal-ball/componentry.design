@@ -16,4 +16,6 @@
 
 <br />
 
-<img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg">
+<div align="center">
+  <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg">
+</div>

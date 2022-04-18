@@ -40,13 +40,12 @@ module.exports = {
 const postcssConfig = `// postcss.config.js
 module.exports = {
   plugins: [
-    require('postcss-nested'),
     require('componentry/postcss'),
+    require('tailwindcss/nesting'),
     require('tailwindcss'),
     require('autoprefixer'),
   ],
-}
-`
+}`
 
 export default function TailwindIntegration() {
   return (
@@ -111,9 +110,8 @@ export default function TailwindIntegration() {
         <div>
           <Text variant='subtitle'>4. Optional nesting support</Text>
           <Text mt={2} ml={2}>
-            If you want to support nesting in your CSS dont' use{' '}
-            <code>tailwind/nesting</code>, it will break Componentry, instead use{' '}
-            <code>postcss-nested</code>.
+            If you want to support nesting in your CSS Componentry works with{' '}
+            <code>tailwind/nesting</code>.
           </Text>
         </div>
         <CodeBlock code={postcssConfig} language='tsx' />
