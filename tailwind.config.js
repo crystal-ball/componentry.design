@@ -8,6 +8,8 @@ const { width, height, ...themeOverrides } = theme
 
 const tailwindTheme = {
   ...themeOverrides,
+  flexGrow: { 0: 0, DEFAULT: 1 }, // bugfix
+  flexShrink: { 0: 0, DEFAULT: 1 }, // bugfix
   extend: {
     height,
     width,

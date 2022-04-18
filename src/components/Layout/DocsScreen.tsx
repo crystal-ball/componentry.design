@@ -1,20 +1,22 @@
 import { Flex, Link, Text } from 'componentry'
 import NextLink from 'next/link'
 
+import { Footer } from '../Footer/Footer'
 import Header from '../Header/Header'
 
 import classes from './DocsScreen.module.css'
 
 export function DocsScreenLayout({ children }: ScreenContainerProps) {
   return (
-    <Flex direction='column' className='min-h-screen'>
+    <Flex direction='column' minHeight='screen'>
       <Header />
-      <Flex px={16} mt={3}>
+      <Flex px={16} mt={3} flexGrow>
         <DocsNav />
         <Flex pt={4} pb={6} direction='column'>
           {children}
         </Flex>
       </Flex>
+      <Footer />
     </Flex>
   )
 }

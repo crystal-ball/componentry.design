@@ -2,6 +2,7 @@ import { Block, Button, Flex, Icon, Text } from 'componentry'
 import Head from 'next/head'
 import NextLink from 'next/link'
 
+import { Footer } from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 
 import classes from './index.module.css'
@@ -43,6 +44,8 @@ export default function Home() {
           </Block>
         </Flex>
       </Flex>
+
+      <Footer />
     </Flex>
   )
 }
