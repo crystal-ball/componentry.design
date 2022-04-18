@@ -1,8 +1,8 @@
 import { Block, Link, Text } from 'componentry'
 import NextLink from 'next/link'
 
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 
 export default function Overview() {
   return (

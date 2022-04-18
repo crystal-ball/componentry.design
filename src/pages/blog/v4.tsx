@@ -22,7 +22,7 @@ export default function Blog() {
           by using PostCSS instead of SASS for styles processing.
         </Text>
 
-        <Text className='mt-1'>V4 improvement highlights:</Text>
+        <Text className='mt-3'>V4 improvement highlights:</Text>
         <ul className='list-disc list-inside mt-1'>
           <li>Library styles migrated to PostCSS</li>
           <li>TailwindCSS compatibility for utility classes</li>

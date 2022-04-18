@@ -1,8 +1,8 @@
 import { Grid, Text } from 'componentry'
 
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
-import { ContentSection } from '@/components/Layout/ContentSection'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
+import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 
 const config = `// componentry.config.js
 module.exports = {
@@ -88,7 +88,7 @@ const theme = `const theme = {
   // --- TYPOGRAPHY
   fontFamily: {
     body: "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
-    monospace: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
   fontSize: {
     base: '1rem', // HTML base size

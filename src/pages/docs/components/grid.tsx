@@ -2,9 +2,9 @@ import { Block, Grid, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
-import { ContentSection } from '@/components/Layout/ContentSection'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
+import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
 
 const gridPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'GridPropsBase')
@@ -60,7 +60,7 @@ export default function GridDocs() {
           styles or classes.
         </Text>
 
-        <Block fontFamily='monospace' fontWeight='bold' my={4}>
+        <Block fontFamily='mono' fontWeight='bold' my={4}>
           <Grid
             backgroundColor='primary-100'
             style={{ gridTemplateColumns: 'repeat(3, minmax(100px, 1fr))' }}
@@ -94,7 +94,7 @@ export default function GridDocs() {
           </li>
         </ul>
 
-        <Block fontFamily='monospace' fontWeight='bold' my={4}>
+        <Block fontFamily='mono' fontWeight='bold' my={4}>
           <Grid
             backgroundColor='primary-100'
             justify='start'

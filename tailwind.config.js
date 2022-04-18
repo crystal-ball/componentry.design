@@ -1,40 +1,46 @@
 'use strict'
 
-const theme = require('./src/theme/theme')
+const { borderPlugin } = require('componentry')
+const plugin = require('tailwindcss/plugin')
+const { theme } = require('./src/theme/theme')
 
-theme.extend.gridTemplateColumns = {
-  instructions: 'minmax(200px, 1fr) minmax(200px, 2fr)',
-  classesTable: '1fr 3fr',
-  propsTable: '1fr 2.5fr',
+const { width, height, ...themeOverrides } = theme
+
+const tailwindTheme = {
+  ...themeOverrides,
+  extend: {
+    height,
+    width,
+    gridTemplateColumns: {
+      instructions: 'minmax(200px, 1fr) minmax(200px, 2fr)',
+      classesTable: '1fr 3fr',
+      propsTable: '1fr 2.5fr',
+    },
+  },
 }
 
 module.exports = {
-  theme,
   content: [
     './node_modules/componentry/types/utils/tailwind-safelist.d.ts',
     './src/**/*.{ts,tsx}',
   ],
-  plugins: [],
   corePlugins: {
     preflight: false,
   },
+
+  plugins: [plugin(borderPlugin)],
+  theme: tailwindTheme,
   safelist: [
     'sr-only',
 
-    // color
+    // width
+    { pattern: /w-([\d]+|px)/ },
+
+    // borders
+    { pattern: /border(-[trbl])?-(nav|container)/ },
+
+    // background/text colors
     { pattern: /bg-primary-.*/ },
-
-    // spacing
-    { pattern: /m[trblxy]?-.*/ },
-    { pattern: /p[trblxy]?-.*/ },
-    { pattern: /gap(-[xy])?-.*/ },
-
-    // sizing
-    { pattern: /w-.*/ },
-    { pattern: /h-.*/ },
-
-    // typography
     { pattern: /text-(heading|body|muted|link|heart)/ },
-    { pattern: /font-(body|monospace)/ },
   ],
 }

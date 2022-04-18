@@ -44,6 +44,10 @@ type PropType =
       value: string
     }
   | {
+      type: 'reference'
+      name: string
+    }
+  | {
       type: 'union'
       types: Array<{
         type: 'literal'
@@ -53,6 +57,8 @@ type PropType =
 
 function createTypeCell(propType: PropType): JSX.Element | string {
   switch (propType.type) {
+    case 'reference':
+      return propType.name
     case 'intrinsic':
       return propType.name
     case 'literal':

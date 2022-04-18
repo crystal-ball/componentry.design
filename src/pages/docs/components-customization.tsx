@@ -1,8 +1,8 @@
 import { Grid, Text } from 'componentry'
 
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
-import { ContentSection } from '@/components/Layout/ContentSection'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
+import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 
 const override = `// componentry.config.js
 module.exports = {

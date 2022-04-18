@@ -4,9 +4,9 @@ import invariant from 'tiny-invariant'
 
 import { ClassesLink } from '@/components/ClassesLink/ClassesLink'
 import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
-import { ContentSection } from '@/components/Layout/ContentSection'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
+import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
 
 const textPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'TextPropsBase')
@@ -100,7 +100,7 @@ export default function TextDocs() {
           <PropsTable componentProps={textPropsAPIDocs} />
         </Block>
 
-        <Text variant='h2' display='flex' justifyContent='between' alignItems='end'>
+        <Text variant='h2' display='flex' justifyContent='space-between' alignItems='end'>
           Styling
           <Text>
             <ClassesLink sources={textStyleAPIDocs.sources} name='Text' />

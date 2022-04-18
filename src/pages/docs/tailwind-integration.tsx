@@ -1,8 +1,8 @@
 import { Grid, Text } from 'componentry'
 
-import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
+import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 
 const theming = `// tailwind.config.js
 const theme = require('./src/theme/theme')
