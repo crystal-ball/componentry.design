@@ -40,6 +40,14 @@ const shorthandExample = `<Grid
   </Block>
 </Grid>`
 
+const refExample = `import { useRef } from 'react'
+import { RefGrid } from 'componentry'
+
+function LayoutWithRef() {
+  const ref = useRef(null)
+  return <RefGrid ref={ref} p={4}></RefGrid>
+}`
+
 export default function GridDocs() {
   invariant(gridPropsAPIDocs, 'GridPropsBase doc entry missing')
 
@@ -77,7 +85,17 @@ export default function GridDocs() {
           </Grid>
         </Block>
 
-        <CodeBlock code={gridExample} language='tsx' />
+        <Block my={4}>
+          <CodeBlock code={gridExample} language='tsx' />
+        </Block>
+
+        <Text variant='h3'>Usage with refs</Text>
+        <Text>
+          If you need to pass a ref to Grid, use a <code>RefGrid</code>:
+        </Text>
+        <Block my={4}>
+          <CodeBlock code={refExample} language='tsx' />
+        </Block>
 
         {/* --- SHORTHAND --- */}
         <Text variant='h2'>Shorthand props</Text>

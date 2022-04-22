@@ -13,6 +13,14 @@ const blockExample = `<Block backgroundColor='primary-100' p={4} m={1}>
   03
 </Block>`
 
+const refExample = `import { useRef } from 'react'
+import { RefBlock } from 'componentry'
+
+function LayoutWithRef() {
+  const ref = useRef(null)
+  return <RefBlock ref={ref} p={4}></RefBlock>
+}`
+
 export default function BlockDocs() {
   return (
     <DocsScreenLayout>
@@ -39,7 +47,17 @@ export default function BlockDocs() {
           </Block>
         </Block>
 
-        <CodeBlock code={blockExample} language='tsx' />
+        <Block my={4}>
+          <CodeBlock code={blockExample} language='tsx' />
+        </Block>
+
+        <Text variant='h3'>Usage with refs</Text>
+        <Text>
+          If you need to pass a ref to Block, use a <code>RefBlock</code>:
+        </Text>
+        <Block my={4}>
+          <CodeBlock code={refExample} language='tsx' />
+        </Block>
       </ContentSection>
     </DocsScreenLayout>
   )
