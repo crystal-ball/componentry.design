@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "clsx": "1.1.1",
-    "componentry": "4.1.0",
+    "componentry": "4.2.0",
     "hast-to-hyperscript": "10.0.1",
     "next": "12.1.4",
     "react": "18.0.0",
