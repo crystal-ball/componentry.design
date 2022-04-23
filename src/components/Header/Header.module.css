@@ -1,4 +1,18 @@
+.searchSizer {
+  width: 224px;
+
+  /* button is the docsearch button */
+  button {
+    width: 100%;
+    margin: 0; /* override default button margin-left */
+  }
+}
+
+.logo {
+  font-size: 26px; /* arbitrary value that looks good with racing font */
+}
+
 .github {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
 }

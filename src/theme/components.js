@@ -10,7 +10,7 @@ const Button = {
     'padding': '0 24px',
     'borderColor': theme.colors.gray[600],
     'color': theme.colors.gray[600],
-    'fontSize': '14px',
+    'fontSize': theme.fontSize.button,
     'fontWeight': theme.fontWeight.normal,
     'lineHeight': 1,
     'textTransform': 'uppercase',
@@ -86,7 +86,7 @@ const Text = {
     },
   },
   '.C9Y-Text-body': {
-    fontSize: '1rem',
+    fontSize: theme.fontSize.body,
     color: theme.textColor.body,
     fontFamily: theme.fontFamily.body,
     fontWeight: theme.fontWeight.normal,
