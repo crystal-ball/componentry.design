@@ -1,10 +1,13 @@
+import { DocSearch } from '@docsearch/react'
+import clsx from 'clsx'
 import { Flex, Icon, Link, Text } from 'componentry'
 import NextLink from 'next/link'
 
+import '@docsearch/css'
 import classes from './Header.module.css'
 
 const stickyClasses =
-  'sticky top-0 bg-background border-0 border-b border-solid border-container'
+  'sticky top-0 bg-background border-0 border-b border-solid border-container shadow-nav'
 
 export default function Header({ isLandingScreen }: HeaderProps) {
   return (
@@ -12,30 +15,39 @@ export default function Header({ isLandingScreen }: HeaderProps) {
       as='nav'
       className={isLandingScreen ? undefined : stickyClasses}
       justify='space-between'
-      p={4}
+      py={4}
+      px={6}
       align='center'
     >
       {isLandingScreen ? (
         <div />
       ) : (
-        <Text variant='h3'>
-          <NextLink href='/' passHref>
-            <Link className='no-underline font-display'>Componentry</Link>
-          </NextLink>
-        </Text>
+        <NextLink href='/' passHref>
+          <Link className={clsx(classes.logo, 'no-underline font-display')}>
+            Componentry
+          </Link>
+        </NextLink>
       )}
 
       <Flex align='center' gap={4}>
         <NextLink href='/docs/installation' passHref>
-          <Link fontWeight='bold' className='no-underline'>
+          <Link fontWeight='bold' fontSize='button' pr={2} className='no-underline'>
             Docs
           </Link>
         </NextLink>
         <NextLink href='/blog' passHref>
-          <Link fontWeight='bold' className='no-underline'>
+          <Link fontWeight='bold' fontSize='button' pr={2} className='no-underline'>
             Blog
           </Link>
         </NextLink>
+        <div className={classes.searchSizer}>
+          <DocSearch
+            appId='GLQ9FXJ6Z9'
+            indexName='componentry'
+            apiKey='829c66c6429b0e6c4e5aef0559057e0a'
+          />
+        </div>
+
         <Link href='https://github.com/crystal-ball/componentry'>
           <Icon id='github' color='link' className={classes.github} />
         </Link>

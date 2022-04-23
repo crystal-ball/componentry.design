@@ -77,8 +77,11 @@ const themeOverrides = /** @type {const} */ ({
     },
   },
 
-  // --------------------------------------------------------
-  // TYPOGRAPHY
+  backgroundColor: {
+    background: '#fff',
+    // Primary colors are used for layout docs
+    primary,
+  },
   textColor: {
     heading: gray[900],
     body: gray[700],
@@ -86,6 +89,10 @@ const themeOverrides = /** @type {const} */ ({
     link: primary[500],
     heart: '#fcc4dd',
   },
+
+  // --------------------------------------------------------
+  // TYPOGRAPHY
+
   fontFamily: {
     body: '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
     display:
@@ -94,8 +101,10 @@ const themeOverrides = /** @type {const} */ ({
   },
   fontSize: {
     base: '1rem', // 16px
+    body: '1rem', // 16px
     sm: '0.75rem', // 12px
     lg: '1.25rem', // 20px
+    button: '0.875rem', // 14px
     code: '0.875rem', // 14px
   },
   fontWeight: {
@@ -115,6 +124,10 @@ const themeOverrides = /** @type {const} */ ({
   border: {
     nav: `1px solid ${gray[200]}`,
     container: `1px solid ${gray[300]}`,
+  },
+
+  boxShadow: {
+    nav: `0px -3px 6px #171872`,
   },
 })
 

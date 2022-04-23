@@ -1,4 +1,5 @@
-.tagline {
+.tagline,
+.search {
   width: 100%;
 
   @screen lg {
