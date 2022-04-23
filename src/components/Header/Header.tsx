@@ -1,6 +1,6 @@
 import { DocSearch } from '@docsearch/react'
 import clsx from 'clsx'
-import { Flex, Icon, Link, Text } from 'componentry'
+import { Flex, Icon, Link } from 'componentry'
 import NextLink from 'next/link'
 
 import '@docsearch/css'
