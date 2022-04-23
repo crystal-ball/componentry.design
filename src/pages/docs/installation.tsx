@@ -5,7 +5,7 @@ import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 
 const postcssConfig = `{
-  "plugins": ["componentry/postcss", "autoprefixer"]
+  "plugins": [require("componentry/postcss"), require("autoprefixer")]
 }`
 
 const directives = `/* The "components" param will include all component styles */
