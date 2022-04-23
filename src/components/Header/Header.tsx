@@ -1,9 +1,9 @@
-import { DocSearch } from '@docsearch/react'
+// import { DocSearch } from '@docsearch/react'
 import clsx from 'clsx'
-import { Flex, Icon, Link, Text } from 'componentry'
+import { Flex, Icon, Link } from 'componentry'
 import NextLink from 'next/link'
 
-import '@docsearch/css'
+// import '@docsearch/css'
 import classes from './Header.module.css'
 
 const stickyClasses =
@@ -40,13 +40,13 @@ export default function Header({ isLandingScreen }: HeaderProps) {
             Blog
           </Link>
         </NextLink>
-        <div className={classes.searchSizer}>
+        {/* <div className={classes.searchSizer}>
           <DocSearch
             appId='GLQ9FXJ6Z9'
             indexName='componentry'
             apiKey='829c66c6429b0e6c4e5aef0559057e0a'
           />
-        </div>
+        </div> */}
 
         <Link href='https://github.com/crystal-ball/componentry'>
           <Icon id='github' color='link' className={classes.github} />
