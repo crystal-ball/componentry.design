@@ -9,9 +9,10 @@ export default function Spacing() {
 
   const spacingScale = useMemo(() => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars -- Use destructuring to pull out spacing scale keys with values
-    const { '0': zero, px, ...scale } = theme.spacing
+    const { '0': zero, auto, px, ...scale } = theme.spacing
 
     return [
+      'auto',
       '0',
       'px',
       ...Object.keys(scale).sort((a, b) => parseInt(a, 10) - parseInt(b, 10)),
@@ -31,8 +32,6 @@ export default function Spacing() {
           Out of the box this provides a wide set of values for creating cohesive layouts.
         </Text>
 
-        {/* TODO: TS and augmentation overrides */}
-
         <Flex
           className='pattern-background'
           direction='column'
@@ -42,12 +41,25 @@ export default function Spacing() {
           p={5}
         >
           {spacingScale.map((base) => {
-            const numValue = base === 'px' ? 1 : Number.parseFloat(base)
-
             let description
-            if (base === '0') description = '(0px)'
-            else if (base === 'px') description = '(1px)'
-            else description = `(${numValue / 4}rem/${numValue * 4}px)`
+            switch (base) {
+              case 'auto': {
+                description = 'auto'
+                break
+              }
+              case '0': {
+                description = '(0px)'
+                break
+              }
+              case 'px': {
+                description = '(1px)'
+                break
+              }
+              default: {
+                const val = parseInt(base, 10)
+                description = `(${val / 4}rem/${val * 4}px)`
+              }
+            }
 
             return (
               <Flex key={base} align='center'>
