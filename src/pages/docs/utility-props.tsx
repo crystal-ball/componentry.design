@@ -1,4 +1,4 @@
-import { Block, Text } from 'componentry'
+import { Alert, Block, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
@@ -13,6 +13,13 @@ const utilityPropsAPIDocs = apiDocs.children.find(
 
 const usage = `<Block mt={2}>Easy themed spacing</Block>
 // ^ utility prop "mt" converted to utility class "mt-2"`
+
+const augmentation = `declare module 'componentry/types/utils/utility-classes' {
+  // eg customizing allowed fontSize values
+  interface UtilityPropsOverrides {
+    fontSize: 'body' | 'sm' | 'lg' | 'display'
+  }
+}`
 
 export default function UtilityProps() {
   invariant(utilityPropsAPIDocs, 'UtilityPropsBase doc entry missing')
@@ -31,6 +38,23 @@ export default function UtilityProps() {
         <Block my={4}>
           <CodeBlock code={usage} language='tsx' />
         </Block>
+
+        <Text variant='h2'>TypeScript customization</Text>
+        <Text>
+          Module augmentation enables overriding the library defined utility props values
+          using the <code>UtilityPropsOverrides</code> in{' '}
+          <code>componentry/types/utils/utility-classes</code>.
+        </Text>
+
+        <Block my={4}>
+          <CodeBlock code={augmentation} language='tsx' />
+        </Block>
+
+        <Alert color='highlight' mb={8}>
+          Any UtilityPropsOverrides definition completely overrides the library defaults,
+          they are not merged together. This means if you'd like to add a single value you
+          still have to define the entire union type.
+        </Alert>
 
         <Text variant='h3'>Available Props</Text>
 

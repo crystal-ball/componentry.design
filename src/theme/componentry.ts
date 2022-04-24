@@ -43,6 +43,18 @@ declare module 'componentry/types/utils/utility-classes' {
   }
 }
 
+declare module 'componentry/types/components/Alert/Alert' {
+  interface AlertPropsOverrides {
+    color: 'primary' | 'success' | 'warning' | 'critical' | 'highlight'
+  }
+}
+
+declare module 'componentry/types/components/Button/Button' {
+  interface ButtonPropsOverrides {
+    size: 'small' | 'large'
+  }
+}
+
 declare module 'componentry/types/components/Text/Text' {
   interface TextPropsOverrides {
     variant:
@@ -55,11 +67,5 @@ declare module 'componentry/types/components/Text/Text' {
       | 'body'
       | 'detail'
       | 'overline'
-  }
-}
-
-declare module 'componentry/types/components/Button/Button' {
-  interface ButtonPropsOverrides {
-    size: 'small' | 'large'
   }
 }
