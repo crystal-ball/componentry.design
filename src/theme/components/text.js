@@ -1,6 +1,8 @@
-import { theme } from '../theme'
+'use strict'
 
-export const Text = {
+const { theme } = require('../theme')
+
+module.exports.Text = {
   '.C9Y-Text-title': {
     fontSize: '5rem',
     color: theme.colors.primary[500],

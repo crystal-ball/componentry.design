@@ -1,1 +1,3 @@
-export const Alert = {}
+'use strict'
+
+module.exports.Alert = {}

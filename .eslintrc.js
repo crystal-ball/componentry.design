@@ -18,7 +18,7 @@ module.exports = {
       },
     },
     {
-      files: ['src/theme/*.js'],
+      files: ['src/theme/**/*.js'],
       parserOptions: {
         sourceType: 'script',
       },

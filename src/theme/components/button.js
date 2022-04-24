@@ -1,6 +1,8 @@
-import { theme } from '../theme'
+'use strict'
 
-export const Button = {
+const { theme } = require('../theme')
+
+module.exports.Button = {
   '.C9Y-Button-outlined': {
     'height': '38px',
     'padding': '0 24px',
