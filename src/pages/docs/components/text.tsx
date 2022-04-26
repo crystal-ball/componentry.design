@@ -9,7 +9,9 @@ import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
 
-const textPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'TextPropsBase')
+const textPropsAPIDocs = apiDocs.children.find(
+  (entry) => entry.name === 'TextPropsDefaults',
+)
 const textStyleAPIDocs = apiDocs.children.find((entry) => entry.name === 'TextStyles')
 
 const basicUsage = `<Text variant='h3'>Componentry Components</Text>`
@@ -40,7 +42,7 @@ configureTextElementsMap({
 })`
 
 export default function TextDocs() {
-  invariant(textPropsAPIDocs, 'TextPropsBase doc entry missing')
+  invariant(textPropsAPIDocs, 'TextPropsDefaults doc entry missing')
   invariant(textStyleAPIDocs, 'TextStyles doc entry missing')
 
   return (

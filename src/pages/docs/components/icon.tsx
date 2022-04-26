@@ -9,7 +9,9 @@ import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
 
-const iconPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'IconPropsBase')
+const iconPropsAPIDocs = apiDocs.children.find(
+  (entry) => entry.name === 'IconPropsDefaults',
+)
 const iconStyleAPIDocs = apiDocs.children.find((entry) => entry.name === 'IconStyles')
 
 const symbolSprite = `// With an SVG symbol definition
@@ -45,7 +47,7 @@ configureIconElementsMap({
 <Icon id="code" />`
 
 export default function IconDocs() {
-  invariant(iconPropsAPIDocs, 'IconPropsBase doc entry missing')
+  invariant(iconPropsAPIDocs, 'IconPropsDefaults doc entry missing')
   invariant(iconStyleAPIDocs, 'IconStyles doc entry missing')
 
   return (

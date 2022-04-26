@@ -7,7 +7,9 @@ import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
 
-const flexPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'FlexPropsBase')
+const flexPropsAPIDocs = apiDocs.children.find(
+  (entry) => entry.name === 'FlexPropsDefaults',
+)
 
 const blockExample = `<Flex backgroundColor='primary-100'>
   <Block backgroundColor='primary-200' p={4} m={1}>
@@ -40,7 +42,7 @@ function LayoutWithRef() {
 }`
 
 export default function FlexDocs() {
-  invariant(flexPropsAPIDocs, 'FlexPropsBase doc entry missing')
+  invariant(flexPropsAPIDocs, 'FlexPropsDefaults doc entry missing')
 
   return (
     <DocsScreenLayout>

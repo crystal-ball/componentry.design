@@ -25,7 +25,15 @@ type ScreenContainerProps = {
   children: React.ReactNode
 }
 
-const components = ['block', 'flex', 'icon', 'grid', 'text', 'componentry-provider']
+const components = [
+  'block',
+  'flex',
+  'icon',
+  'grid',
+  'link',
+  'text',
+  'componentry-provider',
+]
 
 function DocsNav() {
   return (
