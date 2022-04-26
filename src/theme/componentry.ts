@@ -28,21 +28,6 @@ declare module 'componentry/types/theme/theme' {
   export interface ThemeOverrides extends CustomTheme {}
 }
 
-declare module 'componentry/types/utils/utility-classes' {
-  type Border = 'nav' | 'container'
-
-  interface UtilityPropsOverrides {
-    fontSize: 'body' | 'sm' | 'lg' | 'button' | 'code'
-
-    backgroundColor: 'primary-100' | 'primary-200'
-    border: Border
-    borderTop: Border
-    borderRight: Border
-    borderBottom: Border
-    borderLeft: Border
-  }
-}
-
 declare module 'componentry/types/components/Alert/Alert' {
   interface AlertPropsOverrides {
     color: 'primary' | 'success' | 'warning' | 'critical' | 'highlight'

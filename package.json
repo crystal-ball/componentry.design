@@ -14,7 +14,7 @@
     "@docsearch/css": "3.0.0",
     "@docsearch/react": "3.0.0",
     "clsx": "1.1.1",
-    "componentry": "4.3.0",
+    "componentry": "4.4.0-beta.0",
     "hast-to-hyperscript": "10.0.1",
     "next": "12.1.4",
     "react": "17.0.2",

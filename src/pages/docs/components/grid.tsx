@@ -7,7 +7,9 @@ import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
 
-const gridPropsAPIDocs = apiDocs.children.find((entry) => entry.name === 'GridPropsBase')
+const gridPropsAPIDocs = apiDocs.children.find(
+  (entry) => entry.name === 'GridPropsDefaults',
+)
 
 const gridExample = `<Grid
   backgroundColor='primary-100'
@@ -49,7 +51,7 @@ function LayoutWithRef() {
 }`
 
 export default function GridDocs() {
-  invariant(gridPropsAPIDocs, 'GridPropsBase doc entry missing')
+  invariant(gridPropsAPIDocs, 'GridPropsDefaults doc entry missing')
 
   return (
     <DocsScreenLayout>
