@@ -24,17 +24,16 @@ module.exports = {
 }`
 
 const safelist = `// tailwind.config.js
+const { tailwindSafelist } = require('componentry')
 const theme = require('./src/theme/theme')
 
 module.exports = {
   theme,
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-    './node_modules/componentry/types/utils/tailwind-safelist.d.ts',
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   corePlugins: {
     preflight: false,
   },
+  safeList: tailwindSafelist 
 }`
 
 const postcssConfig = `// postcss.config.js
@@ -95,12 +94,8 @@ export default function TailwindIntegration() {
             Componentry provides shorthand utility props that map to Tailwind utility
             classes, but Tailwind doesn't see this usage so it won't include these
             classes. The easiest way to work around this is to safelist the classes you'll
-            use.
-          </Text>
-          <Text mt={2} ml={2}>
-            Componentry also provides a file for matching all of the default utility
-            classes except for: margin, padding, gap, background-color, border-color, and
-            text color.
+            use. Componentry provides a <code>tailwindSafelist</code> export that manages
+            this for you.
           </Text>
         </div>
         <CodeBlock code={safelist} language='tsx' />

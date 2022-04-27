@@ -1,4 +1,4 @@
-import { Grid, Text } from 'componentry'
+import { Grid, Link, Text } from 'componentry'
 
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
@@ -46,9 +46,14 @@ ReactDOM.render(
     </Theme>
   </React.StrictMode>,
   document.getElementById('root')
-);
+);`
 
-`
+const augment = `// Override the allowed Button variants using provided ButtonPropsOverrides
+declare module 'componentry/types/components/Button/Button' {
+  interface ButtonPropsOverrides {
+    variant: 'filled' | 'outlined' | 'text'
+  }
+}`
 
 export default function ComponentsCustomization() {
   return (
@@ -97,6 +102,20 @@ export default function ComponentsCustomization() {
           </Text>
         </div>
         <CodeBlock code={props} language='tsx' />
+      </Grid>
+      {/* --- AUGMENT --- */}
+      <Grid width='full' gap={6} mt={6} className='grid-cols-instructions'>
+        <div>
+          <Text variant='subtitle'>3. Augment types</Text>
+          <Text mt={2} ml={2}>
+            For TS users types for component props can be overridden using{' '}
+            <Link href='https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation'>
+              module augmentation
+            </Link>
+            .
+          </Text>
+        </div>
+        <CodeBlock code={augment} language='tsx' />
       </Grid>
     </DocsScreenLayout>
   )
