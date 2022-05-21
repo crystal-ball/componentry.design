@@ -22,7 +22,7 @@ export default function Blog() {
           and safelisting classes for Tailwind is now managed.
         </Text>
 
-        <Text className='mt-3'>V4.1 improvement highlights:</Text>
+        <Text className='mt-3'>V4.4 improvement highlights:</Text>
         <ul className='list-disc list-inside mt-1'>
           <li>Default utility props are derived from the Theme type.</li>
           <li>Managed solution for safe-listing Tailwind classes added.</li>
