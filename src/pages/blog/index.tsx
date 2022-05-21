@@ -9,17 +9,37 @@ export default function Blog() {
         <Text variant='h2' textAlign='center' my={12}>
           Componentry release updates
         </Text>
-        <NextLink href='/blog/v4'>
+
+        <NextLink href='/blog/v4.5'>
           <Flex direction='column' style={{ maxWidth: '600px', cursor: 'pointer' }}>
             <Flex mt={1} justify='space-between' align='center'>
               <Text variant='h3' color='link'>
-                Componentry v4.0.0
+                Componentry v4.5.0
               </Text>
-              <Text variant='overline'>March 4, 2022</Text>
+              <Text variant='overline'>May 5, 2022</Text>
             </Flex>
             <Text mt={3}>
-              Componentry V4 enables a significantly upgraded workflow for customizing
-              styles by using PostCSS instead of SASS for styles processing.
+              Componentry v4.5 includes additions and improvements to the library action
+              components: Button, IconButton and Link. The new{' '}
+              <code>wrapWhenDisabled</code> prop allows creating disabled actions that can
+              still be used with elements that require a ref, like Tooltips for explaining
+              disabled states.
+            </Text>
+          </Flex>
+        </NextLink>
+
+        <NextLink href='/blog/v4.4'>
+          <Flex direction='column' style={{ maxWidth: '600px', cursor: 'pointer' }}>
+            <Flex mt={1} justify='space-between' align='center'>
+              <Text variant='h3' color='link'>
+                Componentry v4.4.0
+              </Text>
+              <Text variant='overline'>April 27, 2022</Text>
+            </Flex>
+            <Text mt={3}>
+              Componentry V4.4 includes a few small improvements to the library setup
+              workflow. Notably: utility prop types align with custom themes "out of the
+              box", and safelisting classes for Tailwind is now managed.
             </Text>
           </Flex>
         </NextLink>
@@ -40,18 +60,17 @@ export default function Blog() {
           </Flex>
         </NextLink>
 
-        <NextLink href='/blog/v4.4'>
+        <NextLink href='/blog/v4'>
           <Flex direction='column' style={{ maxWidth: '600px', cursor: 'pointer' }}>
             <Flex mt={1} justify='space-between' align='center'>
               <Text variant='h3' color='link'>
-                Componentry v4.4.0
+                Componentry v4.0.0
               </Text>
-              <Text variant='overline'>April 27, 2022</Text>
+              <Text variant='overline'>March 4, 2022</Text>
             </Flex>
             <Text mt={3}>
-              Componentry V4.4 includes a few small improvements to the library setup
-              workflow. Notably: utility prop types align with custom themes "out of the
-              box", and safelisting classes for Tailwind is now managed.
+              Componentry V4 enables a significantly upgraded workflow for customizing
+              styles by using PostCSS instead of SASS for styles processing.
             </Text>
           </Flex>
         </NextLink>
