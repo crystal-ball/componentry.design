@@ -27,8 +27,10 @@ type ScreenContainerProps = {
 
 const components = [
   'block',
+  'button',
   'flex',
   'icon',
+  // 'icon-button',
   'grid',
   'link',
   'text',

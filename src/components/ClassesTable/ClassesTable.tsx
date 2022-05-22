@@ -19,7 +19,8 @@ export function ClassesTable({ componentStyles }: ClassesTableProps) {
             <Table.Cell>
               <code>{name}</code>
             </Table.Cell>
-            <Table.Cell>{comment.shortText}</Table.Cell>
+            {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
+            <Table.Cell>{comment?.shortText}</Table.Cell>
           </Table.Row>
         ))}
       </Table.Body>

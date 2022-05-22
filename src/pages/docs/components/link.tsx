@@ -4,7 +4,6 @@ import invariant from 'tiny-invariant'
 
 import { ClassesLink } from '@/components/ClassesLink/ClassesLink'
 import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
-import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
@@ -28,10 +27,7 @@ export default function LinkDocs() {
 
         {/* --- USAGE --- */}
         <Text variant='h2'>Variants</Text>
-        <Text>
-          Link is configured with two variants: <code>text</code>, and{' '}
-          <code>inherit</code>
-        </Text>
+        <Text>Link will inherit font size by default.</Text>
 
         <Flex
           borderRadius
@@ -41,17 +37,8 @@ export default function LinkDocs() {
           my={8}
           py={8}
         >
-          <Link onClick={console.log}>text variant</Link>
-          <Link variant='inherit' onClick={console.log}>
-            inherit variant
-          </Link>
+          <Link onClick={console.log}>Standalone link</Link>
         </Flex>
-
-        <Text>
-          The default variant <code>text</code> can be used as a standalone element, the
-          font-size will match the body text font-size. The inherit variant is useful for
-          nesting links in other Text elements, eg inside a header:
-        </Text>
 
         <Flex
           borderRadius
@@ -62,10 +49,7 @@ export default function LinkDocs() {
           py={8}
         >
           <Text variant='h3'>
-            Componentry{' '}
-            <Link variant='inherit' onClick={console.log}>
-              components
-            </Link>
+            Componentry <Link onClick={console.log}>components</Link>
           </Text>
         </Flex>
 

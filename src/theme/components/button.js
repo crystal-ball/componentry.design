@@ -3,15 +3,17 @@
 const { theme } = require('../theme')
 
 module.exports.Button = {
-  '.C9Y-Button-outlined': {
+  '.C9Y-Button-docs': {
     'height': '38px',
     'padding': '0 24px',
-    'borderColor': theme.colors.gray[600],
+    'backgroundColor': 'transparent',
     'color': theme.colors.gray[600],
     'fontSize': theme.fontSize.button,
     'fontWeight': theme.fontWeight.normal,
     'lineHeight': 1,
     'textTransform': 'uppercase',
+    'border': `1px solid ${theme.colors.gray[600]}`,
+    'borderRadius': theme.borderRadius.DEFAULT,
 
     '&:hover, &.C9Y-hover': {
       borderColor: theme.colors.gray[700],
@@ -26,7 +28,7 @@ module.exports.Button = {
       color: theme.colors.gray[300],
     },
   },
-  '.C9Y-Button-largeSize': {
+  '.C9Y-Button-docsLargeSize': {
     height: '40px',
     fontSize: '16px',
     padding: '0 2rem',

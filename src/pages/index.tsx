@@ -26,13 +26,13 @@ export default function Home() {
             </Text>
             <Flex mt={4} gap={2}>
               <NextLink href='/docs/overview' passHref>
-                <Button variant='outlined' size='large'>
+                <Button variant='docs' size='docsLarge'>
                   Get started
                 </Button>
               </NextLink>
               <Button
-                variant='outlined'
-                size='large'
+                variant='docs'
+                size='docsLarge'
                 href='https://github.com/crystal-ball/componentry'
               >
                 <Block mr={0.5}>

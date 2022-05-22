@@ -7,19 +7,28 @@ import { themeOverrides } from './theme'
 
 export {}
 
-export function configureComponentry() {
-  configureIconElementsMap({
-    github: Github,
-    menu: Menu,
-    hologram: Hologram,
-  })
+const iconElementsMap = {
+  github: Github,
+  menu: Menu,
+  hologram: Hologram,
+} as const
 
-  configureTextElementsMap({
-    title: 'h1',
-    subtitle: 'h4',
-    detail: 'p',
-    overline: 'div',
-  })
+const textElementsMap = {
+  title: 'h1',
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  subtitle: 'h4',
+  lead: 'p',
+  body: 'p',
+  detail: 'p',
+  overline: 'div',
+} as const
+
+export function configureComponentry() {
+  configureIconElementsMap(iconElementsMap)
+
+  configureTextElementsMap(textElementsMap)
 }
 
 declare module 'componentry/types/theme/theme' {
@@ -36,21 +45,21 @@ declare module 'componentry/types/components/Alert/Alert' {
 
 declare module 'componentry/types/components/Button/Button' {
   interface ButtonPropsOverrides {
-    size: 'small' | 'large'
+    variant: 'filled' | 'outlined' | 'docs'
+    size: 'small' | 'large' | 'docsLarge'
+    startIcon: keyof typeof iconElementsMap
+    endIcon: keyof typeof iconElementsMap
+  }
+}
+
+declare module 'componentry/types/components/Icon/Icon' {
+  interface IconPropsOverrides {
+    id: keyof typeof iconElementsMap
   }
 }
 
 declare module 'componentry/types/components/Text/Text' {
   interface TextPropsOverrides {
-    variant:
-      | 'title'
-      | 'h1'
-      | 'h2'
-      | 'h3'
-      | 'subtitle'
-      | 'lead'
-      | 'body'
-      | 'detail'
-      | 'overline'
+    variant: keyof typeof textElementsMap
   }
 }
