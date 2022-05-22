@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
 import { configureIconElementsMap, configureTextElementsMap } from 'componentry'
-import { text } from 'stream/consumers'
 import { Github } from './icons/Github'
 import { Hologram } from './icons/Hologram'
 import { Menu } from './icons/Menu'
