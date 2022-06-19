@@ -8,6 +8,13 @@
 6. ComponentryProvider
 7. useTheme()
 8. note about TW and width/height
+9. Guide for focused and disabled states
+10. Guide for ActionRoot setup
+11. Button page
+12. IconButton page
+13. Add `truncate` to Text
+14. Add `wrapWhenDisabled` to Link
+15. Add a11y notes to Icon
 
 ## Theme setup workflow
 
