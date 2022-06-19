@@ -1,4 +1,4 @@
-import { Block, Flex, Link, Text } from 'componentry'
+import { Flex, Link, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
@@ -6,6 +6,7 @@ import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
+import { TypesAugmentation } from '@/components/TypesAugmentation/TypesAugmentation'
 
 const linkPropsAPIDocs = apiDocs.children.find(
   (entry) => entry.name === 'LinkPropsDefaults',
@@ -53,14 +54,8 @@ export default function LinkDocs() {
         </Flex>
 
         <PropsTable componentProps={linkPropsAPIDocs} />
+        <TypesAugmentation name='Link' />
         <ClassesTable name='Link' componentStyles={linkStyleAPIDocs} />
-
-        <Text variant='h2'>TypeScript customization</Text>
-        <Text>
-          Link exposes component prop types customization through module augmentation of{' '}
-          <code>'componentry/types/components/Link/Link'</code> using{' '}
-          <code>LinkPropsOverrides</code>.
-        </Text>
       </ContentSection>
     </DocsScreenLayout>
   )

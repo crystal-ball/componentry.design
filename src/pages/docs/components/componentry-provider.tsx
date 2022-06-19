@@ -1,13 +1,22 @@
-import { Block, Text } from 'componentry'
+import { Text } from 'componentry'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 
 const simpleExample = `import { ComponentryProvider, createTheme } from 'componentry'
 
+// Create your application theme
 const theme = createTheme()
 
-<ComponentryProvider theme={theme}>
+// Create your component default prop overrides
+const componentOverrides = {
+  Button: { 
+    variant: 'outlined'
+  }
+}
+
+// Connect all components using context provider
+<ComponentryProvider theme={theme} components={componentOverrides}>
   <App />
 </ComponentryProvider>`
 

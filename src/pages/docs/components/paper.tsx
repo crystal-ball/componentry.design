@@ -6,6 +6,7 @@ import { Block, Paper, Text } from 'componentry'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
+import { TypesAugmentation } from '@/components/TypesAugmentation/TypesAugmentation'
 
 // const paperPropsAPIDocs = apiDocs.children.find(
 //   (entry) => entry.name === 'TextPropsDefaults',
@@ -46,6 +47,7 @@ export default function PaperDocs() {
         </Block>
 
         {/* <PropsTable componentProps={textPropsAPIDocs} /> */}
+        <TypesAugmentation name='Paper' />
         {/* <ClassesTable name='Paper' componentStyles={paperPropsAPIDocs} /> */}
       </ContentSection>
     </DocsScreenLayout>
