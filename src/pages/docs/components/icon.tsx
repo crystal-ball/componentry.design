@@ -1,4 +1,4 @@
-import { Block, Text } from 'componentry'
+import { Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
@@ -7,6 +7,7 @@ import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
+import { TypesAugmentation } from '@/components/TypesAugmentation/TypesAugmentation'
 
 const iconPropsAPIDocs = apiDocs.children.find(
   (entry) => entry.name === 'IconPropsDefaults',
@@ -75,9 +76,7 @@ export default function IconDocs() {
           Icon and it will be used for the SVG's <code>href</code>:
         </Text>
 
-        <Block my={4}>
-          <CodeBlock code={symbolSprite} language='tsx' />
-        </Block>
+        <CodeBlock code={symbolSprite} language='tsx' />
 
         <Text variant='subtitle' mt={3}>
           SVG elements
@@ -89,9 +88,7 @@ export default function IconDocs() {
           SVG elements:
         </Text>
 
-        <Block my={4}>
-          <CodeBlock code={elementsMap} language='tsx' />
-        </Block>
+        <CodeBlock code={elementsMap} language='tsx' />
 
         <Text variant='h2'>Alignment</Text>
 
@@ -107,6 +104,7 @@ export default function IconDocs() {
         </Text>
 
         <PropsTable componentProps={iconPropsAPIDocs} />
+        <TypesAugmentation name='Icon' />
         <ClassesTable name='Icon' componentStyles={iconStyleAPIDocs} />
       </ContentSection>
     </DocsScreenLayout>

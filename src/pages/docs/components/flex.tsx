@@ -65,9 +65,8 @@ export default function FlexDocs() {
             </Block>
           </Flex>
         </Block>
-        <Block my={4}>
-          <CodeBlock code={blockExample} language='tsx' />
-        </Block>
+
+        <CodeBlock code={blockExample} language='tsx' />
 
         {/* --- SHORTHAND --- */}
         <Text variant='h2'>Shorthand props</Text>
@@ -89,9 +88,9 @@ export default function FlexDocs() {
             <code>justify</code> for <code>justifyContent</code>
           </li>
         </ul>
+
         <CodeBlock code={shorthandExample} language='tsx' />
 
-        <Text variant='h2'>Props</Text>
         <Block my={4}>
           <PropsTable componentProps={flexPropsAPIDocs} />
         </Block>

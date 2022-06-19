@@ -7,6 +7,7 @@ import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
+import { TypesAugmentation } from '@/components/TypesAugmentation/TypesAugmentation'
 
 const buttonPropsAPIDocs = apiDocs.children.find(
   (entry) => entry.name === 'ButtonPropsDefaults',
@@ -31,6 +32,7 @@ export default function ButtonDocs() {
         <Text variant='lead' mt={3}>
           Button is the primary component for communicating actionable elements to users.
         </Text>
+
         {/* --- USAGE --- */}
         <Text variant='h2'>Usage</Text>
         <Text>
@@ -82,18 +84,18 @@ export default function ButtonDocs() {
             Button
           </Button>
         </Grid>
-        <Block my={4}>
-          <CodeBlock code={basicExample} language='tsx' />
-        </Block>
+
+        <CodeBlock code={basicExample} language='tsx' />
+
         <Text variant='h3'>Full width</Text>
         <Text mb={4}>
           Pass the <code>fullWidth</code> prop and the button will fill its container's
           width.
         </Text>
         <Button fullWidth>Componentry</Button>
-        <Block my={4}>
-          <CodeBlock code={fullWidthExample} language='tsx' />
-        </Block>
+
+        <CodeBlock code={fullWidthExample} language='tsx' />
+
         {/* --- ICONS --- */}
         <Text variant='h3'>Icons</Text>
         <Text mb={4}>
@@ -101,11 +103,11 @@ export default function ButtonDocs() {
           element.
         </Text>
         <Button startIcon='github'>Componentry</Button>
-        <Block my={4}>
-          <CodeBlock code={iconExample} language='tsx' />
-        </Block>
+
+        <CodeBlock code={iconExample} language='tsx' />
 
         <PropsTable componentProps={buttonPropsAPIDocs} />
+        <TypesAugmentation name='Button' />
         <ClassesTable name='Button' componentStyles={buttonStyleAPIDocs} />
       </ContentSection>
     </DocsScreenLayout>

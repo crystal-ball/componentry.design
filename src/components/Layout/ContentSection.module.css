@@ -25,4 +25,9 @@
   & :global(.C9Y-Text-body) {
     max-width: 700px;
   }
+
+  & :global(.CodeBlock) {
+    margin-top: theme('spacing.6');
+    margin-bottom: theme('spacing.6');
+  }
 }

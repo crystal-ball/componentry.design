@@ -7,6 +7,7 @@ import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
 import { PropsTable } from '@/components/PropsTable/PropsTable'
+import { TypesAugmentation } from '@/components/TypesAugmentation/TypesAugmentation'
 
 const textPropsAPIDocs = apiDocs.children.find(
   (entry) => entry.name === 'TextPropsDefaults',
@@ -62,9 +63,7 @@ export default function TextDocs() {
 
         <Text variant='h3'>Componentry Components</Text>
 
-        <Block my={4}>
-          <CodeBlock code={basicUsage} language='tsx' />
-        </Block>
+        <CodeBlock code={basicUsage} language='tsx' />
 
         <Text variant='h2'>Variant to element mapping</Text>
 
@@ -73,18 +72,14 @@ export default function TextDocs() {
           includes the following text elements mapping:
         </Text>
 
-        <Block my={2}>
-          <CodeBlock code={defaultMapping} language='tsx' />
-        </Block>
+        <CodeBlock code={defaultMapping} language='tsx' />
 
         <Text mt={2}>
           With this default mapping the following usage would render an <code>h1</code>{' '}
           and <code>p</code> element:
         </Text>
 
-        <Block my={4}>
-          <CodeBlock code={elementsRendered} language='tsx' />
-        </Block>
+        <CodeBlock code={elementsRendered} language='tsx' />
 
         <Text mt={2}>
           You can customize this mapping using the exported{' '}
@@ -92,11 +87,10 @@ export default function TextDocs() {
           with the default, simplifying adding new variants and customizing the defaults.
         </Text>
 
-        <Block my={4}>
-          <CodeBlock code={mappingCustomization} language='tsx' />
-        </Block>
+        <CodeBlock code={mappingCustomization} language='tsx' />
 
         <PropsTable componentProps={textPropsAPIDocs} />
+        <TypesAugmentation name='Text' />
         <ClassesTable name='Text' componentStyles={textStyleAPIDocs} />
       </ContentSection>
     </DocsScreenLayout>

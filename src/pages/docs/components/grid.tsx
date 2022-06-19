@@ -79,9 +79,7 @@ export default function GridDocs() {
           </Grid>
         </Block>
 
-        <Block my={4}>
-          <CodeBlock code={gridExample} language='tsx' />
-        </Block>
+        <CodeBlock code={gridExample} language='tsx' />
 
         {/* --- SHORTHAND --- */}
         <Text variant='h2'>Shorthand props</Text>
@@ -118,10 +116,7 @@ export default function GridDocs() {
 
         <CodeBlock code={shorthandExample} language='tsx' />
 
-        <Text variant='h2'>Props</Text>
-        <Block my={4}>
-          <PropsTable componentProps={gridPropsAPIDocs} />
-        </Block>
+        <PropsTable componentProps={gridPropsAPIDocs} />
       </ContentSection>
     </DocsScreenLayout>
   )
