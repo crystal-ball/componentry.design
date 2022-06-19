@@ -101,8 +101,8 @@ const themeOverrides = /** @type {const} */ ({
   },
   fontSize: {
     base: '1rem', // 16px
-    body: '1rem', // 16px
     sm: '0.75rem', // 12px
+    md: '1rem', // 16px
     lg: '1.25rem', // 20px
     button: '0.875rem', // 14px
     code: '0.875rem', // 14px

@@ -2,7 +2,6 @@ import { Block, Button, Grid, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
-import { ClassesLink } from '@/components/ClassesLink/ClassesLink'
 import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
@@ -32,14 +31,12 @@ export default function ButtonDocs() {
         <Text variant='lead' mt={3}>
           Button is the primary component for communicating actionable elements to users.
         </Text>
-
         {/* --- USAGE --- */}
         <Text variant='h2'>Usage</Text>
         <Text>
           Use the <code>variant</code> prop to switch between button styles. Buttons
           support hover, active, and disabled states.
         </Text>
-
         <Grid
           className='grid-cols-3'
           gap={4}
@@ -85,11 +82,9 @@ export default function ButtonDocs() {
             Button
           </Button>
         </Grid>
-
         <Block my={4}>
           <CodeBlock code={basicExample} language='tsx' />
         </Block>
-
         <Text variant='h3'>Full width</Text>
         <Text mb={4}>
           Pass the <code>fullWidth</code> prop and the button will fill its container's
@@ -99,35 +94,19 @@ export default function ButtonDocs() {
         <Block my={4}>
           <CodeBlock code={fullWidthExample} language='tsx' />
         </Block>
-
         {/* --- ICONS --- */}
         <Text variant='h3'>Icons</Text>
         <Text mb={4}>
           Pass a <code>startIcon</code> or <code>endIcon</code> to add a Button icon
           element.
         </Text>
-
         <Button startIcon='github'>Componentry</Button>
-
         <Block my={4}>
           <CodeBlock code={iconExample} language='tsx' />
         </Block>
 
-        <Text variant='h2'>Props</Text>
-        <Block my={4}>
-          <PropsTable componentProps={buttonPropsAPIDocs} />
-        </Block>
-
-        <Text variant='h2' display='flex' justifyContent='space-between' alignItems='end'>
-          Styling
-          <Text>
-            <ClassesLink sources={buttonStyleAPIDocs.sources} name='Text' />
-          </Text>
-        </Text>
-
-        <Block my={4}>
-          <ClassesTable componentStyles={buttonStyleAPIDocs} />
-        </Block>
+        <PropsTable componentProps={buttonPropsAPIDocs} />
+        <ClassesTable name='Button' componentStyles={buttonStyleAPIDocs} />
       </ContentSection>
     </DocsScreenLayout>
   )

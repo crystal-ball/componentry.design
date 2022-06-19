@@ -2,7 +2,6 @@ import { Block, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
-import { ClassesLink } from '@/components/ClassesLink/ClassesLink'
 import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
@@ -107,21 +106,8 @@ export default function IconDocs() {
           your icons and font family.
         </Text>
 
-        <Text variant='h2'>Props</Text>
-        <Block my={4}>
-          <PropsTable componentProps={iconPropsAPIDocs} />
-        </Block>
-
-        <Text variant='h2' display='flex' justifyContent='space-between' alignItems='end'>
-          Styling
-          <Text>
-            <ClassesLink sources={iconStyleAPIDocs.sources} name='Icon' />
-          </Text>
-        </Text>
-
-        <Block my={4}>
-          <ClassesTable componentStyles={iconStyleAPIDocs} />
-        </Block>
+        <PropsTable componentProps={iconPropsAPIDocs} />
+        <ClassesTable name='Icon' componentStyles={iconStyleAPIDocs} />
       </ContentSection>
     </DocsScreenLayout>
   )

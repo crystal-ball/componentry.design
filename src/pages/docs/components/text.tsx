@@ -2,7 +2,6 @@ import { Block, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
-import { ClassesLink } from '@/components/ClassesLink/ClassesLink'
 import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
@@ -97,21 +96,8 @@ export default function TextDocs() {
           <CodeBlock code={mappingCustomization} language='tsx' />
         </Block>
 
-        <Text variant='h2'>Props</Text>
-        <Block my={4}>
-          <PropsTable componentProps={textPropsAPIDocs} />
-        </Block>
-
-        <Text variant='h2' display='flex' justifyContent='space-between' alignItems='end'>
-          Styling
-          <Text>
-            <ClassesLink sources={textStyleAPIDocs.sources} name='Text' />
-          </Text>
-        </Text>
-
-        <Block my={4}>
-          <ClassesTable componentStyles={textStyleAPIDocs} />
-        </Block>
+        <PropsTable componentProps={textPropsAPIDocs} />
+        <ClassesTable name='Text' componentStyles={textStyleAPIDocs} />
       </ContentSection>
     </DocsScreenLayout>
   )

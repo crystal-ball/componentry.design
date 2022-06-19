@@ -2,7 +2,6 @@ import { Block, Flex, Link, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
-import { ClassesLink } from '@/components/ClassesLink/ClassesLink'
 import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
@@ -53,21 +52,8 @@ export default function LinkDocs() {
           </Text>
         </Flex>
 
-        <Text variant='h2'>Props</Text>
-        <Block my={4}>
-          <PropsTable componentProps={linkPropsAPIDocs} />
-        </Block>
-
-        <Text variant='h2' display='flex' justifyContent='space-between' alignItems='end'>
-          Styling
-          <Text>
-            <ClassesLink sources={linkStyleAPIDocs.sources} name='Text' />
-          </Text>
-        </Text>
-
-        <Block my={4}>
-          <ClassesTable componentStyles={linkStyleAPIDocs} />
-        </Block>
+        <PropsTable componentProps={linkPropsAPIDocs} />
+        <ClassesTable name='Link' componentStyles={linkStyleAPIDocs} />
 
         <Text variant='h2'>TypeScript customization</Text>
         <Text>
