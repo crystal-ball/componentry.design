@@ -54,7 +54,7 @@ module.exports.Text = {
     },
   },
   '.C9Y-Text-body': {
-    fontSize: theme.fontSize.body,
+    fontSize: theme.fontSize.base,
     color: theme.textColor.body,
     fontFamily: theme.fontFamily.body,
     fontWeight: theme.fontWeight.normal,
