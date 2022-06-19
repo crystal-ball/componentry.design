@@ -122,6 +122,7 @@ const themeOverrides = /** @type {const} */ ({
   // --------------------------------------------------------
   // BORDERS
   border: {
+    DEFAULT: `1px solid ${gray[200]}`,
     nav: `1px solid ${gray[200]}`,
     container: `1px solid ${gray[300]}`,
   },

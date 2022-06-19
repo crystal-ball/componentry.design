@@ -33,6 +33,7 @@ const components = [
   // 'icon-button',
   'grid',
   'link',
+  'paper',
   'text',
   'componentry-provider',
 ]
