@@ -33,14 +33,6 @@ const shorthandExample = `// With utility props
   Flex Props
 </Flex>`
 
-const refExample = `import { useRef } from 'react'
-import { RefFlex } from 'componentry'
-
-function LayoutWithRef() {
-  const ref = useRef(null)
-  return <RefFlex ref={ref} p={4}></RefFlex>
-}`
-
 export default function FlexDocs() {
   invariant(flexPropsAPIDocs, 'FlexPropsDefaults doc entry missing')
 
@@ -75,14 +67,6 @@ export default function FlexDocs() {
         </Block>
         <Block my={4}>
           <CodeBlock code={blockExample} language='tsx' />
-        </Block>
-
-        <Text variant='h3'>Usage with refs</Text>
-        <Text>
-          If you need to pass a ref to Flex, use a <code>RefFlex</code>:
-        </Text>
-        <Block my={4}>
-          <CodeBlock code={refExample} language='tsx' />
         </Block>
 
         {/* --- SHORTHAND --- */}
