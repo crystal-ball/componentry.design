@@ -9,6 +9,7 @@ const { createTheme } = require('componentry')
 
 const gray = /** @type {const} */ ({
   // Tailwind Gray - https://tailwindcss.com/docs/customizing-colors
+  0: '#fff',
   50: '#f9fafb',
   100: '#f3f4f6',
   200: '#e5e7eb',
@@ -43,7 +44,6 @@ const themeOverrides = /** @type {const} */ ({
   colors: {
     current: 'currentColor',
     transparent: 'transparent',
-    background: '#fff',
     inverse: '#eff',
     gray,
     primary,
@@ -78,15 +78,15 @@ const themeOverrides = /** @type {const} */ ({
   },
 
   backgroundColor: {
-    background: '#fff',
+    background: 'var(--background-color)',
     // Primary colors are used for layout docs
     primary,
   },
   textColor: {
-    heading: gray[900],
-    body: gray[700],
+    heading: 'var(--textColor-heading)',
+    body: 'var(--textColor-body)',
     muted: gray[500],
-    link: primary[500],
+    link: 'var(--link-color)',
     heart: '#fcc4dd',
   },
 
@@ -122,9 +122,9 @@ const themeOverrides = /** @type {const} */ ({
   // --------------------------------------------------------
   // BORDERS
   border: {
-    DEFAULT: `1px solid ${gray[200]}`,
-    nav: `1px solid ${gray[200]}`,
-    container: `1px solid ${gray[300]}`,
+    DEFAULT: `1px solid var(--border-container)`,
+    container: `1px solid var(--border-container)`,
+    nav: `1px solid var(--border-nav)`,
   },
 
   boxShadow: {

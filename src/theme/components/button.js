@@ -7,12 +7,13 @@ module.exports.Button = {
     'height': '38px',
     'padding': '0 24px',
     'backgroundColor': 'transparent',
-    'color': theme.colors.gray[600],
+    'color': 'var(--button-color)',
     'fontSize': theme.fontSize.button,
     'fontWeight': theme.fontWeight.normal,
     'lineHeight': 1,
     'textTransform': 'uppercase',
-    'border': `1px solid ${theme.colors.gray[600]}`,
+    'border': `1px solid`,
+    'borderColor': 'var(--button-color)',
     'borderRadius': theme.borderRadius.DEFAULT,
 
     '&:hover, &.C9Y-hover': {

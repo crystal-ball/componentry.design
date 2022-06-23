@@ -16,6 +16,38 @@
     font-size: theme('fontSize.code');
     font-family: theme('fontFamily.mono');
   }
+
+  .color-scheme-dark {
+    --background-color: theme('colors.gray.900');
+    --border-container: #232872;
+    --border-nav: #232872;
+
+    /* TEXT */
+    --textColor-body: theme('colors.gray.100');
+    --textColor-heading: theme('colors.gray.300');
+
+    /* LINK */
+    --link-color: theme('colors.primary.300');
+
+    /* BUTTON */
+    --button-color: theme('colors.gray.400');
+  }
+
+  .color-scheme-light {
+    --background-color: theme('colors.gray.0');
+    --border-container: theme('colors.gray.200');
+    --border-nav: theme('colors.gray.300');
+
+    /* TEXT */
+    --textColor-body: theme('colors.gray.900');
+    --textColor-heading: theme('colors.gray.700');
+
+    /* LINK */
+    --link-color: theme('colors.primary.500');
+
+    /* BUTTON */
+    --button-color: theme('colors.gray.600');
+  }
 }
 
 @componentry components;

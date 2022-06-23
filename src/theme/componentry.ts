@@ -1,16 +1,18 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
 import { configureIconElementsMap, configureTextElementsMap } from 'componentry'
 import { Github } from './icons/Github'
-import { Hologram } from './icons/Hologram'
-import { Menu } from './icons/Menu'
+import { Moon } from './icons/Moon'
+import { Settings } from './icons/Settings'
+import { Sun } from './icons/Sun'
 import { themeOverrides } from './theme'
 
 export {}
 
 const iconElementsMap = {
   github: Github,
-  menu: Menu,
-  hologram: Hologram,
+  moon: Moon,
+  settings: Settings,
+  sun: Sun,
 } as const
 
 const textElementsMap = {
