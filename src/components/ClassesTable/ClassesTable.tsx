@@ -36,13 +36,13 @@ export function ClassesTable({ componentStyles, name }: ClassesTableProps) {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {componentStyles.children.map(({ name, comment }) => (
+          {componentStyles.children.map((style) => (
             <Table.Row key={name} className='grid-cols-classesTable'>
               <Table.Cell>
-                <code>{name}</code>
+                <code>{style.name}</code>
               </Table.Cell>
-              {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
-              <Table.Cell>{comment?.shortText}</Table.Cell>
+              {/* @ts-expect-error -- Comment isn't getting inferred correctly... */}
+              <Table.Cell>{style.comment?.shortText}</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>

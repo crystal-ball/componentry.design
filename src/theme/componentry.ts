@@ -39,16 +39,16 @@ declare module 'componentry/types/theme/theme' {
 
 declare module 'componentry/types/components/Alert/Alert' {
   interface AlertPropsOverrides {
-    color: 'primary' | 'success' | 'warning' | 'critical' | 'highlight'
+    color?: 'primary' | 'success' | 'warning' | 'critical' | 'highlight'
   }
 }
 
 declare module 'componentry/types/components/Button/Button' {
   interface ButtonPropsOverrides {
-    variant: 'filled' | 'outlined' | 'docs'
-    size: 'small' | 'large' | 'docsLarge'
-    startIcon: keyof typeof iconElementsMap
-    endIcon: keyof typeof iconElementsMap
+    variant?: 'filled' | 'outlined' | 'docs'
+    size?: 'small' | 'large' | 'docsLarge'
+    startIcon?: keyof typeof iconElementsMap
+    endIcon?: keyof typeof iconElementsMap
   }
 }
 
@@ -60,6 +60,6 @@ declare module 'componentry/types/components/Icon/Icon' {
 
 declare module 'componentry/types/components/Text/Text' {
   interface TextPropsOverrides {
-    variant: keyof typeof textElementsMap
+    variant?: keyof typeof textElementsMap
   }
 }

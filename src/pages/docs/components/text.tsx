@@ -1,4 +1,4 @@
-import { Block, Text } from 'componentry'
+import { Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 

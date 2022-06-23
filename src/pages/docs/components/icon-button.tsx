@@ -1,4 +1,4 @@
-import { Block, Text } from 'componentry'
+import { Text } from 'componentry'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
