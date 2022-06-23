@@ -41,7 +41,6 @@ export function ClassesTable({ componentStyles, name }: ClassesTableProps) {
               <Table.Cell>
                 <code>{style.name}</code>
               </Table.Cell>
-              {/* @ts-expect-error -- Comment isn't getting inferred correctly... */}
               <Table.Cell>{style.comment?.shortText}</Table.Cell>
             </Table.Row>
           ))}
