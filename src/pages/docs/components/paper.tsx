@@ -1,25 +1,26 @@
 import { Block, Paper, Text } from 'componentry'
-// import apiDocs from 'componentry/api-docs'
-// import invariant from 'tiny-invariant'
+import apiDocs from 'componentry/api-docs'
+import invariant from 'tiny-invariant'
 
-// import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
+import { ClassesTable } from '@/components/ClassesTable/ClassesTable'
 import { CodeBlock } from '@/components/CodeBlock/CodeBlock'
 import { ContentSection } from '@/components/Layout/ContentSection'
 import { DocsScreenLayout } from '@/components/Layout/DocsScreen'
+import { PropsTable } from '@/components/PropsTable/PropsTable'
 import { TypesAugmentation } from '@/components/TypesAugmentation/TypesAugmentation'
 
-// const paperPropsAPIDocs = apiDocs.children.find(
-//   (entry) => entry.name === 'TextPropsDefaults',
-// )
-// const paperStyleAPIDocs = apiDocs.children.find((entry) => entry.name === 'TextStyles')
+const paperPropsAPIDocs = apiDocs.children.find(
+  (entry) => entry.name === 'PaperPropsDefaults',
+)
+const paperStyleAPIDocs = apiDocs.children.find((entry) => entry.name === 'PaperStyles')
 
 const paperExample = `<Paper variant='flat' p={2}>
   Custom container content
 </Paper>`
 
 export default function PaperDocs() {
-  // invariant(paperPropsAPIDocs, 'PaperPropsDefaults doc entry missing')
-  // invariant(paperStyleAPIDocs, 'PaperStyles doc entry missing')
+  invariant(paperPropsAPIDocs, 'PaperPropsDefaults doc entry missing')
+  invariant(paperStyleAPIDocs, 'PaperStyles doc entry missing')
 
   return (
     <DocsScreenLayout>
@@ -46,9 +47,9 @@ export default function PaperDocs() {
           <CodeBlock code={paperExample} language='tsx' />
         </Block>
 
-        {/* <PropsTable componentProps={textPropsAPIDocs} /> */}
+        <PropsTable componentProps={paperPropsAPIDocs} />
         <TypesAugmentation name='Paper' />
-        {/* <ClassesTable name='Paper' componentStyles={paperPropsAPIDocs} /> */}
+        <ClassesTable name='Paper' componentStyles={paperStyleAPIDocs} />
       </ContentSection>
     </DocsScreenLayout>
   )
