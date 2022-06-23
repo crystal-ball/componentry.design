@@ -27,7 +27,7 @@ export function PropsTable({ componentProps }: PropsTableProps) {
                 <code>{prop.name}</code>
               </Table.Cell>
               <Table.Cell>
-                {/* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */}
+                {/* @ts-expect-error -- Comment isn't getting inferred correctly... */}
                 <Text mb={1}>{prop.comment?.shortText}</Text>
                 <code>{createTypeCell(prop.type as PropType)}</code>
               </Table.Cell>
