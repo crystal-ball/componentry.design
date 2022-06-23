@@ -1,4 +1,4 @@
-import { Block, Button, Grid, Text } from 'componentry'
+import { Button, Grid, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
