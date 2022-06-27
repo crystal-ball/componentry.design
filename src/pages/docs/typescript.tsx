@@ -1,3 +1,5 @@
+import { Text } from 'componentry'
+
 export default function TypeScript() {
-  return <div>TS Guide...</div>
+  return <Text>TS Guide...</Text>
 }

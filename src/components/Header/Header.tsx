@@ -3,11 +3,11 @@ import clsx from 'clsx'
 import { Flex, Icon, Link } from 'componentry'
 import NextLink from 'next/link'
 
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle'
 import '@docsearch/css'
 import classes from './Header.module.css'
 
-const stickyClasses =
-  'sticky top-0 bg-background border-0 border-b border-solid border-container shadow-nav'
+const stickyClasses = 'sticky top-0 bg-background border-b-nav shadow-nav'
 
 export default function Header({ isLandingScreen }: HeaderProps) {
   return (
@@ -40,6 +40,7 @@ export default function Header({ isLandingScreen }: HeaderProps) {
             Blog
           </Link>
         </NextLink>
+
         <div className={classes.searchSizer}>
           <DocSearch
             appId='GLQ9FXJ6Z9'
@@ -48,8 +49,10 @@ export default function Header({ isLandingScreen }: HeaderProps) {
           />
         </div>
 
+        <ColorSchemeToggle />
+
         <Link href='https://github.com/crystal-ball/componentry'>
-          <Icon id='github' color='link' className={classes.github} />
+          <Icon id='github' className={classes.github} />
         </Link>
       </Flex>
     </Flex>

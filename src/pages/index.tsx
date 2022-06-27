@@ -4,6 +4,7 @@ import NextLink from 'next/link'
 
 import { Footer } from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
+import { Hologram } from '@/components/Hologram/Hologram'
 
 import classes from './index.module.css'
 
@@ -17,7 +18,7 @@ export default function Home() {
 
       <Flex as='main' className='flex-1' justify='center' align='center'>
         <Flex pb={6}>
-          <Icon id='hologram' className={classes.hologram} />
+          <Hologram />
           <Block ml={10}>
             <Text variant='title'>Componentry</Text>
             <Text variant='lead' mt={4} className={classes.tagline}>

@@ -5,7 +5,7 @@ const { theme } = require('../theme')
 module.exports.Text = {
   '.C9Y-Text-title': {
     fontSize: '5rem',
-    color: theme.colors.primary[500],
+    color: theme.colors.primary[500], // #2529c3
     fontFamily: theme.fontFamily.display,
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1,
@@ -13,35 +13,35 @@ module.exports.Text = {
   },
   '.C9Y-Text-h1': {
     fontSize: '3rem',
-    color: theme.textColor.heading,
+    color: 'var(--textColor-heading)',
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1.25,
     letterSpacing: '0.5px',
   },
   '.C9Y-Text-h2': {
     fontSize: '2rem',
-    color: theme.textColor.heading,
+    color: 'var(--textColor-heading)',
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1.25,
     letterSpacing: 0,
   },
   '.C9Y-Text-h3': {
     fontSize: '1.5rem',
-    color: theme.textColor.heading,
+    color: 'var(--textColor-heading)',
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1.25,
     letterSpacing: '0.5px',
   },
   '.C9Y-Text-subtitle': {
     fontSize: '1rem',
-    color: theme.textColor.body,
+    color: 'var(--textColor-body)',
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1,
     letterSpacing: '0.5px',
   },
   '.C9Y-Text-lead': {
     'fontSize': '1.25rem',
-    'color': theme.textColor.body,
+    'color': 'var(--textColor-body)',
     'fontFamily': theme.fontFamily.body,
     'fontWeight': theme.fontWeight.normal,
     'lineHeight': 1.5,
@@ -55,14 +55,14 @@ module.exports.Text = {
   },
   '.C9Y-Text-body': {
     fontSize: theme.fontSize.base,
-    color: theme.textColor.body,
+    color: 'var(--textColor-body)',
     fontFamily: theme.fontFamily.body,
     fontWeight: theme.fontWeight.normal,
     lineHeight: theme.lineHeight.normal,
   },
   '.C9Y-Text-detail': {
     fontSize: '0.875rem',
-    color: theme.textColor.body,
+    color: 'var(--textColor-body)',
     fontFamily: theme.fontFamily.body,
     fontWeight: theme.fontWeight.normal,
     lineHeight: '1.125rem',

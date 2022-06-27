@@ -1,0 +1,32 @@
+.hologram {
+  width: 360px;
+  height: 295px;
+
+  .circleLarge {
+    fill: #e0e0e0;
+  }
+  .circleSmall {
+    fill: #9e9e9e;
+  }
+  .lineConnector {
+    fill: #412e2e;
+  }
+  .accent {
+    fill: #1d1e7c;
+  }
+
+  :global(.color-scheme-dark) & {
+    .circleLarge {
+      fill: #1c1c5b;
+    }
+    .circleSmall {
+      fill: #374151;
+    }
+    .lineConnector {
+      fill: #9ca3af;
+    }
+    .accent {
+      fill: #3f42ae;
+    }
+  }
+}
