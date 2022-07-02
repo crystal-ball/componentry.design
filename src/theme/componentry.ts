@@ -49,8 +49,6 @@ declare module 'componentry/types/components/Button/Button' {
   interface ButtonPropsOverrides {
     variant?: 'filled' | 'outlined' | 'docs'
     size?: 'small' | 'large' | 'docsLarge'
-    startIcon?: keyof typeof iconElementsMap
-    endIcon?: keyof typeof iconElementsMap
   }
 }
 

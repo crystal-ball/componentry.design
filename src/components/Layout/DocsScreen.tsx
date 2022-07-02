@@ -30,7 +30,7 @@ const components = [
   'button',
   'flex',
   'icon',
-  // 'icon-button',
+  'icon-button',
   'grid',
   'link',
   'paper',

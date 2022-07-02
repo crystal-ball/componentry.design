@@ -1,4 +1,4 @@
-import { Button, Grid, Text } from 'componentry'
+import { Button, Grid, Icon, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
@@ -19,7 +19,7 @@ const basicExample = `<Button variant='filled'>Filled</Button>
 
 const fullWidthExample = `<Button fullWidth>Componentry</Button>`
 
-const iconExample = `<Button startIcon='github'>Componentry</Button>`
+const iconExample = `<Button startIcon={<Icon id='github' />}>Componentry</Button>`
 
 export default function ButtonDocs() {
   invariant(buttonPropsAPIDocs, 'ButtonPropsDefaults doc entry missing')
@@ -102,7 +102,7 @@ export default function ButtonDocs() {
           Pass a <code>startIcon</code> or <code>endIcon</code> to add a Button icon
           element.
         </Text>
-        <Button startIcon='github'>Componentry</Button>
+        <Button startIcon={<Icon id='github' />}>Componentry</Button>
 
         <CodeBlock code={iconExample} language='tsx' />
 
