@@ -8,16 +8,14 @@ const postcssConfig = `{
   "plugins": [require("componentry/postcss"), require("autoprefixer")]
 }`
 
-const directives = `/* The "components" param will include all component styles */
+const directives = `/* The "foundation" param includes a set of browser normalization styles */
 @componentry foundation;
 
+/* The "components" param include all of the component styles */
 @componentry components;
 
-/* Or each component style can be selectively included */
-@componentry Alert;
-@componentry Badge;
-@componentry Button;
-/* ... */
+/* The "utilities" param includes the componentry states styles */
+@componentry utilities;
 `
 
 const gettingStarted = `import { Flex, Text } from 'componentry'
