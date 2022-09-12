@@ -33,12 +33,12 @@ function toggleColorScheme(scheme: 'light' | 'dark') {
   if (scheme === 'dark') {
     document.body.classList.add('color-scheme-dark')
     document.body.classList.remove('color-scheme-light')
-    document.body.parentElement!.dataset.theme = 'dark' // Docsearch color scheme indicator
+    if (document.body.parentElement) document.body.parentElement.dataset.theme = 'dark' // Docsearch color scheme indicator
     localStorage.setItem('color-scheme', 'dark')
   } else {
     document.body.classList.add('color-scheme-light')
     document.body.classList.remove('color-scheme-dark')
-    document.body.parentElement!.dataset.theme = 'light' // Docsearch color scheme indicator
+    if (document.body.parentElement) document.body.parentElement.dataset.theme = 'light' // Docsearch color scheme indicator
     localStorage.setItem('color-scheme', 'light')
   }
 }
