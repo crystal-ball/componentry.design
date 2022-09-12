@@ -1,20 +1,19 @@
 import { Icon } from 'componentry'
-import { useState } from 'react'
-
-let defaultColorScheme: 'light' | 'dark' = 'light'
-if (typeof window !== 'undefined') {
-  const chosenScheme = localStorage.getItem('color-scheme')
-  if (chosenScheme === 'dark' || chosenScheme === 'light') {
-    defaultColorScheme = chosenScheme
-  } else {
-    defaultColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
-  }
-}
+import { useEffect, useState } from 'react'
 
 export function ColorSchemeToggle() {
-  const [colorScheme, setColorScheme] = useState<'light' | 'dark'>(defaultColorScheme)
+  const [colorScheme, setColorScheme] = useState<'light' | 'dark'>('light')
+
+  useEffect(() => {
+    const userScheme = localStorage.getItem('color-scheme')
+    if (userScheme === 'light' || userScheme === 'dark') {
+      setColorScheme(userScheme)
+    } else {
+      setColorScheme(
+        window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+      )
+    }
+  }, [])
 
   return (
     <Icon

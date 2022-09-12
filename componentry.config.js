@@ -10,5 +10,5 @@ const { theme } = require('./src/theme/theme')
 
 module.exports = {
   theme,
-  components,
+  styles: components,
 }

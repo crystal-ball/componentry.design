@@ -1,12 +1,10 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
-import { configureIconElementsMap, configureTextElementsMap } from 'componentry'
+import { configureIconElementsMap } from 'componentry'
 import { Github } from './icons/Github'
 import { Moon } from './icons/Moon'
 import { Settings } from './icons/Settings'
 import { Sun } from './icons/Sun'
-import { themeOverrides } from './theme'
-
-export {}
+import { theme, themeOverrides } from './theme'
 
 const iconElementsMap = {
   github: Github,
@@ -14,8 +12,9 @@ const iconElementsMap = {
   settings: Settings,
   sun: Sun,
 } as const
+configureIconElementsMap(iconElementsMap)
 
-const textElementsMap = {
+const textElementMap = {
   title: 'h1',
   h1: 'h1',
   h2: 'h2',
@@ -27,10 +26,13 @@ const textElementsMap = {
   overline: 'div',
 } as const
 
-export function configureComponentry() {
-  configureIconElementsMap(iconElementsMap)
-
-  configureTextElementsMap(textElementsMap)
+export const config = {
+  theme,
+  defaultProps: {
+    Text: {
+      textElementMap,
+    },
+  },
 }
 
 declare module 'componentry/types/theme/theme' {
@@ -60,6 +62,6 @@ declare module 'componentry/types/components/Icon/Icon' {
 
 declare module 'componentry/types/components/Text/Text' {
   interface TextPropsOverrides {
-    variant?: keyof typeof textElementsMap
+    variant?: keyof typeof textElementMap
   }
 }
