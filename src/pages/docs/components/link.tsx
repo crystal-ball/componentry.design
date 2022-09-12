@@ -37,6 +37,7 @@ export default function LinkDocs() {
           my={8}
           py={8}
         >
+          {/* eslint-disable-next-line no-console -- docs example */}
           <Link onClick={console.log}>Standalone link</Link>
         </Flex>
 
@@ -49,6 +50,7 @@ export default function LinkDocs() {
           py={8}
         >
           <Text variant='h3'>
+            {/* eslint-disable-next-line no-console -- docs example */}
             Componentry <Link onClick={console.log}>components</Link>
           </Text>
         </Flex>

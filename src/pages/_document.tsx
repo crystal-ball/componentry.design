@@ -19,6 +19,7 @@ export default function Document() {
         />
       </Head>
       <body className='bg-background text-body'>
+        {/* eslint-disable-next-line react/no-danger -- next/script not working ¯\_(ツ)_/¯  */}
         <script dangerouslySetInnerHTML={{ __html: setBodyBackgroundClass }} />
         <Main />
         <NextScript />
