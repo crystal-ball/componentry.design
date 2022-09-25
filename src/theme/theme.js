@@ -81,8 +81,10 @@ const themeOverrides = /** @type {const} */ ({
     background: 'var(--background-color)',
     // Primary colors are used for layout docs
     primary,
+    demo: 'var(--background-demo-color)',
   },
   textColor: {
+    title: 'var(--textColor-title)',
     heading: 'var(--textColor-heading)',
     body: 'var(--textColor-body)',
     muted: gray[500],

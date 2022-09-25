@@ -76,7 +76,7 @@ export default function Spacing() {
             return (
               <Flex key={base} align='center'>
                 <Block className='w-10'>{base}</Block>
-                <Block className={`bg-primary-900 w-${base} h-4 rounded`} />
+                <Block backgroundColor='demo' className={`w-${base} h-4 rounded`} />
                 <Text variant='detail' color='muted' ml={4}>
                   {description}
                 </Text>

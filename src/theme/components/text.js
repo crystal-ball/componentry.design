@@ -5,7 +5,7 @@ const { theme } = require('../theme')
 module.exports.Text = {
   '.C9Y-Text-title': {
     fontSize: '5rem',
-    color: theme.colors.primary[500], // #2529c3
+    color: 'var(--textColor-title)',
     fontFamily: theme.fontFamily.display,
     fontWeight: theme.fontWeight.bold,
     lineHeight: 1,

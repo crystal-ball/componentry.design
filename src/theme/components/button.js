@@ -13,20 +13,20 @@ module.exports.Button = {
     'lineHeight': 1,
     'textTransform': 'uppercase',
     'border': `1px solid`,
-    'borderColor': 'var(--button-color)',
+    'borderColor': 'var(--button-docs-color)',
     'borderRadius': theme.borderRadius.DEFAULT,
 
     '&:hover, &.C9Y-hover': {
-      borderColor: theme.colors.gray[700],
-      color: theme.colors.gray[700],
+      borderColor: 'var(--button-docs-hover-color)',
+      color: 'var(--button-docs-hover-color)',
     },
     '&:active, &.C9Y-active': {
-      borderColor: theme.colors.gray[900],
-      color: theme.colors.gray[900],
+      borderColor: 'var(--button-docs-active-color)',
+      color: 'var(--button-docs-active-color)',
     },
     '&.C9Y-disabled': {
-      borderColor: theme.colors.gray[300],
-      color: theme.colors.gray[300],
+      borderColor: 'var(--button-docs-disabled-color)',
+      color: 'var(--button-docs-disabled-color)',
     },
   },
   '.C9Y-Button-docsLargeSize': {
