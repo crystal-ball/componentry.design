@@ -23,7 +23,7 @@ export default function Header({ isLandingScreen }: HeaderProps) {
         <div />
       ) : (
         <NextLink href='/' passHref>
-          <Link className={clsx(classes.logo, 'no-underline font-display')}>
+          <Link color='title' className={clsx(classes.logo, 'no-underline font-display')}>
             Componentry
           </Link>
         </NextLink>

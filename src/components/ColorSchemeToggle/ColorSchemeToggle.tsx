@@ -1,4 +1,4 @@
-import { Icon } from 'componentry'
+import { Icon, Link } from 'componentry'
 import { useEffect, useState } from 'react'
 
 export function ColorSchemeToggle() {
@@ -16,16 +16,15 @@ export function ColorSchemeToggle() {
   }, [])
 
   return (
-    <Icon
-      id={colorScheme === 'dark' ? 'moon' : 'sun'}
-      color='link'
-      className='cursor-pointer'
+    <Link
       onClick={() => {
         const updatedScheme = colorScheme === 'dark' ? 'light' : 'dark'
         setColorScheme(updatedScheme)
         toggleColorScheme(updatedScheme)
       }}
-    />
+    >
+      <Icon id={colorScheme === 'dark' ? 'moon' : 'sun'} />
+    </Link>
   )
 }
 

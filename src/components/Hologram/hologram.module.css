@@ -17,7 +17,7 @@
 
   :global(.color-scheme-dark) & {
     .circleLarge {
-      fill: #1c1c5b;
+      fill: #0f141e;
     }
     .circleSmall {
       fill: #374151;
