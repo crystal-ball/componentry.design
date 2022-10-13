@@ -28,7 +28,7 @@ export function PropsTable({ componentProps }: PropsTableProps) {
               </Table.Cell>
               <Table.Cell>
                 {/* @ts-expect-error -- Union type inference failure */}
-                <Text mb={1}>{prop.comment.shortText}</Text>
+                <Text mb={1}>{prop.comment?.shortText}</Text>
                 <code>{createTypeCell(prop.type as PropType)}</code>
               </Table.Cell>
             </Table.Row>
