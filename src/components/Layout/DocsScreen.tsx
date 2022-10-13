@@ -26,6 +26,7 @@ type ScreenContainerProps = {
 }
 
 const components = [
+  'badge',
   'block',
   'button',
   'flex',
