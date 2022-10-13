@@ -1,4 +1,4 @@
-import { Badge, Flex, Link, Text } from 'componentry'
+import { Badge, Flex, Text } from 'componentry'
 import apiDocs from 'componentry/api-docs'
 import invariant from 'tiny-invariant'
 
