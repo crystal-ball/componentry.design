@@ -10,11 +10,7 @@
     // --- Language support
     "target": "es5",
     "module": "esnext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "preserve",
     // --- Code generation
     "noEmit": true, // Don't emit files (Compilation handled by Babel)
@@ -26,19 +22,11 @@
     // --- Alias resolution
     "baseUrl": ".",
     "paths": {
-      "componentry/api-docs":["node_modules/componentry/dist/api-docs.json"],
-      "@/*": [
-        "src/*"
-      ] // Resolve `@/` import base to scr/
+      "componentry/api-docs": ["node_modules/componentry/dist/api-docs.json"],
+      "@/*": ["src/*"] // Resolve `@/` import base to scr/
     },
     "incremental": true
   },
-  "include": [
-    "next-env.d.ts",
-    "@types/**/*",
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "@types/**/*", "src/**/*"],
+  "exclude": ["node_modules"]
 }

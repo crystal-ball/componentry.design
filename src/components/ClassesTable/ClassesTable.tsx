@@ -42,7 +42,7 @@ export function ClassesTable({ componentStyles, name }: ClassesTableProps) {
                 <code>{style.name}</code>
               </Table.Cell>
               {/* @ts-expect-error -- Union type inference failure */}
-              <Table.Cell>{style.comment?.shortText}</Table.Cell>
+              <Table.Cell>{style.comment.shortText}</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
