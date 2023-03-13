@@ -11,8 +11,8 @@
     "test:types": "tsc"
   },
   "dependencies": {
-    "@docsearch/css": "3.2.1",
-    "@docsearch/react": "3.2.1",
+    "@docsearch/css": "3.3.3",
+    "@docsearch/react": "3.3.3",
     "clsx": "1.2.1",
     "componentry": "7.0.0",
     "hast-to-hyperscript": "10.0.3",
